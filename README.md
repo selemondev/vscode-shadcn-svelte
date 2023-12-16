@@ -1,7 +1,7 @@
 <p align="center">
  <img align="center" src="https://raw.githubusercontent.com/selemondev/vscode-shadcn-svelte/master/src/images/icon.png" height="96" />
  <h1 align="center">
-  shadcn-vue
+  shadcn-svelte
  </h1>
 </p>
 
@@ -52,7 +52,7 @@ Easily import and use shadcn-svelte components with ease using snippets within V
 
 1. Components
 
-For `Alert` component, type `cni-alert` to add imports in your vue file, and to use the component, use `cnx-alert`.
+For `Alert` component, type `cni-alert` to add imports in your svelte file, and to use the component, use `cnx-alert`.
 
 > Similarly, for any other component, use `cni-[component]` to add imports and `cnx-[component]` to use.
 
@@ -79,5 +79,5 @@ Use this link - [Snippet Generation](https://snippet-generator.app/?description=
 All credits go to the creators of these amazing projects:
 
 - [Shadcn UI](https://ui.shadcn.com) for creating this beautiful project.
-- [Shadcn Svelte](https://shadcn-svelte.com) for creating the Vue port of Shadcn UI.
+- [Shadcn Svelte](https://shadcn-svelte.com) for creating the Svelte port of Shadcn UI.
 - [Bits UI](https://www.bits-ui.com/docs/introduction) for doing all the hard work to make sure components are accessible.
