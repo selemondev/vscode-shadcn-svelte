@@ -52,7 +52,7 @@ Easily import and use shadcn-svelte components with ease using snippets within V
 
 1. Components
 
-For `Alert` component, type `cni-alert` to add imports in your vue file, and to use the component, use `cnx-alert`.
+For `Alert` component, type `cni-alert` to add imports in your svelte file, and to use the component, use `cnx-alert`.
 
 > Similarly, for any other component, use `cni-[component]` to add imports and `cnx-[component]` to use.
 
