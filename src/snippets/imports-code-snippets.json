@@ -262,15 +262,7 @@
   
     "Tooltip": {
       "prefix": ["shadcn-i-tooltip", "cni-tooltip"],
-      "body": [
-        "<Tooltip.Root>",
-        "  <Tooltip.Trigger>Hover</Tooltip.Trigger>",
-        "  <Tooltip.Content>",
-        "    <p>Add to library</p>",
-        "  </Tooltip.Content>",
-        "</Tooltip.Root>",
-        ""
-      ],
+      "body": ["import * as Tooltip from \"$$lib/components/ui/tooltip\"", ""],
       "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
     }
   }
