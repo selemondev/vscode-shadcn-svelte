@@ -116,7 +116,7 @@
     "Dropdown Menu": {
       "prefix": ["shadcn-i-dropdown-menu", "cni-dropdown-menu"],
       "body": [
-        "import { Button } from \"$$lib/components/ui/button\"",
+        "import * as DropdownMenu from \"$$lib/components/ui/dropdown-menu\"",
         ""
       ],
       "description": "https://shadcn-svelte.com/docs/components/dropdown-menu.html"
