@@ -78,6 +78,6 @@ Use this link - [Snippet Generation](https://snippet-generator.app/?description=
 
 All credits go to the creators of these amazing projects:
 
-- [Shadcn UI](https://ui.shadcn.com) for creating this beautiful project.
+- [Shadcn UI](https://ui.shadcn.com) for creating this amazing project.
 - [Shadcn Svelte](https://shadcn-svelte.com) for creating the Svelte port of Shadcn UI.
 - [Bits UI](https://www.bits-ui.com/docs/introduction) for doing all the hard work to make sure components are accessible.
