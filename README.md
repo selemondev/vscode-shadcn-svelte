@@ -5,7 +5,7 @@
  </h1>
 </p>
 
-This VSCode extension enables you to install [shadcn/svelte](https://shadcn-svelte.com) components directly from your IDE ✨.
+This VSCode Extension enables you to install [shadcn/svelte](https://shadcn-svelte.com) components directly from your IDE ✨.
 
 ## Initialize the Shadcn/Svelte CLI
 
