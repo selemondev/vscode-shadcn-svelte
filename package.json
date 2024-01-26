@@ -1,6 +1,6 @@
 {
   "name": "vscode-shadcn-svelte",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "displayName": "shadcn/svelte",
   "description": "Integrate components and snippets from Shadcn/Svelte directly into your IDE.",
   "publisher": "Selemondev",
@@ -106,7 +106,17 @@
         "command": "shadcn-svelte.gotoDoc",
         "title": "shadcn/svelte: Open Documentation"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "shadcn/svelte",
+      "properties": {
+        "shadcn-svelte.cwd": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Absolute path to the working directory when running shadcn-svelte CLI. Default is the current workspace folder."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
@@ -116,7 +126,7 @@
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "yarn run compile && yarn run lint",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts --fix"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
