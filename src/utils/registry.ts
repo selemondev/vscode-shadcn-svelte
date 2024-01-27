@@ -3,16 +3,16 @@ import { to } from "./index";
 import { detectPackageManager } from "./vscode";
 
 type OgComponent = {
-  type: "components:ui"
-  name: string
-  files: string[]
-  dependencies?: string[]
-  registryDependencies?: string[]
+  type: "components:ui";
+  name: string;
+  files: string[];
+  dependencies?: string[];
+  registryDependencies?: string[];
 };
 
 type Component = {
-  label: string
-  detail?: string
+  label: string;
+  detail?: string;
 };
 
 export const shadCnDocUrl = "https://shadcn-svelte.com/docs";
@@ -45,33 +45,33 @@ export const getRegistry = async (): Promise<Components | null> => {
   return components;
 };
 
-export const getInstallCmd = async (components: string[], cwd: string) => {
+export const getInstallCmd = async (components: string[]) => {
   const packageManager = await detectPackageManager();
   const componentStr = components.join(" ");
 
   if (packageManager === "bun") {
-    return `bunx shadcn-svelte add ${componentStr} -c ${cwd}`;
+    return `bunx shadcn-svelte add ${componentStr}`;
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
+    return `pnpm dlx shadcn-svelte@latest add ${componentStr}`;
   }
 
-  return `npx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
+  return `npx shadcn-svelte@latest add ${componentStr}`;
 };
 
-export const getInitCmd = async (cwd: string) => {
+export const getInitCmd = async () => {
   const packageManager = await detectPackageManager();
 
   if (packageManager === "bun") {
-    return `bunx shadcn-svelte init -c ${cwd}`;
+    return "bunx shadcn-svelte init";
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx shadcn-svelte@latest init -c ${cwd}`;
+    return "pnpm dlx shadcn-svelte@latest init";
   }
 
-  return `npx shadcn-svelte@latest init -c ${cwd}`;
+  return "npx shadcn-svelte@latest init";
 };
 
 export const getComponentDocLink = (component: string) => {
