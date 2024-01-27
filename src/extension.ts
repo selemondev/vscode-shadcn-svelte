@@ -7,7 +7,7 @@ import {
   getRegistry,
   shadCnDocUrl,
 } from "./utils/registry";
-import { executeCommand, getOrChooseCwd } from "./utils/vscode";
+import { executeCommand } from "./utils/vscode";
 import type { Components } from "./utils/registry";
 
 const commands = {
@@ -24,8 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   const disposables: vscode.Disposable[] = [
     vscode.commands.registerCommand(commands.initCli, async () => {
-      const cwd = await getOrChooseCwd();
-      const intCmd = await getInitCmd(cwd);
+      const intCmd = await getInitCmd();
       executeCommand(intCmd);
     }),
     vscode.commands.registerCommand(commands.addNewComponent, async () => {
@@ -41,15 +40,14 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       const selectedComponent = await vscode.window.showQuickPick(registryData, {
-          matchOnDescription: true,
-        });
+        matchOnDescription: true,
+      });
 
       if (!selectedComponent) {
         return;
       }
 
-      const cwd = await getOrChooseCwd();
-      const installCmd = await getInstallCmd([selectedComponent.label], cwd);
+      const installCmd = await getInstallCmd([selectedComponent.label]);
       executeCommand(installCmd);
     }),
 
@@ -66,9 +64,9 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       const selectedComponents = await vscode.window.showQuickPick(registryData, {
-          matchOnDescription: true,
-          canPickMany: true,
-        });
+        matchOnDescription: true,
+        canPickMany: true,
+      });
 
       if (!selectedComponents) {
         return;
@@ -76,8 +74,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       const selectedComponent = selectedComponents.map((component) => component.label);
 
-      const cwd = await getOrChooseCwd();
-      const installCmd = await getInstallCmd(selectedComponent, cwd);
+      const installCmd = await getInstallCmd(selectedComponent);
       executeCommand(installCmd);
     }),
     vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
