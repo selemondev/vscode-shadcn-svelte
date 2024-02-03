@@ -1,6 +1,6 @@
 {
   "name": "vscode-shadcn-svelte",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "displayName": "shadcn/svelte",
   "description": "Integrate components and snippets from Shadcn/Svelte directly into your IDE ✨.",
   "publisher": "Selemondev",
@@ -110,7 +110,8 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm package",
-    "build": "tsup",
+    "publish:release": "vsce publish --no-dependencies",
+    "package": "tsup",
     "dev": "pnpm build -- --watch",
     "pretest": "pnpm compile && yarn run lint",
     "lint": "eslint src --ext ts"
