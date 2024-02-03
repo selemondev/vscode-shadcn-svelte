@@ -4,6 +4,7 @@ out/**
 node_modules/**
 .gitignore
 .npmrc
+vsc-extension-quickstart.md
 **/tsconfig.json
 **/.eslintrc.json
 **/*.map
