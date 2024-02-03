@@ -457,6 +457,12 @@
       ],
       "description": "https://shadcn-svelte.com/docs/components/slider.html"
     },
+
+    "Sonner": {
+      "prefix": ["shadcn-x-sonner", "cnx-sonner"],
+      "body": ["<Toaster />"],
+      "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
+    },
   
     "Switch": {
       "prefix": ["shadcn-x-switch", "cnx-switch"],
