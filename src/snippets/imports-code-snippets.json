@@ -217,6 +217,12 @@
       "body": ["import { Slider } from \"$$lib/components/ui/slider\"", ""],
       "description": "https://shadcn-svelte.com/docs/components/slider.html"
     },
+
+    "Sonner": {
+      "prefix": ["shadcn-i-sonner", "cni-sonner"],
+      "body": ["import { Toaster } from \"$lib/components/ui/sonner\""],
+      "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
+    },
   
     "Switch": {
       "prefix": ["shadcn-i-switch", "cni-switch"],
