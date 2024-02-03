@@ -1,552 +1,723 @@
 {
-    "Accordion": {
-      "prefix": ["shadcn-x-accordion", "cnx-accordion"],
-      "body": [
-        "<Accordion.Root class=\"w-full sm:max-w-[70%]\">",
-        "  <Accordion.Item value=\"item-1\">",
-        "    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>",
-        "    <Accordion.Content>",
-        "      Yes. It adheres to the WAI-ARIA design pattern.",
-        "    </Accordion.Content>",
-        "  </Accordion.Item>",
-        "  <Accordion.Item value=\"item-2\">",
-        "    <Accordion.Trigger>Is it styled?</Accordion.Trigger>",
-        "    <Accordion.Content>",
-        "      Yes. It comes with default styles that matches the other components'",
-        "      aesthetic.",
-        "    </Accordion.Content>",
-        "  </Accordion.Item>",
-        "  <Accordion.Item value=\"item-3\">",
-        "    <Accordion.Trigger>Is it animated?</Accordion.Trigger>",
-        "    <Accordion.Content>",
-        "      Yes. It's animated by default, but you can disable it if you prefer.",
-        "    </Accordion.Content>",
-        "  </Accordion.Item>",
-        "</Accordion.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/accordion.html"
-    },
-  
-    "Alert": {
-      "prefix": ["shadcn-x-alert", "cnx-alert"],
-      "body": [
-        "<Alert.Root>",
-        "  <Alert.Title>Heads up!</Alert.Title>",
-        "  <Alert.Description>",
-        "    You can add components to your app using the cli.",
-        "  </Alert.Description>",
-        "</Alert.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/alert.html"
-    },
-  
-    "Alert Destructive": {
-      "prefix": ["shadcn-x-alert-destructive", "cnx-alert-destructive"],
-      "body": [
-        "<Alert.Root variant=\"destructive\">",
-        "  <AlertCircle class=\"h-4 w-4\" />",
-        "  <Alert.Title>Error</Alert.Title>",
-        "  <Alert.Description>",
-        "    Your session has expired. Please login again.",
-        "  </Alert.Description>",
-        "</Alert.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/alert.html"
-    },
-  
-    "Alert Dialog": {
-      "prefix": ["shadcn-x-alert-dialog", "cnx-alert-dialog"],
-      "body": [
-        "<AlertDialog.Root>",
-        "  <AlertDialog.Trigger>Open</AlertDialog.Trigger>",
-        "  <AlertDialog.Content>",
-        "    <AlertDialog.Header>",
-        "      <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>",
-        "      <AlertDialog.Description>",
-        "        This action cannot be undone. This will permanently delete your account",
-        "        and remove your data from our servers.",
-        "      </AlertDialog.Description>",
-        "    </AlertDialog.Header>",
-        "    <AlertDialog.Footer>",
-        "      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>",
-        "      <AlertDialog.Action>Continue</AlertDialog.Action>",
-        "    </AlertDialog.Footer>",
-        "  </AlertDialog.Content>",
-        "</AlertDialog.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/alert-dialog.html"
-    },
-  
-    "Aspect Ratio": {
-      "prefix": ["shadcn-x-aspect-ratio", "cnx-aspect-ratio"],
-      "body": [
-        "<div class=\"w-[450px]\">",
-        "    <AspectRatio :ratio=\"16 / 9\">",
-        "      <img src=\"...\" alt=\"Image\" class=\"rounded-md object-cover\">",
-        "    </AspectRatio>",
-        "</div>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/aspect-ratio.html"
-    },
-  
-    "Avatar": {
-      "prefix": ["shadcn-x-avatar", "cnx-avatar"],
-      "body": [
-        "<Avatar.Root>",
-        "  <Avatar.Image src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />",
-        "  <Avatar.Fallback>CN</Avatar.Fallback>",
-        "</Avatar.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/avatar.html"
-    },
-  
-    "Badge": {
-      "prefix": ["shadcn-x-badge", "cnx-badge"],
-      "body": [
-        "<Badge>Badge</Badge>"
-      ],    
-      "description": "https://shadcn-svelte.com/docs/components/badge.html"
-    },
-  
-    "Badge Destructive": {
-      "prefix": ["shadcn-x-badge-destructive", "cnx-badge-destructive"],
-      "body": [
-        "<Badge variant=\"destructive\">",
-        "    Destructive",
-        "</Badge>"
-      ],    
-      "description": "https://shadcn-svelte.com/docs/components/badge.html"
-    },
-  
-    "Badge Outline": {
-      "prefix": ["shadcn-x-badge-outline", "cnx-badge-outline"],
-      "body": [
-        "<Badge variant=\"outline\">",
-        "    Outline",
-        "</Badge>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/badge.html"
-    },
-  
-    "Badge Secondary": {
-      "prefix": ["shadcn-x-badge-secondary", "cnx-badge-secondary"],
-      "body": [
-        "<Badge variant=\"secondary\">",
-        "    Secondary",
-        "</Badge>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/badge.html"
-    },
-  
-    "Button": {
-      "prefix": ["shadcn-x-button", "cnx-button"],
-      "body": [
-        "<Button>Button</Button>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/button.html"
-    },
+  "Accordion": {
+    "prefix": [
+      "shadcn-x-accordion",
+      "cnx-accordion"
+    ],
+    "body": [
+      "<Accordion.Root class=\"w-full sm:max-w-[70%]\">",
+      "  <Accordion.Item value=\"item-1\">",
+      "    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>",
+      "    <Accordion.Content>",
+      "      Yes. It adheres to the WAI-ARIA design pattern.",
+      "    </Accordion.Content>",
+      "  </Accordion.Item>",
+      "  <Accordion.Item value=\"item-2\">",
+      "    <Accordion.Trigger>Is it styled?</Accordion.Trigger>",
+      "    <Accordion.Content>",
+      "      Yes. It comes with default styles that matches the other components'",
+      "      aesthetic.",
+      "    </Accordion.Content>",
+      "  </Accordion.Item>",
+      "  <Accordion.Item value=\"item-3\">",
+      "    <Accordion.Trigger>Is it animated?</Accordion.Trigger>",
+      "    <Accordion.Content>",
+      "      Yes. It's animated by default, but you can disable it if you prefer.",
+      "    </Accordion.Content>",
+      "  </Accordion.Item>",
+      "</Accordion.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/accordion.html"
+  },
+  "Alert": {
+    "prefix": [
+      "shadcn-x-alert",
+      "cnx-alert"
+    ],
+    "body": [
+      "<Alert.Root>",
+      "  <Alert.Title>Heads up!</Alert.Title>",
+      "  <Alert.Description>",
+      "    You can add components to your app using the cli.",
+      "  </Alert.Description>",
+      "</Alert.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/alert.html"
+  },
+  "Alert Destructive": {
+    "prefix": [
+      "shadcn-x-alert-destructive",
+      "cnx-alert-destructive"
+    ],
+    "body": [
+      "<Alert.Root variant=\"destructive\">",
+      "  <AlertCircle class=\"h-4 w-4\" />",
+      "  <Alert.Title>Error</Alert.Title>",
+      "  <Alert.Description>",
+      "    Your session has expired. Please login again.",
+      "  </Alert.Description>",
+      "</Alert.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/alert.html"
+  },
+  "Alert Dialog": {
+    "prefix": [
+      "shadcn-x-alert-dialog",
+      "cnx-alert-dialog"
+    ],
+    "body": [
+      "<AlertDialog.Root>",
+      "  <AlertDialog.Trigger>Open</AlertDialog.Trigger>",
+      "  <AlertDialog.Content>",
+      "    <AlertDialog.Header>",
+      "      <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>",
+      "      <AlertDialog.Description>",
+      "        This action cannot be undone. This will permanently delete your account",
+      "        and remove your data from our servers.",
+      "      </AlertDialog.Description>",
+      "    </AlertDialog.Header>",
+      "    <AlertDialog.Footer>",
+      "      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>",
+      "      <AlertDialog.Action>Continue</AlertDialog.Action>",
+      "    </AlertDialog.Footer>",
+      "  </AlertDialog.Content>",
+      "</AlertDialog.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/alert-dialog.html"
+  },
+  "Aspect Ratio": {
+    "prefix": [
+      "shadcn-x-aspect-ratio",
+      "cnx-aspect-ratio"
+    ],
+    "body": [
+      "<div class=\"w-[450px]\">",
+      "    <AspectRatio :ratio=\"16 / 9\">",
+      "      <img src=\"...\" alt=\"Image\" class=\"rounded-md object-cover\">",
+      "    </AspectRatio>",
+      "</div>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/aspect-ratio.html"
+  },
+  "Avatar": {
+    "prefix": [
+      "shadcn-x-avatar",
+      "cnx-avatar"
+    ],
+    "body": [
+      "<Avatar.Root>",
+      "  <Avatar.Image src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />",
+      "  <Avatar.Fallback>CN</Avatar.Fallback>",
+      "</Avatar.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/avatar.html"
+  },
+  "Badge": {
+    "prefix": [
+      "shadcn-x-badge",
+      "cnx-badge"
+    ],
+    "body": [
+      "<Badge>Badge</Badge>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/badge.html"
+  },
+  "Badge Destructive": {
+    "prefix": [
+      "shadcn-x-badge-destructive",
+      "cnx-badge-destructive"
+    ],
+    "body": [
+      "<Badge variant=\"destructive\">",
+      "    Destructive",
+      "</Badge>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/badge.html"
+  },
+  "Badge Outline": {
+    "prefix": [
+      "shadcn-x-badge-outline",
+      "cnx-badge-outline"
+    ],
+    "body": [
+      "<Badge variant=\"outline\">",
+      "    Outline",
+      "</Badge>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/badge.html"
+  },
+  "Badge Secondary": {
+    "prefix": [
+      "shadcn-x-badge-secondary",
+      "cnx-badge-secondary"
+    ],
+    "body": [
+      "<Badge variant=\"secondary\">",
+      "    Secondary",
+      "</Badge>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/badge.html"
+  },
+  "Button": {
+    "prefix": [
+      "shadcn-x-button",
+      "cnx-button"
+    ],
+    "body": [
+      "<Button>Button</Button>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/button.html"
+  },
+  "Button Secondary": {
+    "prefix": [
+      "shadcn-x-button-secondary",
+      "cnx-button-secondary"
+    ],
+    "body": [
+      "<Button variant=\"secondary\">Button</Button>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/button.html"
+  },
+  "Button Outline": {
+    "prefix": [
+      "shadcn-x-button-outline",
+      "cnx-button-outline"
+    ],
+    "body": [
+      "<Button variant=\"outline\">Button</Button>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/button.html"
+  },
+  "Button Ghost": {
+    "prefix": [
+      "shadcn-x-button-ghost",
+      "cnx-button-ghost"
+    ],
+    "body": [
+      "<Button variant=\"ghost\">Button</Button>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/button.html"
+  },
+  "Button Link": {
+    "prefix": [
+      "shadcn-x-button-link",
+      "cnx-button-link"
+    ],
+    "body": [
+      "<Button variant=\"link\">Button</Button>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/button.html"
+  },
+  "Calendar": {
+    "prefix": [
+      "shadcn-x-calendar",
+      "cnx-calendar"
+    ],
+    "body": [
+      "<Calendar bind:value class='border rounded-md' />"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/calendar.html"
+  },
+  "Card": {
+    "prefix": [
+      "shadcn-x-card",
+      "cnx-card"
+    ],
+    "body": [
+      "<Card.Root>",
+      "  <Card.Header>",
+      "    <Card.Title>Card Title</Card.Title>",
+      "    <Card.Description>Card Description</Card.Description>",
+      "  </Card.Header>",
+      "  <Card.Content>",
+      "    <p>Card Content</p>",
+      "  </Card.Content>",
+      "  <Card.Footer>",
+      "    <p>Card Footer</p>",
+      "  </Card.Footer>",
+      "</Card.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/card.html"
+  },
+  "Carousel": {
+    "prefix": [
+      "shadcn-x-carousel",
+      "cnx-carousel"
+    ],
+    "body": [
+      "<Carousel.Root class=\"w-full max-w-sm\">",
+      "  <Carousel.Content class=\"-ml-1\">",
+      "    {#each Array(5) as _, i (i)}",
+      "      <Carousel.Item class=\"pl-1 md:basis-1/2 lg:basis-1/3\">",
+      "        <div class=\"p-1\">",
+      "          <Card.Root>",
+      "            <Card.Content",
+      "              class=\"flex aspect-square items-center justify-center p-6\"",
+      "            >",
+      "              <span class=\"text-2xl font-semibold\">{i + 1}</span>",
+      "            </Card.Content>",
+      "          </Card.Root>",
+      "        </div>",
+      "      </Carousel.Item>",
+      "    {/each}",
+      "  </Carousel.Content>",
+      "  <Carousel.Previous />",
+      "  <Carousel.Next />",
+      "</Carousel.Root>"
+    ],
+    "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
+  },
 
-    "Button Secondary": {
-      "prefix": ["shadcn-x-button-secondary", "cnx-button-secondary"],
-      "body": [
-        "<Button variant=\"secondary\">Button</Button>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/button.html"
-    },
-
-    "Button Outline": {
-      "prefix": ["shadcn-x-button-outline", "cnx-button-outline"],
-      "body": [
-        "<Button variant=\"outline\">Button</Button>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/button.html"
-    },
-
-    "Button Ghost": {
-      "prefix": ["shadcn-x-button-ghost", "cnx-button-ghost"],
-      "body": [
-        "<Button variant=\"ghost\">Button</Button>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/button.html"
-    },
-
-    "Button Link": {
-      "prefix": ["shadcn-x-button-link", "cnx-button-link"],
-      "body": [
-        "<Button variant=\"link\">Button</Button>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/button.html"
-    },
-
-    "Calendar": {
-        "prefix": ["shadcn-x-calendar", "cnx-calendar"],
-        "body": [
-            "<Calendar bind:value class='border rounded-md' />"
-        ],
-        "description": "https://shadcn-svelte.com/docs/components/calendar.html"
-    },
-    
-  
-    "Card": {
-      "prefix": ["shadcn-x-card", "cnx-card"],
-      "body": [
-        "<Card.Root>",
-        "  <Card.Header>",
-        "    <Card.Title>Card Title</Card.Title>",
-        "    <Card.Description>Card Description</Card.Description>",
-        "  </Card.Header>",
-        "  <Card.Content>",
-        "    <p>Card Content</p>",
-        "  </Card.Content>",
-        "  <Card.Footer>",
-        "    <p>Card Footer</p>",
-        "  </Card.Footer>",
-        "</Card.Root>"
-      ],    
-      "description": "https://shadcn-svelte.com/docs/components/card.html"
-    },
-  
-    "Checkbox": {
-      "prefix": ["shadcn-x-checkbox", "cnx-checkbox"],
-      "body": [
-        "<Checkbox />"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/checkbox.html"
-    },
-  
-    "Collapsible": {
-      "prefix": ["shadcn-x-collapsible", "cnx-collapsible"],
-      "body": [
-        "<Collapsible.Root>",
-        "  <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>",
-        "  <Collapsible.Content>",
-        "    Yes. Free to use for personal and commercial projects. No attribution",
-        "    required.",
-        "  </Collapsible.Content>",
-        "</Collapsible.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/collapsible.html"
-    },
-  
-    "Command": {
-      "prefix": ["shadcn-x-command", "cnx-command"],
-      "body": [
-        "<Command.Root>",
-        "  <Command.Input placeholder=\"Type a command or search...\" />",
-        "  <Command.List>",
-        "    <Command.Empty>No results found.</Command.Empty>",
-        "    <Command.Group heading=\"Suggestions\">",
-        "      <Command.Item>Calendar</Command.Item>",
-        "      <Command.Item>Search Emoji</Command.Item>",
-        "      <Command.Item>Calculator</Command.Item>",
-        "    </Command.Group>",
-        "    <Command.Separator />",
-        "    <Command.Group heading=\"Settings\">",
-        "      <Command.Item>Profile</Command.Item>",
-        "      <Command.Item>Billing</Command.Item>",
-        "      <Command.Item>Settings</Command.Item>",
-        "    </Command.Group>",
-        "  </Command.List>",
-        "</Command.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/command.html"
-    },
-  
-    "Context Menu": {
-      "prefix": ["shadcn-x-context-menu", "cnx-context-menu"],
-      "body": [
-        "<ContextMenu.Root>",
-        "  <ContextMenu.Trigger>Right click</ContextMenu.Trigger>",
-        "  <ContextMenu.Content>",
-        "    <ContextMenu.Item>Profile</ContextMenu.Item>",
-        "    <ContextMenu.Item>Billing</ContextMenu.Item>",
-        "    <ContextMenu.Item>Team</ContextMenu.Item>",
-        "    <ContextMenu.Item>Subscription</ContextMenu.Item>",
-        "  </ContextMenu.Content>",
-        "</ContextMenu.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/context-menu.html"
-    },
-  
-    "Dialog": {
-      "prefix": ["shadcn-x-dialog", "cnx-dialog"],
-      "body": [
-        "<Dialog.Root>",
-        "  <Dialog.Trigger>Open</Dialog.Trigger>",
-        "  <Dialog.Content>",
-        "    <Dialog.Header>",
-        "      <Dialog.Title>Are you sure absolutely sure?</Dialog.Title>",
-        "      <Dialog.Description>",
-        "        This action cannot be undone. This will permanently delete your account",
-        "        and remove your data from our servers.",
-        "      </Dialog.Description>",
-        "    </Dialog.Header>",
-        "  </Dialog.Content>",
-        "</Dialog.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/dialog.html"
-    },
-  
-    "Dropdown Menu": {
-      "prefix": ["shadcn-x-dropdown-menu", "cnx-dropdown-menu"],
-      "body": [
-        "<DropdownMenu.Root>",
-        "  <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>",
-        "  <DropdownMenu.Content>",
-        "    <DropdownMenu.Group>",
-        "      <DropdownMenu.Label>My Account</DropdownMenu.Label>",
-        "      <DropdownMenu.Separator />",
-        "      <DropdownMenu.Item>Profile</DropdownMenu.Item>",
-        "      <DropdownMenu.Item>Billing</DropdownMenu.Item>",
-        "      <DropdownMenu.Item>Team</DropdownMenu.Item>",
-        "      <DropdownMenu.Item>Subscription</DropdownMenu.Item>",
-        "    </DropdownMenu.Group>",
-        "  </DropdownMenu.Content>",
-        "</DropdownMenu.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/dropdown-menu.html"
-    },
-  
-    "Hover Card": {
-      "prefix": ["shadcn-x-hover-card", "cnx-hover-card"],
-      "body": [
-        "<HoverCard.Root>",
-        "  <HoverCard.Trigger>Hover</HoverCard.Trigger>",
-        "  <HoverCard.Content>",
-        "    SvelteKit - Web development, streamlined",
-        "  </HoverCard.Content>",
-        "</HoverCard.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/hover-card.html"
-    },
-  
-    "Input": {
-      "prefix": ["shadcn-x-input", "cnx-input"],
-      "body": ["<Input />", ""],
-      "description": "https://shadcn-svelte.com/docs/components/input.html"
-    },
-  
-    "Label": {
-      "prefix": ["shadcn-x-label", "cnx-label"],
-      "body": ["<Label for=\"email\">Your email address</Label>", ""],
-      "description": "https://shadcn-svelte.com/docs/components/label.html"
-    },
-  
-    "Menubar": {
-      "prefix": ["shadcn-x-menubar", "cnx-menubar"],
-      "body": [
-        "<Menubar.Root>",
-        "  <Menubar.Menu>",
-        "    <Menubar.Trigger>File</Menubar.Trigger>",
-        "    <Menubar.Content>",
-        "      <Menubar.Item>",
-        "        New Tab",
-        "        <Menubar.Shortcut>⌘T</Menubar.Shortcut>",
-        "      </Menubar.Item>",
-        "      <Menubar.Item>New Window</Menubar.Item>",
-        "      <Menubar.Separator />",
-        "      <Menubar.Item>Share</Menubar.Item>",
-        "      <Menubar.Separator />",
-        "      <Menubar.Item>Print</Menubar.Item>",
-        "    </Menubar.Content>",
-        "  </Menubar.Menu>",
-        "</Menubar.Root>",
-        ""
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/menubar.html"
-    },
-  
-    "Popover": {
-      "prefix": ["shadcn-x-popover", "cnx-popover"],
-      "body": [
-        "<Popover.Root>",
-        "  <Popover.Trigger>Open</Popover.Trigger>",
-        "  <Popover.Content>Place content for the popover here.</Popover.Content>",
-        "</Popover.Root>",
-        ""
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/popover.html"
-    },
-  
-    "Progress": {
-      "prefix": ["shadcn-x-progress", "cnx-progress"],
-      "body": ["<Progress value={33} />", ""],
-      "description": "https://shadcn-svelte.com/docs/components/progress.html"
-    },
-  
-    "Radio Group": {
-      "prefix": "shadcn-x-radio-group",
-      "body": [
-        "<RadioGroup.Root value=\"option-one\">",
-        "  <div class=\"flex items-center space-x-2\">",
-        "    <RadioGroup.Item value=\"option-one\" id=\"option-one\" />",
-        "    <Label for=\"option-one\">Option One</Label>",
-        "  </div>",
-        "  <div class=\"flex items-center space-x-2\">",
-        "    <RadioGroup.Item value=\"option-two\" id=\"option-two\" />",
-        "    <Label for=\"option-two\">Option Two</Label>",
-        "  </div>",
-        "</RadioGroup.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/radio-group.html"
-    },
-  
-    "Range Calendar": {
-      "prefix": ["shadcn-x-range-calendar", "cnx-range-calendar"],
-      "body": [
-        "<RangeCalendar bind:value class=\"border rounded-md\" />",
-        ""
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/range-calendar.html"
-    },
-  
-    "Select": {
-      "prefix": ["cnx-select", "shadcn-x-select"],
-      "body": [
-        "<Select.Root>",
-        "  <Select.Trigger class=\"w-[180px]\">",
-        "    <Select.Value placeholder=\"Theme\" />",
-        "  </Select.Trigger>",
-        "  <Select.Content>",
-        "    <Select.Item value=\"light\">Light</Select.Item>",
-        "    <Select.Item value=\"dark\">Dark</Select.Item>",
-        "    <Select.Item value=\"system\">System</Select.Item>",
-        "  </Select.Content>",
-        "</Select.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/select.html"
-    },
-  
-    "Separator": {
-      "prefix": ["shadcn-x-separator", "cnx-separator"],
-      "body": ["<Separator />", ""],
-      "description": "https://shadcn-svelte.com/docs/components/separator.html"
-    },
-  
-    "Sheet": {
-      "prefix": ["shadcn-x-sheet", "cnx-sheet"],
-      "body": [
-        "<Sheet.Root>",
-        "  <Sheet.Trigger>Open</Sheet.Trigger>",
-        "  <Sheet.Content>",
-        "    <Sheet.Header>",
-        "      <Sheet.Title>Are you sure absolutely sure?</Sheet.Title>",
-        "      <Sheet.Description>",
-        "        This action cannot be undone. This will permanently delete your account",
-        "        and remove your data from our servers.",
-        "      </Sheet.Description>",
-        "    </Sheet.Header>",
-        "  </Sheet.Content>",
-        "</Sheet.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/sheet.html"
-    },
-  
-    "Skeleton": {
-      "prefix": ["shadcn-x-skeleton", "cnx-skeleton"],
-      "body": [
-        "<Skeleton class=\"w-[100px] h-[20px] rounded-full\" />"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/skeleton.html"
-    },
-  
-    "Slider": {
-      "prefix": ["shadcn-x-slider", "cnx-slider"],
-      "body": [
-        "<Slider value={[33]} max={100} step={1} />"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/slider.html"
-    },
-
-    "Sonner": {
-      "prefix": ["shadcn-x-sonner", "cnx-sonner"],
-      "body": ["<Toaster />"],
-      "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
-    },
-  
-    "Switch": {
-      "prefix": ["shadcn-x-switch", "cnx-switch"],
-      "body": ["<Switch />", ""],
-      "description": "https://shadcn-svelte.com/docs/components/switch.html"
-    },
-  
-    "Table": {
-      "prefix": ["shadcn-x-table", "cnx-table"],
-      "body": [
-        "<Table.Root>",
-        "  <Table.Caption>A list of your recent invoices.</Table.Caption>",
-        "  <Table.Header>",
-        "    <Table.Row>",
-        "      <Table.Head class=\"w-[100px]\">Invoice</Table.Head>",
-        "      <Table.Head>Status</Table.Head>",
-        "      <Table.Head>Method</Table.Head>",
-        "      <Table.Head class=\"text-right\">Amount</Table.Head>",
-        "    </Table.Row>",
-        "  </Table.Header>",
-        "  <Table.Body>",
-        "    <Table.Row>",
-        "      <Table.Cell class=\"font-medium\">INV001</Table.Cell>",
-        "      <Table.Cell>Paid</Table.Cell>",
-        "      <Table.Cell>Credit Card</Table.Cell>",
-        "      <Table.Cell class=\"text-right\">$250.00</Table.Cell>",
-        "    </Table.Row>",
-        "  </Table.Body>",
-        "</Table.Root>"
-      ],    
-      "description": "https://shadcn-svelte.com/docs/components/table.html"
-    },
-  
-    "Tabs": {
-      "prefix": ["shadcn-x-tabs", "cnx-tabs"],
-      "body": [
-        "<Tabs.Root value=\"account\" class=\"w-[400px]\">",
-        "  <Tabs.List>",
-        "    <Tabs.Trigger value=\"account\">Account</Tabs.Trigger>",
-        "    <Tabs.Trigger value=\"password\">Password</Tabs.Trigger>",
-        "  </Tabs.List>",
-        "  <Tabs.Content value=\"account\">",
-        "    Make changes to your account here.",
-        "  </Tabs.Content>",
-        "  <Tabs.Content value=\"password\">Change your password here.</Tabs.Content>",
-        "</Tabs.Root>"
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/tabs.html"
-    },
-  
-    "Textarea": {
-      "prefix": ["shadcn-x-textarea", "cnx-textarea"],
-      "body": ["<Textarea />", ""],
-      "description": "https://shadcn-svelte.com/docs/components/textarea.html"
-    },
-  
-    "Toggle": {
-      "prefix": ["shadcn-x-toggle", "cnx-toggle"],
-      "body": ["<Toggle>Toggle</Toggle>", ""],
-      "description": "https://shadcn-svelte.com/docs/components/toggle.html"
-    },
-      
-    "Toggle Group": {
-      "prefix": ["shadcn-x-toggle-group", "cnx-toggle-group"],
-      "body": ["<ToggleGroup.Root type=\"single\">",
+  "Carousel-Vertical": {
+    "prefix": [
+      "shadcn-x-carousel-vertical",
+      "cnx-carousel-vertical"
+    ],
+    "body": [
+      "<Carousel.Root",
+      "  opts={{",
+      "    align: \"start\"",
+      "  }}",
+      "  orientation=\"vertical\"",
+      "  class=\"w-full max-w-xs\"",
+      ">",
+      "  <Carousel.Content class=\"-mt-1 h-[200px]\">",
+      "    {#each Array(5) as _, i (i)}",
+      "      <Carousel.Item class=\"pt-1 md:basis-1/2\">",
+      "        <div class=\"p-1\">",
+      "          <Card.Root>",
+      "            <Card.Content class=\"flex items-center justify-center p-6\">",
+      "              <span class=\"text-3xl font-semibold\">{i + 1}</span>",
+      "            </Card.Content>",
+      "          </Card.Root>",
+      "        </div>",
+      "      </Carousel.Item>",
+      "    {/each}",
+      "  </Carousel.Content>",
+      "  <Carousel.Previous />",
+      "  <Carousel.Next />",
+      "</Carousel.Root>"
+    ],
+    "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
+  },
+  "Checkbox": {
+    "prefix": [
+      "shadcn-x-checkbox",
+      "cnx-checkbox"
+    ],
+    "body": [
+      "<Checkbox />"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/checkbox.html"
+  },
+  "Collapsible": {
+    "prefix": [
+      "shadcn-x-collapsible",
+      "cnx-collapsible"
+    ],
+    "body": [
+      "<Collapsible.Root>",
+      "  <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>",
+      "  <Collapsible.Content>",
+      "    Yes. Free to use for personal and commercial projects. No attribution",
+      "    required.",
+      "  </Collapsible.Content>",
+      "</Collapsible.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/collapsible.html"
+  },
+  "Command": {
+    "prefix": [
+      "shadcn-x-command",
+      "cnx-command"
+    ],
+    "body": [
+      "<Command.Root>",
+      "  <Command.Input placeholder=\"Type a command or search...\" />",
+      "  <Command.List>",
+      "    <Command.Empty>No results found.</Command.Empty>",
+      "    <Command.Group heading=\"Suggestions\">",
+      "      <Command.Item>Calendar</Command.Item>",
+      "      <Command.Item>Search Emoji</Command.Item>",
+      "      <Command.Item>Calculator</Command.Item>",
+      "    </Command.Group>",
+      "    <Command.Separator />",
+      "    <Command.Group heading=\"Settings\">",
+      "      <Command.Item>Profile</Command.Item>",
+      "      <Command.Item>Billing</Command.Item>",
+      "      <Command.Item>Settings</Command.Item>",
+      "    </Command.Group>",
+      "  </Command.List>",
+      "</Command.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/command.html"
+  },
+  "Context Menu": {
+    "prefix": [
+      "shadcn-x-context-menu",
+      "cnx-context-menu"
+    ],
+    "body": [
+      "<ContextMenu.Root>",
+      "  <ContextMenu.Trigger>Right click</ContextMenu.Trigger>",
+      "  <ContextMenu.Content>",
+      "    <ContextMenu.Item>Profile</ContextMenu.Item>",
+      "    <ContextMenu.Item>Billing</ContextMenu.Item>",
+      "    <ContextMenu.Item>Team</ContextMenu.Item>",
+      "    <ContextMenu.Item>Subscription</ContextMenu.Item>",
+      "  </ContextMenu.Content>",
+      "</ContextMenu.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/context-menu.html"
+  },
+  "Dialog": {
+    "prefix": [
+      "shadcn-x-dialog",
+      "cnx-dialog"
+    ],
+    "body": [
+      "<Dialog.Root>",
+      "  <Dialog.Trigger>Open</Dialog.Trigger>",
+      "  <Dialog.Content>",
+      "    <Dialog.Header>",
+      "      <Dialog.Title>Are you sure absolutely sure?</Dialog.Title>",
+      "      <Dialog.Description>",
+      "        This action cannot be undone. This will permanently delete your account",
+      "        and remove your data from our servers.",
+      "      </Dialog.Description>",
+      "    </Dialog.Header>",
+      "  </Dialog.Content>",
+      "</Dialog.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/dialog.html"
+  },
+  "Dropdown Menu": {
+    "prefix": [
+      "shadcn-x-dropdown-menu",
+      "cnx-dropdown-menu"
+    ],
+    "body": [
+      "<DropdownMenu.Root>",
+      "  <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>",
+      "  <DropdownMenu.Content>",
+      "    <DropdownMenu.Group>",
+      "      <DropdownMenu.Label>My Account</DropdownMenu.Label>",
+      "      <DropdownMenu.Separator />",
+      "      <DropdownMenu.Item>Profile</DropdownMenu.Item>",
+      "      <DropdownMenu.Item>Billing</DropdownMenu.Item>",
+      "      <DropdownMenu.Item>Team</DropdownMenu.Item>",
+      "      <DropdownMenu.Item>Subscription</DropdownMenu.Item>",
+      "    </DropdownMenu.Group>",
+      "  </DropdownMenu.Content>",
+      "</DropdownMenu.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/dropdown-menu.html"
+  },
+  "Hover Card": {
+    "prefix": [
+      "shadcn-x-hover-card",
+      "cnx-hover-card"
+    ],
+    "body": [
+      "<HoverCard.Root>",
+      "  <HoverCard.Trigger>Hover</HoverCard.Trigger>",
+      "  <HoverCard.Content>",
+      "    SvelteKit - Web development, streamlined",
+      "  </HoverCard.Content>",
+      "</HoverCard.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/hover-card.html"
+  },
+  "Input": {
+    "prefix": [
+      "shadcn-x-input",
+      "cnx-input"
+    ],
+    "body": [
+      "<Input />",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/input.html"
+  },
+  "Label": {
+    "prefix": [
+      "shadcn-x-label",
+      "cnx-label"
+    ],
+    "body": [
+      "<Label for=\"email\">Your email address</Label>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/label.html"
+  },
+  "Menubar": {
+    "prefix": [
+      "shadcn-x-menubar",
+      "cnx-menubar"
+    ],
+    "body": [
+      "<Menubar.Root>",
+      "  <Menubar.Menu>",
+      "    <Menubar.Trigger>File</Menubar.Trigger>",
+      "    <Menubar.Content>",
+      "      <Menubar.Item>",
+      "        New Tab",
+      "        <Menubar.Shortcut>⌘T</Menubar.Shortcut>",
+      "      </Menubar.Item>",
+      "      <Menubar.Item>New Window</Menubar.Item>",
+      "      <Menubar.Separator />",
+      "      <Menubar.Item>Share</Menubar.Item>",
+      "      <Menubar.Separator />",
+      "      <Menubar.Item>Print</Menubar.Item>",
+      "    </Menubar.Content>",
+      "  </Menubar.Menu>",
+      "</Menubar.Root>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/menubar.html"
+  },
+  "Popover": {
+    "prefix": [
+      "shadcn-x-popover",
+      "cnx-popover"
+    ],
+    "body": [
+      "<Popover.Root>",
+      "  <Popover.Trigger>Open</Popover.Trigger>",
+      "  <Popover.Content>Place content for the popover here.</Popover.Content>",
+      "</Popover.Root>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/popover.html"
+  },
+  "Progress": {
+    "prefix": [
+      "shadcn-x-progress",
+      "cnx-progress"
+    ],
+    "body": [
+      "<Progress value={33} />",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/progress.html"
+  },
+  "Radio Group": {
+    "prefix": "shadcn-x-radio-group",
+    "body": [
+      "<RadioGroup.Root value=\"option-one\">",
+      "  <div class=\"flex items-center space-x-2\">",
+      "    <RadioGroup.Item value=\"option-one\" id=\"option-one\" />",
+      "    <Label for=\"option-one\">Option One</Label>",
+      "  </div>",
+      "  <div class=\"flex items-center space-x-2\">",
+      "    <RadioGroup.Item value=\"option-two\" id=\"option-two\" />",
+      "    <Label for=\"option-two\">Option Two</Label>",
+      "  </div>",
+      "</RadioGroup.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/radio-group.html"
+  },
+  "Range Calendar": {
+    "prefix": [
+      "shadcn-x-range-calendar",
+      "cnx-range-calendar"
+    ],
+    "body": [
+      "<RangeCalendar bind:value class=\"border rounded-md\" />",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/range-calendar.html"
+  },
+  "Select": {
+    "prefix": [
+      "cnx-select",
+      "shadcn-x-select"
+    ],
+    "body": [
+      "<Select.Root>",
+      "  <Select.Trigger class=\"w-[180px]\">",
+      "    <Select.Value placeholder=\"Theme\" />",
+      "  </Select.Trigger>",
+      "  <Select.Content>",
+      "    <Select.Item value=\"light\">Light</Select.Item>",
+      "    <Select.Item value=\"dark\">Dark</Select.Item>",
+      "    <Select.Item value=\"system\">System</Select.Item>",
+      "  </Select.Content>",
+      "</Select.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/select.html"
+  },
+  "Separator": {
+    "prefix": [
+      "shadcn-x-separator",
+      "cnx-separator"
+    ],
+    "body": [
+      "<Separator />",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/separator.html"
+  },
+  "Sheet": {
+    "prefix": [
+      "shadcn-x-sheet",
+      "cnx-sheet"
+    ],
+    "body": [
+      "<Sheet.Root>",
+      "  <Sheet.Trigger>Open</Sheet.Trigger>",
+      "  <Sheet.Content>",
+      "    <Sheet.Header>",
+      "      <Sheet.Title>Are you sure absolutely sure?</Sheet.Title>",
+      "      <Sheet.Description>",
+      "        This action cannot be undone. This will permanently delete your account",
+      "        and remove your data from our servers.",
+      "      </Sheet.Description>",
+      "    </Sheet.Header>",
+      "  </Sheet.Content>",
+      "</Sheet.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/sheet.html"
+  },
+  "Skeleton": {
+    "prefix": [
+      "shadcn-x-skeleton",
+      "cnx-skeleton"
+    ],
+    "body": [
+      "<Skeleton class=\"w-[100px] h-[20px] rounded-full\" />"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/skeleton.html"
+  },
+  "Slider": {
+    "prefix": [
+      "shadcn-x-slider",
+      "cnx-slider"
+    ],
+    "body": [
+      "<Slider value={[33]} max={100} step={1} />"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/slider.html"
+  },
+  "Sonner": {
+    "prefix": [
+      "shadcn-x-sonner",
+      "cnx-sonner"
+    ],
+    "body": [
+      "<Toaster />"
+    ],
+    "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
+  },
+  "Switch": {
+    "prefix": [
+      "shadcn-x-switch",
+      "cnx-switch"
+    ],
+    "body": [
+      "<Switch />",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/switch.html"
+  },
+  "Table": {
+    "prefix": [
+      "shadcn-x-table",
+      "cnx-table"
+    ],
+    "body": [
+      "<Table.Root>",
+      "  <Table.Caption>A list of your recent invoices.</Table.Caption>",
+      "  <Table.Header>",
+      "    <Table.Row>",
+      "      <Table.Head class=\"w-[100px]\">Invoice</Table.Head>",
+      "      <Table.Head>Status</Table.Head>",
+      "      <Table.Head>Method</Table.Head>",
+      "      <Table.Head class=\"text-right\">Amount</Table.Head>",
+      "    </Table.Row>",
+      "  </Table.Header>",
+      "  <Table.Body>",
+      "    <Table.Row>",
+      "      <Table.Cell class=\"font-medium\">INV001</Table.Cell>",
+      "      <Table.Cell>Paid</Table.Cell>",
+      "      <Table.Cell>Credit Card</Table.Cell>",
+      "      <Table.Cell class=\"text-right\">$250.00</Table.Cell>",
+      "    </Table.Row>",
+      "  </Table.Body>",
+      "</Table.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/table.html"
+  },
+  "Tabs": {
+    "prefix": [
+      "shadcn-x-tabs",
+      "cnx-tabs"
+    ],
+    "body": [
+      "<Tabs.Root value=\"account\" class=\"w-[400px]\">",
+      "  <Tabs.List>",
+      "    <Tabs.Trigger value=\"account\">Account</Tabs.Trigger>",
+      "    <Tabs.Trigger value=\"password\">Password</Tabs.Trigger>",
+      "  </Tabs.List>",
+      "  <Tabs.Content value=\"account\">",
+      "    Make changes to your account here.",
+      "  </Tabs.Content>",
+      "  <Tabs.Content value=\"password\">Change your password here.</Tabs.Content>",
+      "</Tabs.Root>"
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/tabs.html"
+  },
+  "Textarea": {
+    "prefix": [
+      "shadcn-x-textarea",
+      "cnx-textarea"
+    ],
+    "body": [
+      "<Textarea />",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/textarea.html"
+  },
+  "Toggle": {
+    "prefix": [
+      "shadcn-x-toggle",
+      "cnx-toggle"
+    ],
+    "body": [
+      "<Toggle>Toggle</Toggle>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/toggle.html"
+  },
+  "Toggle Group": {
+    "prefix": [
+      "shadcn-x-toggle-group",
+      "cnx-toggle-group"
+    ],
+    "body": [
+      "<ToggleGroup.Root type=\"single\">",
       "  <ToggleGroup.Item value=\"a\">A</ToggleGroup.Item>",
       "  <ToggleGroup.Item value=\"b\">B</ToggleGroup.Item>",
       "  <ToggleGroup.Item value=\"c\">C</ToggleGroup.Item>",
-      "</ToggleGroup.Root>", ""],
-      "description": "https://shadcn-svelte.com/docs/components/toggle-group.html"
-    },
-  
-    "Tooltip": {
-      "prefix": ["shadcn-x-tooltip", "cnx-tooltip"],
-      "body": [
-        "<Tooltip.Root>",
-        "  <Tooltip.Trigger>Hover</Tooltip.Trigger>",
-        "  <Tooltip.Content>",
-        "    <p>Add to library</p>",
-        "  </Tooltip.Content>",
-        "</Tooltip.Root>",
-        ""
-      ],
-      "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
-    }
+      "</ToggleGroup.Root>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/toggle-group.html"
+  },
+  "Tooltip": {
+    "prefix": [
+      "shadcn-x-tooltip",
+      "cnx-tooltip"
+    ],
+    "body": [
+      "<Tooltip.Root>",
+      "  <Tooltip.Trigger>Hover</Tooltip.Trigger>",
+      "  <Tooltip.Content>",
+      "    <p>Add to library</p>",
+      "  </Tooltip.Content>",
+      "</Tooltip.Root>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
   }
-  
+}
