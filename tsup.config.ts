@@ -8,5 +8,6 @@ export default defineConfig({
     clean: true,
     platform: 'node',
     sourcemap: false,
-    external: ['vscode']
+    external: ['vscode'],
+    noExternal: ['ofetch'],
 })
