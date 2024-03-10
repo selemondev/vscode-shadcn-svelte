@@ -172,6 +172,17 @@
     ],
     "description": "https://shadcn-svelte.com/docs/components/dropdown-menu.html"
   },
+  "Drawer": {
+    "prefix": [
+      "shadcn-i-drawer",
+      "cni-drawer"
+    ],
+    "body": [
+      "  import * as Drawer from \"$lib/components/ui/drawer\"",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/drawer.html"
+  },
   "Hover Card": {
     "prefix": [
       "shadcn-i-hover-card",
