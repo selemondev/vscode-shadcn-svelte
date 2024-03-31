@@ -10,7 +10,7 @@ type OgComponent = {
   registryDependencies?: string[];
 };
 
-type Component = {
+export type Component = {
   label: string;
   detail?: string;
 };

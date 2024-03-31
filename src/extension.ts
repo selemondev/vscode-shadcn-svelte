@@ -8,7 +8,7 @@ import {
   shadCnDocUrl,
 } from "./utils/registry";
 import { executeCommand } from "./utils/vscode";
-import type { Components } from "./utils/registry";
+import type { Component, Components } from "./utils/registry";
 
 const commands = {
   initCli: "shadcn-svelte.initCli",
@@ -72,7 +72,7 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const selectedComponent = selectedComponents.map((component) => component.label);
+      const selectedComponent = selectedComponents.map((component: Component) => component.label);
 
       const installCmd = await getInstallCmd(selectedComponent);
       executeCommand(installCmd);
