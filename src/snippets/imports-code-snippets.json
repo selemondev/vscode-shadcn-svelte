@@ -178,7 +178,7 @@
       "cni-drawer"
     ],
     "body": [
-      "  import * as Drawer from \"$lib/components/ui/drawer\"",
+      "  import * as Drawer from \"$$lib/components/ui/drawer\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/drawer.html"
