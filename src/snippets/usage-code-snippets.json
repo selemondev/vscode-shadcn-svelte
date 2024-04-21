@@ -743,5 +743,26 @@
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
+  },
+  "Form": {
+    "prefix": [
+      "shadcn-x-form",
+      "cnx-form"
+    ],
+    "body": [
+      "<form method=\"POST\" use:enhance>",
+      "  <Form.Field {form} name=\"field\">",
+      "    <Form.Control let:attrs>",
+      "      <Form.Label>Label</Form.Label>",
+      "      <input {...attrs} bind:value=\"{$formData.field}\" />",
+      "    </Form.Control>",
+      "    <Form.Description>Description</Form.Description>",
+      "    <Form.FieldErrors />",
+      "  </Form.Field>",
+      "  <Form.Button>Submit</Form.Button>",
+      "</form>",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/form.html"
   }
 }

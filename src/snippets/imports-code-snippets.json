@@ -412,5 +412,16 @@
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
+  },
+  "Form": {
+    "prefix": [
+      "shadcn-i-form",
+      "cni-form"
+    ],
+    "body": [
+      "import * as Form from \"$$lib/components/ui/form\"",
+      ""
+    ],
+    "description": "https://shadcn-svelte.com/docs/components/form.html"
   }
 }
