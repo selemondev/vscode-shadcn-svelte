@@ -4,9 +4,9 @@ import {
   getInstallCmd,
   getComponentDocLink,
   getRegistry,
-  shadCnDocUrl,
 } from "./utils/registry";
 import { executeCommand } from "./utils/vscode";
+import { getSvelteVersion } from "./utils/getSvelteVersion";
 import type { Component, Components } from "./utils/registry";
 
 const commands = {
@@ -32,16 +32,15 @@ export async function activate(context: vscode.ExtensionContext) {
       executeCommand(intCmd);
     }),
     vscode.commands.registerCommand(commands.addNewComponent, async () => {
-      if (!registryData) {
-        const newRegistryData = await getRegistry();
+      registryData = [];
+      const newRegistryData = await getRegistry();
 
-        if (!newRegistryData) {
-          vscode.window.showErrorMessage("Cannot get the component list");
-          return;
-        }
-
-        registryData = newRegistryData;
+      if (!newRegistryData) {
+        vscode.window.showErrorMessage("Cannot get the component list");
+        return;
       }
+
+      registryData = newRegistryData;
 
       const selectedComponent = await vscode.window.showQuickPick(registryData, {
         matchOnDescription: true,
@@ -56,16 +55,15 @@ export async function activate(context: vscode.ExtensionContext) {
     }),
 
     vscode.commands.registerCommand(commands.addMultipleComponents, async () => {
-      if (!registryData) {
-        const newRegistryData = await getRegistry();
+      registryData = [];
+      const newRegistryData = await getRegistry();
 
-        if (!newRegistryData) {
-          vscode.window.showErrorMessage("Cannot get the component list");
-          return;
-        }
-
-        registryData = newRegistryData;
+      if (!newRegistryData) {
+        vscode.window.showErrorMessage("Cannot get the component list");
+        return;
       }
+
+      registryData = newRegistryData;
 
       const selectedComponents = await vscode.window.showQuickPick(registryData, {
         matchOnDescription: true,
@@ -82,16 +80,15 @@ export async function activate(context: vscode.ExtensionContext) {
       executeCommand(installCmd);
     }),
     vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
-      if (!registryData) {
-        const newRegistryData = await getRegistry();
+      registryData = [];
+      const newRegistryData = await getRegistry();
 
-        if (!newRegistryData) {
-          vscode.window.showErrorMessage("Cannot get the component list");
-          return;
-        }
-
-        registryData = newRegistryData;
+      if (!newRegistryData) {
+        vscode.window.showErrorMessage("Cannot get the component list");
+        return;
       }
+
+      registryData = newRegistryData;
 
       const selectedComponent = await vscode.window.showQuickPick(registryData, {
         matchOnDescription: true,
@@ -101,10 +98,11 @@ export async function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      const componentDocLink = getComponentDocLink(selectedComponent.label);
+      const componentDocLink = await getComponentDocLink(selectedComponent.label);
       vscode.env.openExternal(vscode.Uri.parse(componentDocLink));
     }),
     vscode.commands.registerCommand(commands.reloadComponentList, async () => {
+      registryData = [];
       const newRegistryData = await getRegistry();
 
       if (!newRegistryData) {
@@ -116,6 +114,8 @@ export async function activate(context: vscode.ExtensionContext) {
       vscode.window.showInformationMessage("shadcn/svelte: Reloaded components");
     }),
     vscode.commands.registerCommand(commands.gotoDoc, async () => {
+      const svelteVersion = await getSvelteVersion();
+      const shadCnDocUrl = svelteVersion >= 5 ? "https://next.shadcn-svelte.com/docs" : "https://shadcn-svelte.com/docs";
       vscode.env.openExternal(vscode.Uri.parse(shadCnDocUrl));
     }),
   ];
