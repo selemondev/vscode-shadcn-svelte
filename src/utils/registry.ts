@@ -1,6 +1,7 @@
 import { ofetch } from "ofetch";
 import { to } from "./index";
 import { detectPackageManager } from "./vscode";
+import { getSvelteVersion } from "./getSvelteVersion";
 
 type OgComponent = {
   type: "components:ui";
@@ -48,30 +49,32 @@ export const getRegistry = async (): Promise<Components | null> => {
 export const getInstallCmd = async (components: string[]) => {
   const packageManager = await detectPackageManager();
   const componentStr = components.join(" ");
+  const svelteVersion = await getSvelteVersion();
 
   if (packageManager === "bun") {
-    return `bunx shadcn-svelte add ${componentStr}`;
+    return svelteVersion >= 5 ? `bunx shadcn-svelte@next add ${componentStr}` : `bunx shadcn-svelte add ${componentStr}`;
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx shadcn-svelte@latest add ${componentStr}`;
+    return svelteVersion >= 5 ? `pnpm dlx shadcn-svelte@next add ${componentStr}` : `pnpm dlx shadcn-svelte@latest add ${componentStr}`;
   }
 
-  return `npx shadcn-svelte@latest add ${componentStr}`;
+  return svelteVersion >= 5 ? `npx shadcn-svelte@next add ${componentStr}` : `npx shadcn-svelte@latest add ${componentStr}`;
 };
 
 export const getInitCmd = async () => {
   const packageManager = await detectPackageManager();
+  const svelteVersion = await getSvelteVersion();
 
   if (packageManager === "bun") {
-    return "bunx shadcn-svelte init";
+    return svelteVersion >= 5 ? 'bunx shadcn-svelte@next init' : "bunx shadcn-svelte init";
   }
 
   if (packageManager === "pnpm") {
-    return "pnpm dlx shadcn-svelte@latest init";
+    return svelteVersion >= 5 ? 'pnpm dlx shadcn-svelte@next init' : "pnpm dlx shadcn-svelte@latest init";
   }
 
-  return "npx shadcn-svelte@latest init";
+  return svelteVersion >= 5 ? 'npx shadcn-svelte@next init' : "npx shadcn-svelte@latest init";
 };
 
 export const getComponentDocLink = (component: string) => {
