@@ -205,6 +205,17 @@
     ],
     "description": "https://shadcn-svelte.com/docs/components/input.html"
   },
+  "Input OTP": {
+    "prefix": [
+      "shadcn-i-input-otp",
+      "cni-input-otp"
+    ],
+    "body": [
+      "import * as InputOTP from \"$$lib/components/ui/input-otp/index.js\"",
+      ""
+    ],
+    "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
+  },
   "Label": {
     "prefix": [
       "shadcn-i-label",
@@ -303,6 +314,17 @@
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/sheet.html"
+  },
+  "Sidebar": {
+    "prefix": [
+      "shadcn-i-sidebar",
+      "cni-sidebar"
+    ],
+    "body": [
+      "import * as Sidebar from \"$$lib/components/ui/sidebar/index.js\"",
+      ""
+    ],
+    "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
   },
   "Skeleton": {
     "prefix": [

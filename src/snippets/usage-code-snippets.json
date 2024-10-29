@@ -463,6 +463,30 @@
     ],
     "description": "https://shadcn-svelte.com/docs/components/input.html"
   },
+  "Input OTP": {
+    "prefix": [
+      "shadcn-x-input-otp",
+      "cnx-input-otp"
+    ],
+    "body": [
+      "<InputOTP.Root maxlength={6}>",
+      " {#snippet children({ cells })}",
+      "  <InputOTP.Group>",
+      "   {#each cells.slice(0, 3) as cell}",
+      "    <InputOTP.Slot {cell} />",
+      "   {/each}",
+      "  </InputOTP.Group>",
+      "  <InputOTP.Separator />",
+      "  <InputOTP.Group>",
+      "   {#each cells.slice(0, 3) as cell}",
+      "    <InputOTP.Slot {cell} />",
+      "   {/each}",
+      "  </InputOTP.Group>",
+      " {/snippet}",
+      "</InputOTP.Root>"
+    ],
+    "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
+  },
   "Label": {
     "prefix": [
       "shadcn-x-label",
@@ -602,6 +626,23 @@
       "</Sheet.Root>"
     ],
     "description": "https://shadcn-svelte.com/docs/components/sheet.html"
+  },
+  "Sidebar": {
+    "prefix": [
+      "shadcn-x-sidebar",
+      "cnx-sidebar"
+    ],
+    "body": [
+      "<Sidebar.Root>",
+      " <Sidebar.Header />",
+      " <Sidebar.Content>",
+      "  <Sidebar.Group />",
+      "  <Sidebar.Group />",
+      " </Sidebar.Content>",
+      " <Sidebar.Footer />",
+      "</Sidebar.Root>"
+    ],
+    "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
   },
   "Skeleton": {
     "prefix": [
