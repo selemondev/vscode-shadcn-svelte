@@ -1,5 +1,4 @@
 import * as vscode from "vscode";
-
 import {
   getInitCmd,
   getInstallCmd,
@@ -19,7 +18,12 @@ const commands = {
   gotoDoc: "shadcn-svelte.gotoDoc",
 } as const;
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
+  if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {
+    vscode.window.showErrorMessage("No workspace folder open.");
+    return;
+  }
+
   let registryData: Components;
 
   const disposables: vscode.Disposable[] = [
@@ -32,7 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
         const newRegistryData = await getRegistry();
 
         if (!newRegistryData) {
-          vscode.window.showErrorMessage("Can not get the component list");
+          vscode.window.showErrorMessage("Cannot get the component list");
           return;
         }
 
@@ -56,7 +60,7 @@ export function activate(context: vscode.ExtensionContext) {
         const newRegistryData = await getRegistry();
 
         if (!newRegistryData) {
-          vscode.window.showErrorMessage("Can not get the component list");
+          vscode.window.showErrorMessage("Cannot get the component list");
           return;
         }
 
@@ -82,7 +86,7 @@ export function activate(context: vscode.ExtensionContext) {
         const newRegistryData = await getRegistry();
 
         if (!newRegistryData) {
-          vscode.window.showErrorMessage("Can not get the component list");
+          vscode.window.showErrorMessage("Cannot get the component list");
           return;
         }
 
@@ -104,7 +108,7 @@ export function activate(context: vscode.ExtensionContext) {
       const newRegistryData = await getRegistry();
 
       if (!newRegistryData) {
-        vscode.window.showErrorMessage("Can not get the component list");
+        vscode.window.showErrorMessage("Cannot get the component list");
         return;
       }
 
@@ -120,4 +124,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
