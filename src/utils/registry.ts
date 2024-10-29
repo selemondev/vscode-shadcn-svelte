@@ -16,12 +16,11 @@ export type Component = {
   detail?: string;
 };
 
-export const shadCnDocUrl = "https://shadcn-svelte.com/docs";
-
 export type Components = Component[];
 
 export const getRegistry = async (): Promise<Components | null> => {
-  const reqUrl = "https://shadcn-svelte.com/registry/index.json";
+  const svelteVersion = await getSvelteVersion();
+  const reqUrl = svelteVersion >= 5 ? "https://next.shadcn-svelte.com/registry/index.json" : "https://shadcn-svelte.com/registry/index.json";
   const [res, err] = await to(ofetch(reqUrl));
 
   if (err || !res) {
@@ -77,6 +76,8 @@ export const getInitCmd = async () => {
   return svelteVersion >= 5 ? 'npx shadcn-svelte@next init' : "npx shadcn-svelte@latest init";
 };
 
-export const getComponentDocLink = (component: string) => {
+export const getComponentDocLink = async (component: string) => {
+  const svelteVersion = await getSvelteVersion();
+  const shadCnDocUrl = svelteVersion >= 5 ? "https://next.shadcn-svelte.com/docs" : "https://shadcn-svelte.com/docs";
   return `${shadCnDocUrl}/components/${component}`;
 };
