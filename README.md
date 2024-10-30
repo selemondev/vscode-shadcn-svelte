@@ -45,7 +45,9 @@ Easily import and use shadcn-svelte components with ease using snippets within V
 | Snippet           | Description                            |
 | ----------------- | -------------------------------------- |
 | `cn-help`         | How to use shadcn/svelte snippets      |
+| `cn-x-help`       | How to use shadcn/svelte@next snippets |
 | `cni-[component]` | Adds imports for the component         |
+| `cni-x-[component]`| Adds imports for the shadcn/svelte@next component |
 | `cnx-[component]` | Adds the markup for the svelte component|
 
 ### How to use?
