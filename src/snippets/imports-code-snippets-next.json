@@ -1,0 +1,449 @@
+{
+    "Accordion": {
+      "prefix": [
+        "shadcn-ix-accordion",
+        "cni-x-accordion"
+      ],
+      "body": [
+        "import * as Accordion from \"$$lib/components/ui/accordion/index.js\""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/accordion.html"
+    },
+    "Alert": {
+      "prefix": [
+        "shadcn-ix-alert",
+        "cni-x-alert"
+      ],
+      "body": [
+        "import * as Alert from \"$$lib/components/ui/alert/index.js\""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/alert.html"
+    },
+    "Alert Dialog": {
+      "prefix": [
+        "shadcn-ix-alert-dialog",
+        "cni-x-alert-dialog"
+      ],
+      "body": [
+        "import * as AlertDialog from \"$$lib/components/ui/alert-dialog/index.js\""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/alert-dialog.html"
+    },
+    "Aspect Ratio": {
+      "prefix": [
+        "shadcn-ix-aspect-ratio",
+        "cni-x-aspect-ratio"
+      ],
+      "body": [
+        "import { AspectRatio } from \"$$lib/components/ui/aspect-ratio/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/aspect-ratio.html"
+    },
+    "Avatar": {
+      "prefix": [
+        "shadcn-ix-avatar",
+        "cni-x-avatar"
+      ],
+      "body": [
+        "  import * as Avatar from \"$$lib/components/ui/avatar/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/avatar.html"
+    },
+    "Badge": {
+      "prefix": [
+        "shadcn-ix-badge",
+        "cni-x-badge"
+      ],
+      "body": [
+        "import { Badge } from \"$$lib/components/ui/badge/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/badge.html"
+    },
+    "Button": {
+      "prefix": [
+        "shadcn-ix-button",
+        "cni-x-button"
+      ],
+      "body": [
+        "import { Button } from \"$$lib/components/ui/button/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/button.html"
+    },
+    "Calendar": {
+      "prefix": [
+        "shadcn-ix-calendar",
+        "cni-x-calendar"
+      ],
+      "body": [
+        "import { Calendar } from \"$$lib/components/ui/calendar/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/calendar.html"
+    },
+    "Card": {
+      "prefix": [
+        "shadcn-ix-card",
+        "cni-x-card"
+      ],
+      "body": [
+        "import * as Card from \"$$lib/components/ui/card/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/card.html"
+    },
+    "Carousel": {
+      "prefix": [
+        "shadcn-ix-carousel",
+        "cni-x-carousel"
+      ],
+      "body": [
+        "import * as Card from \"$$lib/components/ui/card/index.js\"",
+        "import * as Carousel from \"$$lib/components/ui/carousel/index.js\""
+      ],
+      "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
+    },
+    "Checkbox": {
+      "prefix": [
+        "shadcn-ix-checkbox",
+        "cni-x-checkbox"
+      ],
+      "body": [
+        "import { Checkbox } from \"$$lib/components/ui/checkbox/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/checkbox.html"
+    },
+    "Collapsible": {
+      "prefix": [
+        "shadcn-ix-collapsible",
+        "cni-x-collapsible"
+      ],
+      "body": [
+        "import * as Collapsible from \"$$lib/components/ui/collapsible/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/collapsible.html"
+    },
+    "Command": {
+      "prefix": [
+        "shadcn-ix-command",
+        "cni-x-command"
+      ],
+      "body": [
+        "import * as Command from \"$$lib/components/ui/command/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/command.html"
+    },
+    "Context Menu": {
+      "prefix": [
+        "shadcn-ix-context-menu",
+        "cni-x-context-menu"
+      ],
+      "body": [
+        "import * as ContextMenu from \"$$lib/components/ui/context-menu/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/context-menu.html"
+    },
+    "Dialog": {
+      "prefix": [
+        "shadcn-ix-dialog",
+        "cni-x-dialog"
+      ],
+      "body": [
+        "import * as Dialog from \"$$lib/components/ui/dialog/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/dialog.html"
+    },
+    "Dropdown Menu": {
+      "prefix": [
+        "shadcn-ix-dropdown-menu",
+        "cni-x-dropdown-menu"
+      ],
+      "body": [
+        "import * as DropdownMenu from \"$$lib/components/ui/dropdown-menu/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/dropdown-menu.html"
+    },
+    "Drawer": {
+      "prefix": [
+        "shadcn-ix-drawer",
+        "cni-x-drawer"
+      ],
+      "body": [
+        "  import * as Drawer from \"$$lib/components/ui/drawer/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/drawer.html"
+    },
+    "Hover Card": {
+      "prefix": [
+        "shadcn-ix-hover-card",
+        "cni-x-hover-card"
+      ],
+      "body": [
+        "import * as HoverCard from \"$$lib/components/ui/hover-card/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/hover-card.html"
+    },
+    "Input": {
+      "prefix": [
+        "shadcn-ix-input",
+        "cni-x-input"
+      ],
+      "body": [
+        "import { Input } from \"$$lib/components/ui/input/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/input.html"
+    },
+    "Input OTP": {
+      "prefix": [
+        "shadcn-ix-input-otp",
+        "cni-x-input-otp"
+      ],
+      "body": [
+        "import * as InputOTP from \"$$lib/components/ui/input-otp/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
+    },
+    "Label": {
+      "prefix": [
+        "shadcn-ix-label",
+        "cni-x-label"
+      ],
+      "body": [
+        "import { Label } from \"$$lib/components/ui/label/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/label.html"
+    },
+    "Menubar": {
+      "prefix": [
+        "shadcn-ix-menubar",
+        "cni-x-menubar"
+      ],
+      "body": [
+        "import * as Menubar from \"$$lib/components/ui/menubar/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/menu-bar.html"
+    },
+    "Popover": {
+      "prefix": [
+        "shadcn-ix-popover",
+        "cni-x-popover"
+      ],
+      "body": [
+        "import * as Popover from \"$$lib/components/ui/popover/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/popover.html"
+    },
+    "Progress": {
+      "prefix": [
+        "shadcn-ix-progress",
+        "cni-x-progress"
+      ],
+      "body": [
+        "import { Progress } from \"$$lib/components/ui/progress/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/progress.html"
+    },
+    "Radio Group": {
+      "prefix": [
+        "shadcn-ix-radio-group",
+        "cni-x-radio-group"
+      ],
+      "body": [
+        "import { Label } from \"$$lib/components/ui/label/index.js\"",
+        "import * as RadioGroup from \"$$lib/components/ui/radio-group/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/radio-group.html"
+    },
+    "Range Calendar": {
+      "prefix": [
+        "shadcn-ix-range-calendar",
+        "cni-x-range-calendar"
+      ],
+      "body": [
+        "import { RangeCalendar } from \"$$lib/components/ui/range-calendar/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/range-calendar.html"
+    },
+    "Select": {
+      "prefix": [
+        "cni-x-select"
+      ],
+      "body": [
+        "import * as Select from \"$$lib/components/ui/select/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/select.html"
+    },
+    "Separator": {
+      "prefix": [
+        "shadcn-ix-separator",
+        "cni-x-separator"
+      ],
+      "body": [
+        "import { Separator } from \"$$lib/components/ui/separator/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/separator.html"
+    },
+    "Sheet": {
+      "prefix": [
+        "shadcn-ix-sheet",
+        "cni-x-sheet"
+      ],
+      "body": [
+        "import * as Sheet from \"$$lib/components/ui/sheet/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/sheet.html"
+    },
+    "Sidebar": {
+      "prefix": [
+        "shadcn-ix-sidebar",
+        "cni-x-sidebar"
+      ],
+      "body": [
+        "import * as Sidebar from \"$$lib/components/ui/sidebar/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
+    },
+    "Skeleton": {
+      "prefix": [
+        "shadcn-ix-skeleton",
+        "cni-x-skeleton"
+      ],
+      "body": [
+        "import { Skeleton } from \"$$lib/components/ui/skeleton/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/skeleton.html"
+    },
+    "Slider": {
+      "prefix": [
+        "shadcn-ix-slider",
+        "cni-x-slider"
+      ],
+      "body": [
+        "import { Slider } from \"$$lib/components/ui/slider/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/slider.html"
+    },
+    "Sonner": {
+      "prefix": [
+        "shadcn-ix-sonner",
+        "cni-x-sonner"
+      ],
+      "body": [
+      "import { toast } from \"svelte-sonner\""
+      ],
+      "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
+    },
+    "Switch": {
+      "prefix": [
+        "shadcn-ix-switch",
+        "cni-x-switch"
+      ],
+      "body": [
+        "import { Switch } from \"$$lib/components/ui/switch/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/switch.html"
+    },
+    "Table": {
+      "prefix": [
+        "shadcn-ix-table",
+        "cni-x-table"
+      ],
+      "body": [
+        "import * as Table from \"$$lib/components/ui/table/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/table.html"
+    },
+    "Tabs": {
+      "prefix": [
+        "shadcn-ix-tabs",
+        "cni-x-tabs"
+      ],
+      "body": [
+        "import * as Tabs from \"$$lib/components/ui/tabs/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/tabs.html"
+    },
+    "Textarea": {
+      "prefix": [
+        "shadcn-ix-textarea",
+        "cni-x-textarea"
+      ],
+      "body": [
+        "import { Textarea } from \"$$lib/components/ui/textarea/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/textarea.html"
+    },
+    "Toggle": {
+      "prefix": [
+        "shadcn-ix-toggle",
+        "cni-x-toggle"
+      ],
+      "body": [
+        "import { Toggle } from \"$$lib/components/ui/toggle/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/toggle.html"
+    },
+    "Toggle Group": {
+      "prefix": [
+        "shadcn-ix-toggle",
+        "cni-x-toggle"
+      ],
+      "body": [
+        "import * as ToggleGroup from \"$$lib/components/ui/toggle-group/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/toggle-group.html"
+    },
+    "Tooltip": {
+      "prefix": [
+        "shadcn-ix-tooltip",
+        "cni-x-tooltip"
+      ],
+      "body": [
+        "import * as Tooltip from \"$$lib/components/ui/tooltip/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/tooltip.html"
+    },
+    "Form": {
+      "prefix": [
+        "shadcn-ix-form",
+        "cni-x-form"
+      ],
+      "body": [
+        "import * as Form from \"$$lib/components/ui/form/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/form.html"
+    }
+  }

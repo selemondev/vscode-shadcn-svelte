@@ -354,7 +354,7 @@
       "cni-sonner"
     ],
     "body": [
-      "import { Toaster } from \"$$lib/components/ui/sonner\""
+     "import { toast } from \"svelte-sonner\""
     ],
     "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
   },
