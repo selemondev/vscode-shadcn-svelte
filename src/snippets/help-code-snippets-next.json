@@ -1,0 +1,26 @@
+{
+    "shadcn/svelte help cn": {
+      "prefix": ["cn-help"],
+      "body": [
+        "// cni-nx-[component] e.g. cni-nx-button",
+        "import { Button } from \"$$lib/components/ui/button/index.js\";",
+        "",
+        "// cnx-x-[component] e.g. cnx-x-button",
+        "<Button> Submit </Button>",
+        ""
+      ]
+    },
+  
+    "shadcn/svelte help shadcn": {
+      "prefix": ["shadcn-help"],
+      "body": [
+        "// shadcn-i-[component] e.g. shadcn-i-button",
+        "import { Button } from \"$$lib/components/ui/button/index.js\";",
+        "",
+        "// shadcn-nx-[component] e.g. shadcn-nx-button",
+        "<Button> Submit </Button>",
+        ""
+      ]
+    }
+  }
+  

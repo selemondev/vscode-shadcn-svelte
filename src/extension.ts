@@ -18,6 +18,9 @@ const commands = {
   gotoDoc: "shadcn-svelte.gotoDoc",
 } as const;
 
+
+// Update the snippets to support Svelte version 5
+
 export async function activate(context: vscode.ExtensionContext) {
   if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {
     vscode.window.showErrorMessage("No workspace folder open.");
