@@ -1,23 +1,23 @@
 {
     "shadcn/svelte help cn": {
-      "prefix": ["cn-help"],
+      "prefix": ["cn-x-help"],
       "body": [
-        "// cni-nx-[component] e.g. cni-nx-button",
+        "// cni-x-[component] e.g. cni-x-button",
         "import { Button } from \"$$lib/components/ui/button/index.js\";",
         "",
-        "// cnx-x-[component] e.g. cnx-x-button",
+        "// cnx-[component] e.g. cnx-button",
         "<Button> Submit </Button>",
         ""
       ]
     },
   
     "shadcn/svelte help shadcn": {
-      "prefix": ["shadcn-help"],
+      "prefix": ["shadcn-x-help"],
       "body": [
-        "// shadcn-i-[component] e.g. shadcn-i-button",
+        "// shadcn-ix-[component] e.g. shadcn-ix-button",
         "import { Button } from \"$$lib/components/ui/button/index.js\";",
         "",
-        "// shadcn-nx-[component] e.g. shadcn-nx-button",
+        "// shadcn-x-[component] e.g. shadcn-x-button",
         "<Button> Submit </Button>",
         ""
       ]
