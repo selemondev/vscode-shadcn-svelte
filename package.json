@@ -137,7 +137,7 @@
     "generate:release": "npx changelogen@latest --release",
     "build": "tsup",
     "dev": "pnpm build -- --watch",
-    "deploy": "vsce publish --no-dependencies",
+    "deploy:extension": "vsce publish --no-dependencies",
     "lint": "eslint src --ext ts"
   },
   "devDependencies": {
