@@ -7,7 +7,7 @@
 
 This VSCode extension enables you to install [shadcn/svelte](https://shadcn-svelte.com) components directly from your IDE ✨.
 
-Please use vscode-shadcn-svelte version 0.0.1 as it is the only version that is currently **stable**. You can install the **0.1.1** version by running the following command in the terminal:
+**Please use vscode-shadcn-svelte version 0.0.1 as it is the only version that is currently stable. You can install the 0.1.1 version by running the following command in the terminal**:
 
 ```
 code --install-extension Selemondev.vscode-shadcn-svelte@0.1.1
