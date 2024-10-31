@@ -3,6 +3,7 @@ import { defineConfig } from "tsup";
 export default defineConfig({
     entry: ['./src/extension.ts'],
     outDir: "dist",
+    format: ['cjs'],
     dts: false,
     splitting: false,
     clean: true,
@@ -10,4 +11,4 @@ export default defineConfig({
     sourcemap: false,
     external: ['vscode'],
     noExternal: ['ofetch'],
-})
+});
