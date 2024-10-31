@@ -13,7 +13,7 @@
     "email": "selemonsrdev@gmail.com"
   },
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.54.0"
   },
   "categories": [
     "Other",
@@ -58,11 +58,27 @@
       },
       {
         "language": "javascript",
+        "path": "./src/snippets/imports-code-snippets-next.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/imports-code-snippets-next.json"
+      },
+      {
+        "language": "javascript",
         "path": "./src/snippets/help-code-snippets.json"
       },
       {
         "language": "typescript",
         "path": "./src/snippets/help-code-snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/help-code-snippets-next.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/help-code-snippets-next.json"
       },
       {
         "language": "html",
@@ -71,6 +87,14 @@
       {
         "language": "svelte",
         "path": "./src/snippets/help-code-snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./src/snippets/help-code-snippets-next.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./src/snippets/help-code-snippets-next.json"
       },
       {
         "language": "html",
