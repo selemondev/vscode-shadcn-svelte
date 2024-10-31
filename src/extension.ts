@@ -19,14 +19,19 @@ const commands = {
 } as const;
 
 export async function activate(context: vscode.ExtensionContext) {
+  if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {
+    vscode.window.showErrorMessage("No workspace folder open.");
+    return;
+  }
+
   let registryData: Components;
 
   const disposables: vscode.Disposable[] = [
-    vscode.commands.registerCommand("shadcn-svelte.initCli", async () => {
+    vscode.commands.registerCommand(commands.initCli, async () => {
       const intCmd = await getInitCmd();
       executeCommand(intCmd);
     }),
-    vscode.commands.registerCommand("shadcn-svelte.addNewComponent", async () => {
+    vscode.commands.registerCommand(commands.addNewComponent, async () => {
       registryData = [];
       const newRegistryData = await getRegistry();
 
@@ -49,7 +54,7 @@ export async function activate(context: vscode.ExtensionContext) {
       executeCommand(installCmd);
     }),
 
-    vscode.commands.registerCommand("shadcn-svelte.addMultipleComponents", async () => {
+    vscode.commands.registerCommand(commands.addMultipleComponents, async () => {
       registryData = [];
       const newRegistryData = await getRegistry();
 
@@ -74,7 +79,7 @@ export async function activate(context: vscode.ExtensionContext) {
       const installCmd = await getInstallCmd(selectedComponent);
       executeCommand(installCmd);
     }),
-    vscode.commands.registerCommand("shadcn-svelte.gotoComponentDoc", async () => {
+    vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
       registryData = [];
       const newRegistryData = await getRegistry();
 
@@ -96,7 +101,7 @@ export async function activate(context: vscode.ExtensionContext) {
       const componentDocLink = await getComponentDocLink(selectedComponent.label);
       vscode.env.openExternal(vscode.Uri.parse(componentDocLink));
     }),
-    vscode.commands.registerCommand("shadcn-svelte.reloadComponentList", async () => {
+    vscode.commands.registerCommand(commands.reloadComponentList, async () => {
       registryData = [];
       const newRegistryData = await getRegistry();
 
@@ -108,7 +113,7 @@ export async function activate(context: vscode.ExtensionContext) {
       registryData = newRegistryData;
       vscode.window.showInformationMessage("shadcn/svelte: Reloaded components");
     }),
-    vscode.commands.registerCommand("shadcn-svelte.gotoDoc", async () => {
+    vscode.commands.registerCommand(commands.gotoDoc, async () => {
       const svelteVersion = await getSvelteVersion();
       const shadCnDocUrl = svelteVersion >= 5 ? "https://next.shadcn-svelte.com/docs" : "https://shadcn-svelte.com/docs";
       vscode.env.openExternal(vscode.Uri.parse(shadCnDocUrl));
