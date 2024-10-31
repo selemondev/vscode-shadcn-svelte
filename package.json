@@ -1,6 +1,6 @@
 {
   "name": "vscode-shadcn-svelte",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "displayName": "shadcn/svelte",
   "description": "Integrate components and snippets from Shadcn/Svelte directly into your IDE ✨.",
   "publisher": "Selemondev",
@@ -13,7 +13,7 @@
     "email": "selemonsrdev@gmail.com"
   },
   "engines": {
-    "vscode": "^1.54.0"
+    "vscode": "^1.95.0"
   },
   "categories": [
     "Other",
@@ -141,8 +141,8 @@
     "lint": "eslint src --ext ts"
   },
   "devDependencies": {
-    "@types/node": "18.x",
-    "@types/vscode": "^1.54.0",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.95.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
     "eslint": "^8.54.0",
