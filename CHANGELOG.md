@@ -4,6 +4,18 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.1.14
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.1.13...v0.1.14)
+
+### 🚀 Enhancements
+
+- Add snipprts ([342d7d8](https://github.com/selemondev/vscode-shadcn-svelte/commit/342d7d8))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.1.13
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.1.12...v0.1.13)
