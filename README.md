@@ -59,10 +59,13 @@ For `Alert` component, type `cni-alert` to add imports in your svelte file, and 
 > Similarly, for any other component, use `cni-[component]` to add imports and `cnx-[component]` to use.
 
 ```tsx
-// cni-alert
+// cni-alert - Svelte v4
 import * as Alert from "$lib/components/ui/alert"
 
-// cnx-alert
+// cni-x-alert - Svelte v5
+import * as Alert from "$lib/components/ui/alert/index.js"
+
+// cnx-alert 
 <Alert.Root>
   <Alert.Title>Heads up!</Alert.Title>
   <Alert.Description>
