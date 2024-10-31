@@ -134,7 +134,7 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm build",
-    "generate:release": "npx changelogen@latest --release",
+    "generate:release": "npx changelogen@latest --major --release",
     "check-types": "tsc --noEmit",
     "build": "pnpm run lint && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
