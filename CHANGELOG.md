@@ -4,6 +4,29 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.1.2
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.1.1...v0.1.2)
+
+### 🚀 Enhancements
+
+- Add support for Svelte version 5 ([5afcbb6](https://github.com/selemondev/vscode-shadcn-svelte/commit/5afcbb6))
+- Add Svelte 5 registry API endpoint ([0985c32](https://github.com/selemondev/vscode-shadcn-svelte/commit/0985c32))
+- Add sidebar and input-otp snippets ([dbca8ac](https://github.com/selemondev/vscode-shadcn-svelte/commit/dbca8ac))
+- Add Shadcn@next import and help code snippets ([0baecfd](https://github.com/selemondev/vscode-shadcn-svelte/commit/0baecfd))
+
+### 📖 Documentation
+
+- Document shadcn-svelte@next snippets ([8ac9206](https://github.com/selemondev/vscode-shadcn-svelte/commit/8ac9206))
+
+### 🏡 Chore
+
+- Add deploy script ([0470328](https://github.com/selemondev/vscode-shadcn-svelte/commit/0470328))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.0.7...v0.0.8)
