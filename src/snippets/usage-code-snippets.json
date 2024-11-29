@@ -1,6 +1,9 @@
 {
   "Accordion": {
-    "prefix": ["shadcn-x-accordion", "cnx-accordion"],
+    "prefix": [
+      "shadcn-x-accordion",
+      "cnx-accordion"
+    ],
     "body": [
       "<Accordion.Root class=\"w-full sm:max-w-[70%]\">",
       "  <Accordion.Item value=\"item-1\">",
@@ -27,7 +30,10 @@
     "description": "https://shadcn-svelte.com/docs/components/accordion.html"
   },
   "Alert": {
-    "prefix": ["shadcn-x-alert", "cnx-alert"],
+    "prefix": [
+      "shadcn-x-alert",
+      "cnx-alert"
+    ],
     "body": [
       "<Alert.Root>",
       "  <Alert.Title>Heads up!</Alert.Title>",
@@ -39,7 +45,10 @@
     "description": "https://shadcn-svelte.com/docs/components/alert.html"
   },
   "Alert Destructive": {
-    "prefix": ["shadcn-x-alert-destructive", "cnx-alert-destructive"],
+    "prefix": [
+      "shadcn-x-alert-destructive",
+      "cnx-alert-destructive"
+    ],
     "body": [
       "<Alert.Root variant=\"destructive\">",
       "  <AlertCircle class=\"h-4 w-4\" />",
@@ -52,7 +61,10 @@
     "description": "https://shadcn-svelte.com/docs/components/alert.html"
   },
   "Alert Dialog": {
-    "prefix": ["shadcn-x-alert-dialog", "cnx-alert-dialog"],
+    "prefix": [
+      "shadcn-x-alert-dialog",
+      "cnx-alert-dialog"
+    ],
     "body": [
       "<AlertDialog.Root>",
       "  <AlertDialog.Trigger>Open</AlertDialog.Trigger>",
@@ -74,7 +86,10 @@
     "description": "https://shadcn-svelte.com/docs/components/alert-dialog.html"
   },
   "Aspect Ratio": {
-    "prefix": ["shadcn-x-aspect-ratio", "cnx-aspect-ratio"],
+    "prefix": [
+      "shadcn-x-aspect-ratio",
+      "cnx-aspect-ratio"
+    ],
     "body": [
       "<div class=\"w-[450px]\">",
       "    <AspectRatio :ratio=\"16 / 9\">",
@@ -85,7 +100,10 @@
     "description": "https://shadcn-svelte.com/docs/components/aspect-ratio.html"
   },
   "Avatar": {
-    "prefix": ["shadcn-x-avatar", "cnx-avatar"],
+    "prefix": [
+      "shadcn-x-avatar",
+      "cnx-avatar"
+    ],
     "body": [
       "<Avatar.Root>",
       "  <Avatar.Image src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />",
@@ -95,57 +113,116 @@
     "description": "https://shadcn-svelte.com/docs/components/avatar.html"
   },
   "Badge": {
-    "prefix": ["shadcn-x-badge", "cnx-badge"],
-    "body": ["<Badge>Badge</Badge>"],
+    "prefix": [
+      "shadcn-x-badge",
+      "cnx-badge"
+    ],
+    "body": [
+      "<Badge>Badge</Badge>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/badge.html"
   },
   "Badge Destructive": {
-    "prefix": ["shadcn-x-badge-destructive", "cnx-badge-destructive"],
-    "body": ["<Badge variant=\"destructive\">", "    Destructive", "</Badge>"],
+    "prefix": [
+      "shadcn-x-badge-destructive",
+      "cnx-badge-destructive"
+    ],
+    "body": [
+      "<Badge variant=\"destructive\">",
+      "    Destructive",
+      "</Badge>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/badge.html"
   },
   "Badge Outline": {
-    "prefix": ["shadcn-x-badge-outline", "cnx-badge-outline"],
-    "body": ["<Badge variant=\"outline\">", "    Outline", "</Badge>"],
+    "prefix": [
+      "shadcn-x-badge-outline",
+      "cnx-badge-outline"
+    ],
+    "body": [
+      "<Badge variant=\"outline\">",
+      "    Outline",
+      "</Badge>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/badge.html"
   },
   "Badge Secondary": {
-    "prefix": ["shadcn-x-badge-secondary", "cnx-badge-secondary"],
-    "body": ["<Badge variant=\"secondary\">", "    Secondary", "</Badge>"],
+    "prefix": [
+      "shadcn-x-badge-secondary",
+      "cnx-badge-secondary"
+    ],
+    "body": [
+      "<Badge variant=\"secondary\">",
+      "    Secondary",
+      "</Badge>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/badge.html"
   },
   "Button": {
-    "prefix": ["shadcn-x-button", "cnx-button"],
-    "body": ["<Button>Button</Button>"],
+    "prefix": [
+      "shadcn-x-button",
+      "cnx-button"
+    ],
+    "body": [
+      "<Button>Button</Button>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/button.html"
   },
   "Button Secondary": {
-    "prefix": ["shadcn-x-button-secondary", "cnx-button-secondary"],
-    "body": ["<Button variant=\"secondary\">Button</Button>"],
+    "prefix": [
+      "shadcn-x-button-secondary",
+      "cnx-button-secondary"
+    ],
+    "body": [
+      "<Button variant=\"secondary\">Button</Button>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/button.html"
   },
   "Button Outline": {
-    "prefix": ["shadcn-x-button-outline", "cnx-button-outline"],
-    "body": ["<Button variant=\"outline\">Button</Button>"],
+    "prefix": [
+      "shadcn-x-button-outline",
+      "cnx-button-outline"
+    ],
+    "body": [
+      "<Button variant=\"outline\">Button</Button>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/button.html"
   },
   "Button Ghost": {
-    "prefix": ["shadcn-x-button-ghost", "cnx-button-ghost"],
-    "body": ["<Button variant=\"ghost\">Button</Button>"],
+    "prefix": [
+      "shadcn-x-button-ghost",
+      "cnx-button-ghost"
+    ],
+    "body": [
+      "<Button variant=\"ghost\">Button</Button>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/button.html"
   },
   "Button Link": {
-    "prefix": ["shadcn-x-button-link", "cnx-button-link"],
-    "body": ["<Button variant=\"link\">Button</Button>"],
+    "prefix": [
+      "shadcn-x-button-link",
+      "cnx-button-link"
+    ],
+    "body": [
+      "<Button variant=\"link\">Button</Button>"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/button.html"
   },
   "Calendar": {
-    "prefix": ["shadcn-x-calendar", "cnx-calendar"],
-    "body": ["<Calendar bind:value class='border rounded-md' />"],
+    "prefix": [
+      "shadcn-x-calendar",
+      "cnx-calendar"
+    ],
+    "body": [
+      "<Calendar bind:value class='border rounded-md' />"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/calendar.html"
   },
   "Card": {
-    "prefix": ["shadcn-x-card", "cnx-card"],
+    "prefix": [
+      "shadcn-x-card",
+      "cnx-card"
+    ],
     "body": [
       "<Card.Root>",
       "  <Card.Header>",
@@ -163,7 +240,10 @@
     "description": "https://shadcn-svelte.com/docs/components/card.html"
   },
   "Carousel": {
-    "prefix": ["shadcn-x-carousel", "cnx-carousel"],
+    "prefix": [
+      "shadcn-x-carousel",
+      "cnx-carousel"
+    ],
     "body": [
       "<Carousel.Root class=\"w-full max-w-sm\">",
       "  <Carousel.Content class=\"-ml-1\">",
@@ -189,7 +269,10 @@
   },
 
   "Carousel-Vertical": {
-    "prefix": ["shadcn-x-carousel-vertical", "cnx-carousel-vertical"],
+    "prefix": [
+      "shadcn-x-carousel-vertical",
+      "cnx-carousel-vertical"
+    ],
     "body": [
       "<Carousel.Root",
       "  opts={{",
@@ -218,12 +301,20 @@
     "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
   },
   "Checkbox": {
-    "prefix": ["shadcn-x-checkbox", "cnx-checkbox"],
-    "body": ["<Checkbox />"],
+    "prefix": [
+      "shadcn-x-checkbox",
+      "cnx-checkbox"
+    ],
+    "body": [
+      "<Checkbox />"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/checkbox.html"
   },
   "Collapsible": {
-    "prefix": ["shadcn-x-collapsible", "cnx-collapsible"],
+    "prefix": [
+      "shadcn-x-collapsible",
+      "cnx-collapsible"
+    ],
     "body": [
       "<Collapsible.Root>",
       "  <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>",
@@ -236,7 +327,10 @@
     "description": "https://shadcn-svelte.com/docs/components/collapsible.html"
   },
   "Command": {
-    "prefix": ["shadcn-x-command", "cnx-command"],
+    "prefix": [
+      "shadcn-x-command",
+      "cnx-command"
+    ],
     "body": [
       "<Command.Root>",
       "  <Command.Input placeholder=\"Type a command or search...\" />",
@@ -259,7 +353,10 @@
     "description": "https://shadcn-svelte.com/docs/components/command.html"
   },
   "Context Menu": {
-    "prefix": ["shadcn-x-context-menu", "cnx-context-menu"],
+    "prefix": [
+      "shadcn-x-context-menu",
+      "cnx-context-menu"
+    ],
     "body": [
       "<ContextMenu.Root>",
       "  <ContextMenu.Trigger>Right click</ContextMenu.Trigger>",
@@ -274,7 +371,10 @@
     "description": "https://shadcn-svelte.com/docs/components/context-menu.html"
   },
   "Dialog": {
-    "prefix": ["shadcn-x-dialog", "cnx-dialog"],
+    "prefix": [
+      "shadcn-x-dialog",
+      "cnx-dialog"
+    ],
     "body": [
       "<Dialog.Root>",
       "  <Dialog.Trigger>Open</Dialog.Trigger>",
@@ -293,7 +393,10 @@
   },
 
   "Drawer": {
-    "prefix": ["shadcn-x-drawer", "cnx-drawer"],
+    "prefix": [
+      "shadcn-x-drawer",
+      "cnx-drawer"
+    ],
     "body": [
       "<Drawer.Root>",
       "  <Drawer.Trigger>Open</Drawer.Trigger>",
@@ -313,7 +416,10 @@
     "description": "https://shadcn-svelte.com/docs/components/drawer.html"
   },
   "Dropdown Menu": {
-    "prefix": ["shadcn-x-dropdown-menu", "cnx-dropdown-menu"],
+    "prefix": [
+      "shadcn-x-dropdown-menu",
+      "cnx-dropdown-menu"
+    ],
     "body": [
       "<DropdownMenu.Root>",
       "  <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>",
@@ -332,7 +438,10 @@
     "description": "https://shadcn-svelte.com/docs/components/dropdown-menu.html"
   },
   "Hover Card": {
-    "prefix": ["shadcn-x-hover-card", "cnx-hover-card"],
+    "prefix": [
+      "shadcn-x-hover-card",
+      "cnx-hover-card"
+    ],
     "body": [
       "<HoverCard.Root>",
       "  <HoverCard.Trigger>Hover</HoverCard.Trigger>",
@@ -344,12 +453,21 @@
     "description": "https://shadcn-svelte.com/docs/components/hover-card.html"
   },
   "Input": {
-    "prefix": ["shadcn-x-input", "cnx-input"],
-    "body": ["<Input />", ""],
+    "prefix": [
+      "shadcn-x-input",
+      "cnx-input"
+    ],
+    "body": [
+      "<Input />",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/input.html"
   },
   "Input OTP": {
-    "prefix": ["shadcn-x-input-otp", "cnx-input-otp"],
+    "prefix": [
+      "shadcn-x-input-otp",
+      "cnx-input-otp"
+    ],
     "body": [
       "<InputOTP.Root maxlength={6}>",
       " {#snippet children({ cells })}",
@@ -370,12 +488,21 @@
     "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
   },
   "Label": {
-    "prefix": ["shadcn-x-label", "cnx-label"],
-    "body": ["<Label for=\"email\">Your email address</Label>", ""],
+    "prefix": [
+      "shadcn-x-label",
+      "cnx-label"
+    ],
+    "body": [
+      "<Label for=\"email\">Your email address</Label>",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/label.html"
   },
   "Menubar": {
-    "prefix": ["shadcn-x-menubar", "cnx-menubar"],
+    "prefix": [
+      "shadcn-x-menubar",
+      "cnx-menubar"
+    ],
     "body": [
       "<Menubar.Root>",
       "  <Menubar.Menu>",
@@ -398,7 +525,10 @@
     "description": "https://shadcn-svelte.com/docs/components/menubar.html"
   },
   "Popover": {
-    "prefix": ["shadcn-x-popover", "cnx-popover"],
+    "prefix": [
+      "shadcn-x-popover",
+      "cnx-popover"
+    ],
     "body": [
       "<Popover.Root>",
       "  <Popover.Trigger>Open</Popover.Trigger>",
@@ -409,8 +539,14 @@
     "description": "https://shadcn-svelte.com/docs/components/popover.html"
   },
   "Progress": {
-    "prefix": ["shadcn-x-progress", "cnx-progress"],
-    "body": ["<Progress value={33} />", ""],
+    "prefix": [
+      "shadcn-x-progress",
+      "cnx-progress"
+    ],
+    "body": [
+      "<Progress value={33} />",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/progress.html"
   },
   "Radio Group": {
@@ -430,12 +566,21 @@
     "description": "https://shadcn-svelte.com/docs/components/radio-group.html"
   },
   "Range Calendar": {
-    "prefix": ["shadcn-x-range-calendar", "cnx-range-calendar"],
-    "body": ["<RangeCalendar bind:value class=\"border rounded-md\" />", ""],
+    "prefix": [
+      "shadcn-x-range-calendar",
+      "cnx-range-calendar"
+    ],
+    "body": [
+      "<RangeCalendar bind:value class=\"border rounded-md\" />",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/range-calendar.html"
   },
   "Scroll Area": {
-    "prefix": ["cnx-scroll-area", "shadcn-x-scroll-area"],
+    "prefix": [
+      "cnx-scroll-area",
+      "shadcn-x-scroll-area"
+    ],
     "body": [
       "<ScrollArea class=\"h-72 w-48 rounded-md border\">",
       "  <div class=\"p-4\">",
@@ -452,7 +597,10 @@
     "description": "https://next.shadcn-svelte.com/docs/components/scroll-area.html"
   },
   "Select": {
-    "prefix": ["cnx-select", "shadcn-x-select"],
+    "prefix": [
+      "cnx-select",
+      "shadcn-x-select"
+    ],
     "body": [
       "<Select.Root>",
       "  <Select.Trigger class=\"w-[180px]\">",
@@ -468,12 +616,21 @@
     "description": "https://shadcn-svelte.com/docs/components/select.html"
   },
   "Separator": {
-    "prefix": ["shadcn-x-separator", "cnx-separator"],
-    "body": ["<Separator />", ""],
+    "prefix": [
+      "shadcn-x-separator",
+      "cnx-separator"
+    ],
+    "body": [
+      "<Separator />",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/separator.html"
   },
   "Sheet": {
-    "prefix": ["shadcn-x-sheet", "cnx-sheet"],
+    "prefix": [
+      "shadcn-x-sheet",
+      "cnx-sheet"
+    ],
     "body": [
       "<Sheet.Root>",
       "  <Sheet.Trigger>Open</Sheet.Trigger>",
@@ -491,7 +648,10 @@
     "description": "https://shadcn-svelte.com/docs/components/sheet.html"
   },
   "Sidebar": {
-    "prefix": ["shadcn-x-sidebar", "cnx-sidebar"],
+    "prefix": [
+      "shadcn-x-sidebar",
+      "cnx-sidebar"
+    ],
     "body": [
       "<Sidebar.Root>",
       " <Sidebar.Header />",
@@ -505,27 +665,51 @@
     "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
   },
   "Skeleton": {
-    "prefix": ["shadcn-x-skeleton", "cnx-skeleton"],
-    "body": ["<Skeleton class=\"w-[100px] h-[20px] rounded-full\" />"],
+    "prefix": [
+      "shadcn-x-skeleton",
+      "cnx-skeleton"
+    ],
+    "body": [
+      "<Skeleton class=\"w-[100px] h-[20px] rounded-full\" />"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/skeleton.html"
   },
   "Slider": {
-    "prefix": ["shadcn-x-slider", "cnx-slider"],
-    "body": ["<Slider value={[33]} max={100} step={1} />"],
+    "prefix": [
+      "shadcn-x-slider",
+      "cnx-slider"
+    ],
+    "body": [
+      "<Slider value={[33]} max={100} step={1} />"
+    ],
     "description": "https://shadcn-svelte.com/docs/components/slider.html"
   },
   "Sonner": {
-    "prefix": ["shadcn-x-sonner", "cnx-sonner"],
-    "body": ["<Toaster />"],
+    "prefix": [
+      "shadcn-x-sonner",
+      "cnx-sonner"
+    ],
+    "body": [
+      "<Toaster />"
+    ],
     "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
   },
   "Switch": {
-    "prefix": ["shadcn-x-switch", "cnx-switch"],
-    "body": ["<Switch />", ""],
+    "prefix": [
+      "shadcn-x-switch",
+      "cnx-switch"
+    ],
+    "body": [
+      "<Switch />",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/switch.html"
   },
   "Table": {
-    "prefix": ["shadcn-x-table", "cnx-table"],
+    "prefix": [
+      "shadcn-x-table",
+      "cnx-table"
+    ],
     "body": [
       "<Table.Root>",
       "  <Table.Caption>A list of your recent invoices.</Table.Caption>",
@@ -550,7 +734,10 @@
     "description": "https://shadcn-svelte.com/docs/components/table.html"
   },
   "Tabs": {
-    "prefix": ["shadcn-x-tabs", "cnx-tabs"],
+    "prefix": [
+      "shadcn-x-tabs",
+      "cnx-tabs"
+    ],
     "body": [
       "<Tabs.Root value=\"account\" class=\"w-[400px]\">",
       "  <Tabs.List>",
@@ -566,17 +753,32 @@
     "description": "https://shadcn-svelte.com/docs/components/tabs.html"
   },
   "Textarea": {
-    "prefix": ["shadcn-x-textarea", "cnx-textarea"],
-    "body": ["<Textarea />", ""],
+    "prefix": [
+      "shadcn-x-textarea",
+      "cnx-textarea"
+    ],
+    "body": [
+      "<Textarea />",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/textarea.html"
   },
   "Toggle": {
-    "prefix": ["shadcn-x-toggle", "cnx-toggle"],
-    "body": ["<Toggle>Toggle</Toggle>", ""],
+    "prefix": [
+      "shadcn-x-toggle",
+      "cnx-toggle"
+    ],
+    "body": [
+      "<Toggle>Toggle</Toggle>",
+      ""
+    ],
     "description": "https://shadcn-svelte.com/docs/components/toggle.html"
   },
   "Toggle Group": {
-    "prefix": ["shadcn-x-toggle-group", "cnx-toggle-group"],
+    "prefix": [
+      "shadcn-x-toggle-group",
+      "cnx-toggle-group"
+    ],
     "body": [
       "<ToggleGroup.Root type=\"single\">",
       "  <ToggleGroup.Item value=\"a\">A</ToggleGroup.Item>",
@@ -588,7 +790,10 @@
     "description": "https://shadcn-svelte.com/docs/components/toggle-group.html"
   },
   "Tooltip": {
-    "prefix": ["shadcn-x-tooltip", "cnx-tooltip"],
+    "prefix": [
+      "shadcn-x-tooltip",
+      "cnx-tooltip"
+    ],
     "body": [
       "<Tooltip.Root>",
       "  <Tooltip.Trigger>Hover</Tooltip.Trigger>",
@@ -601,7 +806,10 @@
     "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
   },
   "Form": {
-    "prefix": ["shadcn-x-form", "cnx-form"],
+    "prefix": [
+      "shadcn-x-form",
+      "cnx-form"
+    ],
     "body": [
       "<form method=\"POST\" use:enhance>",
       "  <Form.Field {form} name=\"field\">",
