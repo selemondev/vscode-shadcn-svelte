@@ -283,6 +283,17 @@
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/range-calendar.html"
     },
+    "Scroll Area": {
+      "prefix": [
+        "shadcn-ix-scroll-area",
+        "cni-x-scroll-area"
+      ],
+      "body": [
+        "import { ScrollArea } from \"$$lib/components/ui/scroll-area/index.js\"",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/scroll-area.html"
+    },
     "Select": {
       "prefix": [
         "cni-x-select"
