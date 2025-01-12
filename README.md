@@ -90,4 +90,5 @@ All credits go to the creators of these amazing projects:
 - [Shadcn UI](https://ui.shadcn.com) for creating this amazing project.
 - [Shadcn Svelte](https://shadcn-svelte.com) for creating the Svelte port of Shadcn UI.
 - [Bits UI](https://www.bits-ui.com/docs/introduction) for doing all the hard work to make sure components are accessible.
-- [Neeraj Dalal](https://github.com/nrjdalal) for creating the Shadcn UI Snippets.
+- [Suhel Makkad](https://github.com/SuhelMakkad/vscode-shadcn-ui) for creating the Shadcn UI VSCode extension.
+- [Neeraj Dalal](https://github.com/nrjdalal/shadcn-ui-snippets) for creating the Shadcn UI Snippets VSCode extension.
