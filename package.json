@@ -104,6 +104,14 @@
       {
         "language": "svelte",
         "path": "./src/snippets/usage-code-snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./src/snippets/usage-code-snippets-next.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./src/snippets/usage-code-snippets-next.json"
       }
     ],
     "commands": [
