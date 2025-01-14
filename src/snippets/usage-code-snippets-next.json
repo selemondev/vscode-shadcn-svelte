@@ -1,0 +1,809 @@
+{
+    "Accordion": {
+      "prefix": [
+        "shadcn-x-accordion-next",
+        "cnx-accordion-next"
+      ],
+      "body": [
+        "<Accordion.Root type=\"single\">",
+        "  <Accordion.Item value=\"item-1\">",
+        "    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>",
+        "    <Accordion.Content>",
+        "      Yes. It adheres to the WAI-ARIA design pattern.",
+        "    </Accordion.Content>",
+        "  </Accordion.Item>",
+        "</Accordion.Root>"
+      ],
+     "description": "https://next.shadcn-svelte.com/docs/components/accordion"
+    },
+    "Alert": {
+      "prefix": [
+        "shadcn-x-alert-next",
+        "cnx-alert-next"
+      ],
+      "body": [
+        "<Alert.Root>",
+        "  <Alert.Title>Heads up!</Alert.Title>",
+        "  <Alert.Description>",
+        "    You can add components to your app using the cli.",
+        "  </Alert.Description>",
+        "</Alert.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/alert.html"
+    },
+    "Alert Destructive": {
+      "prefix": [
+        "shadcn-x-alert-destructive-next",
+        "cnx-alert-destructive-next"
+      ],
+      "body": [
+        "<Alert.Root variant=\"destructive\">",
+        "  <CircleAlert class=\"size-4\" />",
+        "  <Alert.Title>Error</Alert.Title>",
+        "  <Alert.Description",
+        "    >Your session has expired. Please login again.</Alert.Description",
+        "  >",
+        "</Alert.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/alert.html"
+    },
+    "Alert Dialog": {
+      "prefix": [
+        "shadcn-x-alert-dialog-next",
+        "cnx-alert-dialog-next"
+      ],
+      "body": [
+        "<AlertDialog.Root>",
+        "  <AlertDialog.Trigger>Open</AlertDialog.Trigger>",
+        "  <AlertDialog.Content>",
+        "    <AlertDialog.Header>",
+        "      <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>",
+        "      <AlertDialog.Description>",
+        "        This action cannot be undone. This will permanently delete your account",
+        "        and remove your data from our servers.",
+        "      </AlertDialog.Description>",
+        "    </AlertDialog.Header>",
+        "    <AlertDialog.Footer>",
+        "      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>",
+        "      <AlertDialog.Action>Continue</AlertDialog.Action>",
+        "    </AlertDialog.Footer>",
+        "  </AlertDialog.Content>",
+        "</AlertDialog.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/alert-dialog.html"
+    },
+    "Aspect Ratio": {
+      "prefix": [
+        "shadcn-x-aspect-ratio-next",
+        "cnx-aspect-ratio-next"
+      ],
+      "body": [
+        "<div class=\"w-[450px]\">",
+        "    <AspectRatio :ratio=\"16 / 9\">",
+        "      <img src=\"...\" alt=\"Image\" class=\"rounded-md object-cover\">",
+        "    </AspectRatio>",
+        "</div>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/aspect-ratio.html"
+    },
+    "Avatar": {
+      "prefix": [
+        "shadcn-x-avatar-next",
+        "cnx-avatar-next"
+      ],
+      "body": [
+        "<Avatar.Root>",
+        "  <Avatar.Image src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />",
+        "  <Avatar.Fallback>CN</Avatar.Fallback>",
+        "</Avatar.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/avatar.html"
+    },
+    "Badge": {
+      "prefix": [
+        "shadcn-x-badge-next",
+        "cnx-badge-next"
+      ],
+      "body": [
+        "<Badge>Badge</Badge>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/badge.html"
+    },
+    "Badge Destructive": {
+      "prefix": [
+        "shadcn-x-badge-destructive-next",
+        "cnx-badge-destructive-next"
+      ],
+      "body": [
+        "<Badge variant=\"destructive\">",
+        "    Destructive",
+        "</Badge>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/badge.html"
+    },
+    "Badge Outline": {
+      "prefix": [
+        "shadcn-x-badge-outline-next",
+        "cnx-badge-outline-next"
+      ],
+      "body": [
+        "<Badge variant=\"outline\">",
+        "    Outline",
+        "</Badge>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/badge.html"
+    },
+    "Badge Secondary": {
+      "prefix": [
+        "shadcn-x-badge-secondary-next",
+        "cnx-badge-secondary-next"
+      ],
+      "body": [
+        "<Badge variant=\"secondary\">",
+        "    Secondary",
+        "</Badge>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/badge.html"
+    },
+    "Button": {
+      "prefix": [
+        "shadcn-x-button-next",
+        "cnx-button-next"
+      ],
+      "body": [
+        "<Button>Button</Button>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/button.html"
+    },
+    "Button Secondary": {
+      "prefix": [
+        "shadcn-x-button-secondary-next",
+        "cnx-button-secondary-next"
+      ],
+      "body": [
+        "<Button variant=\"secondary\">Button</Button>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/button.html"
+    },
+    "Button Outline": {
+      "prefix": [
+        "shadcn-x-button-outline-next",
+        "cnx-button-outline-next"
+      ],
+      "body": [
+        "<Button variant=\"outline\">Button</Button>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/button.html"
+    },
+    "Button Ghost": {
+      "prefix": [
+        "shadcn-x-button-ghost-next",
+        "cnx-button-ghost-next"
+      ],
+      "body": [
+        "<Button variant=\"ghost\">Button</Button>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/button.html"
+    },
+    "Button Link": {
+      "prefix": [
+        "shadcn-x-button-link-next",
+        "cnx-button-link-next"
+      ],
+      "body": [
+        "<Button variant=\"link\">Button</Button>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/button.html"
+    },
+    "Calendar": {
+      "prefix": [
+        "shadcn-x-calendar-next",
+        "cnx-calendar-next"
+      ],
+      "body": [
+       "<Calendar type=\"single\" bind:value class=\"rounded-md border\" />"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/calendar.html"
+    },
+    "Card": {
+      "prefix": [
+        "shadcn-x-card-next",
+        "cnx-card-next"
+      ],
+      "body": [
+        "<Card.Root>",
+        "  <Card.Header>",
+        "    <Card.Title>Card Title</Card.Title>",
+        "    <Card.Description>Card Description</Card.Description>",
+        "  </Card.Header>",
+        "  <Card.Content>",
+        "    <p>Card Content</p>",
+        "  </Card.Content>",
+        "  <Card.Footer>",
+        "    <p>Card Footer</p>",
+        "  </Card.Footer>",
+        "</Card.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/card.html"
+    },
+    "Carousel": {
+      "prefix": [
+        "shadcn-x-carousel-next",
+        "cnx-carousel-next"
+      ],
+      "body": [
+        "<Carousel.Root>",
+        "  <Carousel.Content>",
+        "    <Carousel.Item>...</Carousel.Item>",
+        "    <Carousel.Item>...</Carousel.Item>",
+        "    <Carousel.Item>...</Carousel.Item>",
+        "  </Carousel.Content>",
+        "  <Carousel.Previous />",
+        "  <Carousel.Next />",
+        "</Carousel.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/carousel.html"
+    },
+  
+    "Carousel-Vertical": {
+      "prefix": [
+        "shadcn-x-carousel-vertical-next",
+        "cnx-carousel-vertical-next"
+      ],
+      "body": [
+        "<Carousel.Root orientation=\"vertical\">",
+        " <Carousel.Content>",
+        "  <Carousel.Item>...</Carousel.Item>",
+        "  <Carousel.Item>...</Carousel.Item>",
+        "  <Carousel.Item>...</Carousel.Item>",
+        " </Carousel.Content>",
+        "</Carousel.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/carousel.html"
+    },
+    "Checkbox": {
+      "prefix": [
+        "shadcn-x-checkbox-next",
+        "cnx-checkbox-next"
+      ],
+      "body": [
+        "<Checkbox />"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/checkbox.html"
+    },
+    "Collapsible": {
+      "prefix": [
+        "shadcn-x-collapsible-next",
+        "cnx-collapsible-next"
+      ],
+      "body": [
+        "<Collapsible.Root>",
+        "  <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>",
+        "  <Collapsible.Content>",
+        "    Yes. Free to use for personal and commercial projects. No attribution",
+        "    required.",
+        "  </Collapsible.Content>",
+        "</Collapsible.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/collapsible.html"
+    },
+    "Command": {
+      "prefix": [
+        "shadcn-x-command-next",
+        "cnx-command-next"
+      ],
+      "body": [
+        "<Command.Root>",
+        "  <Command.Input placeholder=\"Type a command or search...\" />",
+        "  <Command.List>",
+        "    <Command.Empty>No results found.</Command.Empty>",
+        "    <Command.Group heading=\"Suggestions\">",
+        "      <Command.Item>Calendar</Command.Item>",
+        "      <Command.Item>Search Emoji</Command.Item>",
+        "      <Command.Item>Calculator</Command.Item>",
+        "    </Command.Group>",
+        "    <Command.Separator />",
+        "    <Command.Group heading=\"Settings\">",
+        "      <Command.Item>Profile</Command.Item>",
+        "      <Command.Item>Billing</Command.Item>",
+        "      <Command.Item>Settings</Command.Item>",
+        "    </Command.Group>",
+        "  </Command.List>",
+        "</Command.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/command.html"
+    },
+    "Context Menu": {
+      "prefix": [
+        "shadcn-x-context-menu-next",
+        "cnx-context-menu-next"
+      ],
+      "body": [
+        "<ContextMenu.Root>",
+        "  <ContextMenu.Trigger>Right click</ContextMenu.Trigger>",
+        "  <ContextMenu.Content>",
+        "    <ContextMenu.Item>Profile</ContextMenu.Item>",
+        "    <ContextMenu.Item>Billing</ContextMenu.Item>",
+        "    <ContextMenu.Item>Team</ContextMenu.Item>",
+        "    <ContextMenu.Item>Subscription</ContextMenu.Item>",
+        "  </ContextMenu.Content>",
+        "</ContextMenu.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/context-menu.html"
+    },
+    "Dialog": {
+      "prefix": [
+        "shadcn-x-dialog-next",
+        "cnx-dialog-next"
+      ],
+      "body": [
+        "<Dialog.Root>",
+        "  <Dialog.Trigger>Open</Dialog.Trigger>",
+        "  <Dialog.Content>",
+        "    <Dialog.Header>",
+        "      <Dialog.Title>Are you sure absolutely sure?</Dialog.Title>",
+        "      <Dialog.Description>",
+        "        This action cannot be undone. This will permanently delete your account",
+        "        and remove your data from our servers.",
+        "      </Dialog.Description>",
+        "    </Dialog.Header>",
+        "  </Dialog.Content>",
+        "</Dialog.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/dialog.html"
+    },
+  
+    "Drawer": {
+      "prefix": [
+        "shadcn-x-drawer-next",
+        "cnx-drawer-next"
+      ],
+      "body": [
+        "<Drawer.Root>",
+        "  <Drawer.Trigger>Open</Drawer.Trigger>",
+        "  <Drawer.Content>",
+        "    <Drawer.Header>",
+        "      <Drawer.Title>Are you sure absolutely sure?</Drawer.Title>",
+        "      <Drawer.Description>This action cannot be undone.</Drawer.Description>",
+        "    </Drawer.Header>",
+        "    <Drawer.Footer>",
+        "      <Button>Submit</Button>",
+        "      <Drawer.Close>Cancel</Drawer.Close>",
+        "    </Drawer.Footer>",
+        "  </Drawer.Content>",
+        "</Drawer.Root>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/drawer.html"
+    },
+    "Dropdown Menu": {
+      "prefix": [
+        "shadcn-x-dropdown-menu-next",
+        "cnx-dropdown-menu-next"
+      ],
+      "body": [
+        "<DropdownMenu.Root>",
+        "  <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>",
+        "  <DropdownMenu.Content>",
+        "    <DropdownMenu.Group>",
+        "      <DropdownMenu.GroupHeading>My Account</DropdownMenu.GroupHeading>",
+        "      <DropdownMenu.Separator />",
+        "      <DropdownMenu.Item>Profile</DropdownMenu.Item>",
+        "      <DropdownMenu.Item>Billing</DropdownMenu.Item>",
+        "      <DropdownMenu.Item>Team</DropdownMenu.Item>",
+        "      <DropdownMenu.Item>Subscription</DropdownMenu.Item>",
+        "    </DropdownMenu.Group>",
+        "  </DropdownMenu.Content>",
+        "</DropdownMenu.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/dropdown-menu.html"
+    },
+    "Hover Card": {
+      "prefix": [
+        "shadcn-x-hover-card-next",
+        "cnx-hover-card-next"
+      ],
+      "body": [
+        "<HoverCard.Root>",
+        "  <HoverCard.Trigger>Hover</HoverCard.Trigger>",
+        "  <HoverCard.Content>",
+        "    SvelteKit - Web development, streamlined",
+        "  </HoverCard.Content>",
+        "</HoverCard.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/hover-card.html"
+    },
+    "Input": {
+      "prefix": [
+        "shadcn-x-input-next",
+        "cnx-input-next"
+      ],
+      "body": [
+        "<Input />",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/input.html"
+    },
+    "Input OTP": {
+      "prefix": [
+        "shadcn-x-input-otp-next",
+        "cnx-input-otp-next"
+      ],
+      "body": [
+        "<InputOTP.Root maxlength={6}>",
+        "  {#snippet children({ cells })}",
+        "    <InputOTP.Group>",
+        "      {#each cells.slice(0, 3) as cell}",
+        "        <InputOTP.Slot {cell} />",
+        "      {/each}",
+        "    </InputOTP.Group>",
+        "    <InputOTP.Separator />",
+        "    <InputOTP.Group>",
+        "      {#each cells.slice(3, 6) as cell}",
+        "        <InputOTP.Slot {cell} />",
+        "      {/each}",
+        "    </InputOTP.Group>",
+        "  {/snippet}",
+        "</InputOTP.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
+    },
+    "Label": {
+      "prefix": [
+        "shadcn-x-label-next",
+        "cnx-label-next"
+      ],
+      "body": [
+        "<Label for=\"email\">Your email address</Label>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/label.html"
+    },
+    "Menubar": {
+      "prefix": [
+        "shadcn-x-menubar-next",
+        "cnx-menubar-next"
+      ],
+      "body": [
+        "<Menubar.Root>",
+        "  <Menubar.Menu>",
+        "    <Menubar.Trigger>File</Menubar.Trigger>",
+        "    <Menubar.Content>",
+        "      <Menubar.Item>",
+        "        New Tab",
+        "        <Menubar.Shortcut>⌘T</Menubar.Shortcut>",
+        "      </Menubar.Item>",
+        "      <Menubar.Item>New Window</Menubar.Item>",
+        "      <Menubar.Separator />",
+        "      <Menubar.Item>Share</Menubar.Item>",
+        "      <Menubar.Separator />",
+        "      <Menubar.Item>Print</Menubar.Item>",
+        "    </Menubar.Content>",
+        "  </Menubar.Menu>",
+        "</Menubar.Root>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/menubar.html"
+    },
+    "Pagination": {
+        "prefix": [
+          "shadcn-x-pagination-next",
+          "cnx-pagination-next"
+        ],
+        "body": [
+            "<Pagination.Root count={100} perPage={10}>",
+            "  {#snippet children({ pages, currentPage })}",
+            "    <Pagination.Content>",
+            "      <Pagination.Item>",
+            "        <Pagination.PrevButton />",
+            "      </Pagination.Item>",
+            "      {#each pages as page (page.key)}",
+            "        {#if page.type === \"ellipsis\"}",
+            "          <Pagination.Item>",
+            "            <Pagination.Ellipsis />",
+            "          </Pagination.Item>",
+            "        {:else}",
+            "          <Pagination.Item isVisible={currentPage === page.value}>",
+            "            <Pagination.Link {page} isActive={currentPage === page.value}>",
+            "              {page.value}",
+            "            </Pagination.Link>",
+            "          </Pagination.Item>",
+            "        {/if}",
+            "      {/each}",
+            "      <Pagination.Item>",
+            "        <Pagination.NextButton />",
+            "      </Pagination.Item>",
+            "    </Pagination.Content>",
+            "  {/snippet}",
+            "</Pagination.Root>",
+          ""
+        ],
+        "description": "https://next.shadcn-svelte.com/docs/components/pagination.html"
+    },
+    "Popover": {
+      "prefix": [
+        "shadcn-x-popover-next",
+        "cnx-popover-next"
+      ],
+      "body": [
+        "<Popover.Root>",
+        "  <Popover.Trigger>Open</Popover.Trigger>",
+        "  <Popover.Content>Place content for the popover here.</Popover.Content>",
+        "</Popover.Root>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/popover.html"
+    },
+    "Progress": {
+      "prefix": [
+        "shadcn-x-progress-next",
+        "cnx-progress-next"
+      ],
+      "body": [
+        "<Progress value={33} />",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/progress.html"
+    },
+    "Radio Group": {
+      "prefix": [
+        "shadcn-x-radio-group-next",
+        "cnx-radio-group-next"
+      ],
+      "body": [
+        "<RadioGroup.Root value=\"option-one\">",
+        "  <div class=\"flex items-center space-x-2\">",
+        "    <RadioGroup.Item value=\"option-one\" id=\"option-one\" />",
+        "    <Label for=\"option-one\">Option One</Label>",
+        "  </div>",
+        "  <div class=\"flex items-center space-x-2\">",
+        "    <RadioGroup.Item value=\"option-two\" id=\"option-two\" />",
+        "    <Label for=\"option-two\">Option Two</Label>",
+        "  </div>",
+        "</RadioGroup.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/radio-group.html"
+    },
+    "Range Calendar": {
+      "prefix": [
+        "shadcn-x-range-calendar-next",
+        "cnx-range-calendar-next"
+      ],
+      "body": [
+        "<RangeCalendar bind:value class=\"border rounded-md\" />",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/range-calendar.html"
+    },
+    "Select": {
+      "prefix": [
+        "cnx-select-next",
+        "shadcn-x-select-next"
+      ],
+      "body": [
+        "<Select.Root type=\"single\">",
+        "  <Select.Trigger class=\"w-[180px]\"></Select.Trigger>",
+        "  <Select.Content>",
+        "    <Select.Item value=\"light\">Light</Select.Item>",
+        "    <Select.Item value=\"dark\">Dark</Select.Item>",
+        "    <Select.Item value=\"system\">System</Select.Item>",
+        "  </Select.Content>",
+        "</Select.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/select.html"
+    },
+    "Separator": {
+      "prefix": [
+        "shadcn-x-separator-next",
+        "cnx-separator-next"
+      ],
+      "body": [
+        "<Separator />",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/separator.html"
+    },
+    "Sheet": {
+      "prefix": [
+        "shadcn-x-sheet-next",
+        "cnx-sheet-next"
+      ],
+      "body": [
+        "<Sheet.Root>",
+        "  <Sheet.Trigger>Open</Sheet.Trigger>",
+        "  <Sheet.Content>",
+        "    <Sheet.Header>",
+        "      <Sheet.Title>Are you sure absolutely sure?</Sheet.Title>",
+        "      <Sheet.Description>",
+        "        This action cannot be undone. This will permanently delete your account",
+        "        and remove your data from our servers.",
+        "      </Sheet.Description>",
+        "    </Sheet.Header>",
+        "  </Sheet.Content>",
+        "</Sheet.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/sheet.html"
+    },
+    "Sidebar": {
+      "prefix": [
+        "shadcn-x-sidebar-next",
+        "cnx-sidebar-next"
+      ],
+      "body": [
+        "<Sidebar.Root>",
+        "  <Sidebar.Header />",
+        "  <Sidebar.Content>",
+        "    <Sidebar.Group />",
+        "    <Sidebar.Group />",
+        "  </Sidebar.Content>",
+        "  <Sidebar.Footer />",
+        "</Sidebar.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
+    },
+    "Skeleton": {
+      "prefix": [
+        "shadcn-x-skeleton-next",
+        "cnx-skeleton-next"
+      ],
+      "body": [
+        "<Skeleton class=\"h-[20px] w-[100px] rounded-full\" />"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/skeleton.html"
+    },
+    "Slider": {
+      "prefix": [
+        "shadcn-x-slider-next",
+        "cnx-slider-next"
+      ],
+      "body": [
+        "<Slider type=\"single\" bind:value max={100} step={1} />"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/slider.html"
+    },
+    "Sonner": {
+      "prefix": [
+        "shadcn-x-sonner-next",
+        "cnx-sonner-next"
+      ],
+      "body": [
+        "<Toaster />"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/sonner.html"
+    },
+    "Switch": {
+      "prefix": [
+        "shadcn-x-switch-next",
+        "cnx-switch-next"
+      ],
+      "body": [
+        "<Switch />",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/switch.html"
+    },
+    "Table": {
+      "prefix": [
+        "shadcn-x-table-next",
+        "cnx-table-next"
+      ],
+      "body": [
+        "<Table.Root>",
+        " <Table.Caption>A list of your recent invoices.</Table.Caption>",
+        " <Table.Header>",
+        "  <Table.Row>",
+        "   <Table.Head class=\"w-[100px]\">Invoice</Table.Head>",
+        "   <Table.Head>Status</Table.Head>",
+        "   <Table.Head>Method</Table.Head>",
+        "   <Table.Head class=\"text-right\">Amount</Table.Head>",
+        "  </Table.Row>",
+        " </Table.Header>",
+        " <Table.Body>",
+        "  <Table.Row>",
+        "   <Table.Cell class=\"font-medium\">INV001</Table.Cell>",
+        "   <Table.Cell>Paid</Table.Cell>",
+        "   <Table.Cell>Credit Card</Table.Cell>",
+        "   <Table.Cell class=\"text-right\">$250.00</Table.Cell>",
+        "  </Table.Row>",
+        " </Table.Body>",
+        "</Table.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/table.html"
+    },
+    "Tabs": {
+      "prefix": [
+        "shadcn-x-tabs-next",
+        "cnx-tabs-next"
+      ],
+      "body": [
+        "<Tabs.Root value=\"account\" class=\"w-[400px]\">",
+        "  <Tabs.List>",
+        "    <Tabs.Trigger value=\"account\">Account</Tabs.Trigger>",
+        "    <Tabs.Trigger value=\"password\">Password</Tabs.Trigger>",
+        "  </Tabs.List>",
+        "  <Tabs.Content value=\"account\">",
+        "    Make changes to your account here.",
+        "  </Tabs.Content>",
+        "  <Tabs.Content value=\"password\">Change your password here.</Tabs.Content>",
+        "</Tabs.Root>"
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/tabs.html"
+    },
+    "Textarea": {
+      "prefix": [
+        "shadcn-x-textarea-next",
+        "cnx-textarea-next"
+      ],
+      "body": [
+        "<Textarea />",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/textarea.html"
+    },
+    "Toggle": {
+      "prefix": [
+        "shadcn-x-toggle-next",
+        "cnx-toggle-next"
+      ],
+      "body": [
+        "<Toggle>Toggle</Toggle>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/toggle.html"
+    },
+    "Toggle Group": {
+      "prefix": [
+        "shadcn-x-toggle-group-next",
+        "cnx-toggle-group-next"
+      ],
+      "body": [
+        "<ToggleGroup.Root type=\"single\">",
+        "  <ToggleGroup.Item value=\"a\">A</ToggleGroup.Item>",
+        "  <ToggleGroup.Item value=\"b\">B</ToggleGroup.Item>",
+        "  <ToggleGroup.Item value=\"c\">C</ToggleGroup.Item>",
+        "</ToggleGroup.Root>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/toggle-group.html"
+    },
+    "Tooltip": {
+      "prefix": [
+        "shadcn-x-tooltip-next",
+        "cnx-tooltip-next"
+      ],
+      "body": [
+        "<Tooltip.Provider>",
+        "  <Tooltip.Root>",
+        "    <Tooltip.Trigger>Hover</Tooltip.Trigger>",
+        "    <Tooltip.Content>",
+        "      <p>Add to library</p>",
+        "    </Tooltip.Content>",
+        "  </Tooltip.Root>",
+        "</Tooltip.Provider>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/tooltip.html"
+    },
+    "Form": {
+      "prefix": [
+        "shadcn-x-form-next",
+        "cnx-form-next"
+      ],
+      "body": [
+        "<form method=\"POST\" use:enhance>",
+        " <Form.Field {form} name=\"email\">",
+        "  <Form.Control>",
+        "   {#snippet children({ props })}",
+        "    <Form.Label>Email</Form.Label>",
+        "    <Input {...props} bind:value={$formData.email} />",
+        "   {/snippet}",
+        "  </Form.Control>",
+        "  <Form.Description />",
+        "  <Form.FieldErrors />",
+        " </Form.Field>",
+        "</form>",
+        ""
+      ],
+      "description": "https://next.shadcn-svelte.com/docs/components/form.html"
+    }
+  }
