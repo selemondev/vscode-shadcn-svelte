@@ -6,7 +6,7 @@
 </p>
 
 > [!NOTE]  
-> The Shadcn Svelte VSCode Extension supports both Svelte 4 and Svelte 5. The following are the abbreviations for help, imports and usage of the respective Svelte versions: Svelte 4: `cn-help`, `cni-accordion` and `cnx-accordion`. Svelte 5: `cn-x-help`, `cni-x-accordion` and `cnx-accordion-next`. 
+> The Shadcn Svelte VSCode Extension now supports both Svelte 4 and Svelte 5. The following are the abbreviations for help, imports and usage of the respective Svelte versions: Svelte 4: `cn-help`, `cni-accordion` and `cnx-accordion`. Svelte 5: `cn-x-help`, `cni-x-accordion` and `cnx-accordion-next`. 
 
 This VSCode extension enables you to install [shadcn/svelte](https://shadcn-svelte.com) components directly from your IDE ✨.
 
