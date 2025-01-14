@@ -104,7 +104,7 @@
         "import * as Card from \"$$lib/components/ui/card/index.js\"",
         "import * as Carousel from \"$$lib/components/ui/carousel/index.js\""
       ],
-      "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
+      "description": "https://next.shadcn-svelte.com/docs/components/carousel.html"
     },
     "Checkbox": {
       "prefix": [
@@ -365,9 +365,9 @@
         "cni-x-sonner"
       ],
       "body": [
-      "import { toast } from \"svelte-sonner\""
+        "import { Toaster } from \"$lib/components/ui/sonner/index.js\";"
       ],
-      "description": "https://www.shadcn-svelte.com/docs/components/sonner.html"
+      "description": "https://next.shadcn-svelte.com/docs/components/sonner.html"
     },
     "Switch": {
       "prefix": [
