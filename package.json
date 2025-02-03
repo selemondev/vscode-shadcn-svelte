@@ -139,7 +139,17 @@
         "command": "shadcn-svelte.gotoDoc",
         "title": "shadcn/svelte: Open Documentation"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "shadcn/svelte",
+      "properties": {
+        "shadcn-svelte.cwd": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Absolute path to the working directory when running shadcn-svelte CLI. Default is the current workspace folder."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm build",
@@ -149,7 +159,7 @@
     "dev": "pnpm build -- --watch",
     "deploy:extension": "vsce publish --no-dependencies",
     "deploy:openvsx": "ovsx publish -p $OVSX_PAT",
-    "lint": "eslint src --ext ts"
+    "lint": "eslint src --ext ts --fix"
   },
   "devDependencies": {
     "@types/node": "20.x",

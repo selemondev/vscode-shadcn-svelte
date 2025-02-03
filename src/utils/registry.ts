@@ -45,35 +45,35 @@ export const getRegistry = async (): Promise<Components | null> => {
   return components;
 };
 
-export const getInstallCmd = async (components: string[]) => {
+export const getInstallCmd = async (components: string[], cwd: string) => {
   const packageManager = await detectPackageManager();
   const componentStr = components.join(" ");
   const svelteVersion = await getSvelteVersion();
 
   if (packageManager === "bun") {
-    return svelteVersion >= 5 ? `bunx shadcn-svelte@next add ${componentStr}` : `bunx shadcn-svelte add ${componentStr}`;
+    return svelteVersion >= 5 ? `bunx shadcn-svelte@next add ${componentStr} -c ${cwd}` : `bunx shadcn-svelte add ${componentStr} -c ${cwd}`;
   }
 
   if (packageManager === "pnpm") {
-    return svelteVersion >= 5 ? `pnpm dlx shadcn-svelte@next add ${componentStr}` : `pnpm dlx shadcn-svelte@latest add ${componentStr}`;
+    return svelteVersion >= 5 ? `pnpm dlx shadcn-svelte@next add ${componentStr} -c ${cwd}` : `pnpm dlx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
   }
 
-  return svelteVersion >= 5 ? `npx shadcn-svelte@next add ${componentStr}` : `npx shadcn-svelte@latest add ${componentStr}`;
+  return svelteVersion >= 5 ? `npx shadcn-svelte@next add ${componentStr} -c ${cwd}` : `npx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
 };
 
-export const getInitCmd = async () => {
+export const getInitCmd = async (cwd: string) => {
   const packageManager = await detectPackageManager();
   const svelteVersion = await getSvelteVersion();
 
   if (packageManager === "bun") {
-    return svelteVersion >= 5 ? 'bunx shadcn-svelte@next init' : "bunx shadcn-svelte init";
+    return svelteVersion >= 5 ? `bunx shadcn-svelte@next init -c ${cwd}` : `bunx shadcn-svelte init -c ${cwd}`;
   }
 
   if (packageManager === "pnpm") {
-    return svelteVersion >= 5 ? 'pnpm dlx shadcn-svelte@next init' : "pnpm dlx shadcn-svelte@latest init";
+    return svelteVersion >= 5 ? `pnpm dlx shadcn-svelte@next init -c ${cwd}` : `pnpm dlx shadcn-svelte@latest init -c ${cwd}`;
   }
 
-  return svelteVersion >= 5 ? 'npx shadcn-svelte@next init' : "npx shadcn-svelte@latest init";
+  return svelteVersion >= 5 ? `npx shadcn-svelte@next init -c ${cwd}` : `npx shadcn-svelte@latest init -c ${cwd}`;
 };
 
 export const getComponentDocLink = async (component: string) => {
