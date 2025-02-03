@@ -4,6 +4,22 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.5.0
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.4.0...v0.5.0)
+
+### 🚀 Enhancements
+
+- Support multiple workspaces ([ba1723e](https://github.com/selemondev/vscode-shadcn-svelte/commit/ba1723e))
+
+### 🏡 Chore
+
+- Release v0.4.0 ([32cb538](https://github.com/selemondev/vscode-shadcn-svelte/commit/32cb538))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.2.0
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.1.14...v0.2.0)
