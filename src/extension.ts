@@ -5,7 +5,7 @@ import {
   getComponentDocLink,
   getRegistry,
 } from "./utils/registry";
-import { executeCommand } from "./utils/vscode";
+import { executeCommand, getOrChooseCwd } from "./utils/vscode";
 import { getSvelteVersion } from "./utils/getSvelteVersion";
 import type { Component, Components } from "./utils/registry";
 
@@ -28,7 +28,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
   const disposables: vscode.Disposable[] = [
     vscode.commands.registerCommand(commands.initCli, async () => {
-      const intCmd = await getInitCmd();
+      const cwd = await getOrChooseCwd();
+      const intCmd = await getInitCmd(cwd);
       executeCommand(intCmd);
     }),
     vscode.commands.registerCommand(commands.addNewComponent, async () => {
@@ -49,8 +50,8 @@ export async function activate(context: vscode.ExtensionContext) {
       if (!selectedComponent) {
         return;
       }
-
-      const installCmd = await getInstallCmd([selectedComponent.label]);
+      const cwd = await getOrChooseCwd();
+      const installCmd = await getInstallCmd([selectedComponent.label], cwd);
       executeCommand(installCmd);
     }),
 
@@ -75,8 +76,8 @@ export async function activate(context: vscode.ExtensionContext) {
       }
 
       const selectedComponent = selectedComponents.map((component: Component) => component.label);
-
-      const installCmd = await getInstallCmd(selectedComponent);
+      const cwd = await getOrChooseCwd();
+      const installCmd = await getInstallCmd(selectedComponent, cwd);
       executeCommand(installCmd);
     }),
     vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
