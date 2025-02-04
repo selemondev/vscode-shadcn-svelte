@@ -67,8 +67,8 @@ export const getOrChooseCwd = async (): Promise<string> => {
     (f) => f.uri.scheme === "file"
   );
 
-  // If there are no workspace folders open or if there is only one workspace folder, just use the current working dir
-  if (!workspaceFolders.length || workspaceFolders.length === 1) {
+  // If there are no workspace folders open, just use the current working dir
+  if (!workspaceFolders.length) {
     return "./";
   }
 
