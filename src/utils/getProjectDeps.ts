@@ -1,5 +1,4 @@
 import { getProjectDirectory } from "./getProjectDir";
-import * as vscode from "vscode";
 import { readPackageJSON } from "pkg-types";
 import { existsSync } from 'fs';
 
@@ -13,7 +12,6 @@ export const getProjectDependencies = async (): Promise<Dependency[]> => {
     const packageJsonPath = `${getProjectDirectory()}/package.json`;
 
     if (!existsSync(packageJsonPath)) {
-        vscode.window.showErrorMessage('Cannot find package.json!');
         return [];
     } else {
         const packageJSON = await readPackageJSON(packageJsonPath);

@@ -4,6 +4,18 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.5.1
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.0...v0.5.1)
+
+### 💅 Refactors
+
+- Workspace showQuickPick logic ([49250f0](https://github.com/selemondev/vscode-shadcn-svelte/commit/49250f0))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.5.0
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.4.0...v0.5.0)
