@@ -1,6 +1,6 @@
 {
   "name": "vscode-shadcn-svelte",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT",
   "displayName": "shadcn/svelte",
   "description": "Integrate components and snippets from Shadcn/Svelte directly into your IDE ✨.",
@@ -158,8 +158,8 @@
     "check-types": "tsc --noEmit",
     "build": "pnpm run lint && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
-    "deploy:extension": "vsce publish --no-dependencies",
-    "deploy:openvsx": "ovsx publish -p $OVSX_PAT",
+    "deploy:vscode": "vsce publish --no-dependencies",
+    "deploy:ovsx": "ovsx publish --no-dependencies",
     "lint": "eslint src --ext ts --fix"
   },
   "devDependencies": {
