@@ -4,6 +4,23 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.5.3
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.2...v0.5.3)
+
+### 💅 Refactors
+
+- # 58 refactor bun's lockfile name from bun.lockb to bun.lock ([c2bdc36](https://github.com/selemondev/vscode-shadcn-svelte/commit/c2bdc36))
+
+### 🏡 Chore
+
+- **release:** V0.5.2 ([13dfe29](https://github.com/selemondev/vscode-shadcn-svelte/commit/13dfe29))
+- Add deployment scripts ([c845c47](https://github.com/selemondev/vscode-shadcn-svelte/commit/c845c47))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.5.2
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.1...v0.5.2)
