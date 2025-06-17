@@ -33,7 +33,7 @@ export const getFileStat = async (fileName: string) => {
 };
 
 export const detectPackageManager = async (): Promise<PackageManager> => {
-  const bunLockExists = await getFileStat("bun.lockb");
+  const bunLockExists = await getFileStat("bun.lock");
   if (bunLockExists) {
     return "bun";
   }
