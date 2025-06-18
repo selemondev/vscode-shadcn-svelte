@@ -33,13 +33,17 @@ export const getFileStat = async (fileName: string) => {
 };
 
 export const detectPackageManager = async (): Promise<PackageManager> => {
-  const [bunLockExists, bunLockBExists] = await Promise.all([
-    getFileStat("bun.lock").then(() => true).catch(() => false),
-    getFileStat("bun.lockb").then(() => true).catch(() => false),
-  ]);
-  if (bunLockExists || bunLockBExists) {
+  const lockFiles = ["bun.lock", "bun.lockb"];
+  const results = await Promise.all(
+    lockFiles.map((file) =>
+      getFileStat(file).catch(err => err.code === 'ENOENT' ? false : Promise.reject(err))
+    )
+  );
+
+  if (results.some(Boolean)) {
     return 'bun';
   }
+
 
   const pnpmLockExists = await getFileStat("pnpm-lock.yaml");
   if (pnpmLockExists) {
