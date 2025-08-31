@@ -4,6 +4,28 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.5.5
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.4...v0.5.5)
+
+### 💅 Refactors
+
+- Resolve types config ([edc9b48](https://github.com/selemondev/vscode-shadcn-svelte/commit/edc9b48))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump typescript from 5.7.3 to 5.9.2 ([5dfadf4](https://github.com/selemondev/vscode-shadcn-svelte/commit/5dfadf4))
+- **deps-dev:** Bump @types/vscode from 1.96.0 to 1.103.0 ([46f44cb](https://github.com/selemondev/vscode-shadcn-svelte/commit/46f44cb))
+- **deps-dev:** Bump esbuild from 0.24.2 to 0.25.9 ([3250f81](https://github.com/selemondev/vscode-shadcn-svelte/commit/3250f81))
+- **deps-dev:** Bump @typescript-eslint/eslint-plugin ([78e4c0a](https://github.com/selemondev/vscode-shadcn-svelte/commit/78e4c0a))
+- Update dependencies ([2c7a86d](https://github.com/selemondev/vscode-shadcn-svelte/commit/2c7a86d))
+- Update version ([6d40df5](https://github.com/selemondev/vscode-shadcn-svelte/commit/6d40df5))
+- Lint ([dd50478](https://github.com/selemondev/vscode-shadcn-svelte/commit/dd50478))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.5.3
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.2...v0.5.3)
