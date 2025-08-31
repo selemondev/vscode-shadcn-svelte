@@ -1,5 +1,4 @@
 import { getProjectDirectory } from "./getProjectDir";
-import { readPackageJSON } from "pkg-types";
 import { existsSync } from 'fs';
 
 type Dependency = {
@@ -14,6 +13,7 @@ export const getProjectDependencies = async (): Promise<Dependency[]> => {
     if (!existsSync(packageJsonPath)) {
         return [];
     } else {
+const { readPackageJSON } = await import("pkg-types");
         const packageJSON = await readPackageJSON(packageJsonPath);
 
         const addDependencies = (depObj: Record<string, string> | undefined) => {
