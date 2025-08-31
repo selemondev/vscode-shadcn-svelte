@@ -13,7 +13,7 @@ export const getProjectDependencies = async (): Promise<Dependency[]> => {
     if (!existsSync(packageJsonPath)) {
         return [];
     } else {
-const { readPackageJSON } = await import("pkg-types");
+        const { readPackageJSON } = await import("pkg-types");
         const packageJSON = await readPackageJSON(packageJsonPath);
 
         const addDependencies = (depObj: Record<string, string> | undefined) => {
