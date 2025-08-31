@@ -14,7 +14,7 @@
     "email": "selemonsrdev@gmail.com"
   },
   "engines": {
-    "vscode": "^1.103"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other",
