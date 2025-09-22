@@ -166,7 +166,7 @@
     "@types/node": "24.x",
     "@types/vscode": "^1.103.0",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
-    "@typescript-eslint/parser": "^8.43.0",
+    "@typescript-eslint/parser": "^8.44.1",
     "esbuild": "^0.25.9",
     "eslint": "^8.57.1",
     "typescript": "^5.9.2"
