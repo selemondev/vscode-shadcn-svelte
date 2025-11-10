@@ -31,7 +31,7 @@
     "shadcn-svelte snippets",
     "svelte typescript snippets"
   ],
-  "icon": "./src/images/icon.png",
+  "icon": "src/images/icon.png",
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
