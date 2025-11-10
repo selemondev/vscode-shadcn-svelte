@@ -4,6 +4,31 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.6.0
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.6...v0.6.0)
+
+### 🩹 Fixes
+
+- User's cwd preference ([ba6847b](https://github.com/selemondev/vscode-shadcn-svelte/commit/ba6847b))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump @typescript-eslint/eslint-plugin ([63386d9](https://github.com/selemondev/vscode-shadcn-svelte/commit/63386d9))
+- **deps-dev:** Bump @types/node from 20.17.13 to 24.3.1 ([eb8b53a](https://github.com/selemondev/vscode-shadcn-svelte/commit/eb8b53a))
+- **deps-dev:** Bump @types/vscode from 1.85.0 to 1.103.0 ([c579609](https://github.com/selemondev/vscode-shadcn-svelte/commit/c579609))
+- **deps-dev:** Bump @typescript-eslint/parser from 6.21.0 to 8.43.0 ([99b4972](https://github.com/selemondev/vscode-shadcn-svelte/commit/99b4972))
+- **deps-dev:** Bump @types/node from 24.3.1 to 24.6.0 ([871e2ae](https://github.com/selemondev/vscode-shadcn-svelte/commit/871e2ae))
+- **deps-dev:** Bump @typescript-eslint/parser from 8.43.0 to 8.45.0 ([3ca4303](https://github.com/selemondev/vscode-shadcn-svelte/commit/3ca4303))
+- **deps-dev:** Bump eslint from 8.57.1 to 9.36.0 ([4c79fdf](https://github.com/selemondev/vscode-shadcn-svelte/commit/4c79fdf))
+- **deps-dev:** Bump esbuild from 0.25.9 to 0.25.10 ([2b16cb3](https://github.com/selemondev/vscode-shadcn-svelte/commit/2b16cb3))
+- **deps-dev:** Bump eslint from 9.36.0 to 9.37.0 ([9794ea3](https://github.com/selemondev/vscode-shadcn-svelte/commit/9794ea3))
+- **eslint:** Migrate to Eslint v9 file structure ([4feb4ee](https://github.com/selemondev/vscode-shadcn-svelte/commit/4feb4ee))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.5.5
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.4...v0.5.5)
