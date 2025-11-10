@@ -158,8 +158,8 @@
     "check-types": "tsc --noEmit",
     "build": "pnpm lint && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
-    "deploy:vscode": "pnpx vsce publish --no-dependencies",
-    "deploy:ovsx": "pnpx ovsx publish --no-dependencies",
+    "vscode": "pnpx vsce publish --no-dependencies",
+    "ovsx": "pnpx ovsx publish --no-dependencies",
     "lint": "eslint src --ext ts --fix"
   },
   "devDependencies": {
