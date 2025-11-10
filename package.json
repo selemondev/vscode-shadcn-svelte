@@ -156,7 +156,7 @@
     "generate-major:release": "npx changelogen@latest --major --release",
     "generate-minor:release": "npx changelogen@latest --minor --release",
     "check-types": "tsc --noEmit",
-    "build": "pnpm run lint && node esbuild.js --production",
+    "build": "pnpm lint && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
     "deploy:vscode": "vsce publish --no-dependencies",
     "deploy:ovsx": "ovsx publish --no-dependencies",
