@@ -17,16 +17,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.0
+
+      - name: Verify pnpm
+        run: pnpm --version
+
       - name: Set up Node.js with pnpm
         uses: actions/setup-node@v6
         with:
           node-version: 22.x
           cache: "pnpm"
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.28.0
 
       - name: Install dependencies
         run: pnpm install
