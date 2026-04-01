@@ -17,6 +17,9 @@ export type Component = {
 
 export type Components = Component[];
 
+const COMPONENT_NAME_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const MAX_REGISTRY_COMPONENTS = 500;
+
 export const getRegistry = async (): Promise<Components | null> => {
   const reqUrl = "https://shadcn-svelte.com/registry/index.json";
   const [res, err] = await to(ofetch(reqUrl));
@@ -31,14 +34,29 @@ export const getRegistry = async (): Promise<Components | null> => {
     return null;
   }
 
-  const components: Components = (data as OgComponent[]).filter((c) => c.type === 'registry:ui').map((c) => {
-    const component: Component = {
-      label: c.name,
-      detail: `dependencies: ${c.registryDependencies && c.registryDependencies.length > 0 ? c.registryDependencies.join(", ") : "no dependency"}`,
-    };
+  const seen = new Set<string>();
+  const components: Components = [];
 
-    return component;
-  });
+  for (const component of data as OgComponent[]) {
+    if (component.type !== "registry:ui") {
+      continue;
+    }
+
+    if (!COMPONENT_NAME_RE.test(component.name) || seen.has(component.name)) {
+      continue;
+    }
+
+    seen.add(component.name);
+    components.push({
+      label: component.name,
+      detail: `dependencies: ${component.registryDependencies && component.registryDependencies.length > 0 ? component.registryDependencies.join(", ") : "no dependency"}`,
+    });
+
+    if (components.length >= MAX_REGISTRY_COMPONENTS) {
+      break;
+    }
+  }
+
   return components;
 };
 

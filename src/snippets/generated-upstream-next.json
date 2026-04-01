@@ -1,0 +1,977 @@
+{
+  "generatedAt": "2026-04-01T19:09:52.568Z",
+  "upstreamCommit": "dad1614ffd90bc44c123a6f3806a3a55437609ee",
+  "upstreamRepository": "https://github.com/huntabyte/shadcn-svelte",
+  "components": {
+    "accordion": {
+      "description": "https://shadcn-svelte.com/docs/components/accordion",
+      "import": [
+        "import * as Accordion from \"$lib/components/ui/accordion/index.js\";"
+      ],
+      "usage": [
+        "<Accordion.Root type=\"single\">",
+        "  <Accordion.Item value=\"item-1\">",
+        "    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>",
+        "    <Accordion.Content>",
+        "      Yes. It adheres to the WAI-ARIA design pattern.",
+        "    </Accordion.Content>",
+        "  </Accordion.Item>",
+        "</Accordion.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/accordion.md",
+      "examplePath": null
+    },
+    "alert": {
+      "description": "https://shadcn-svelte.com/docs/components/alert",
+      "import": [
+        "import * as Alert from \"$lib/components/ui/alert/index.js\";"
+      ],
+      "usage": [
+        "<Alert.Root>",
+        "  <Alert.Title>Heads up!</Alert.Title>",
+        "  <Alert.Description>",
+        "    You can add components to your app using the cli.",
+        "  </Alert.Description>",
+        "</Alert.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/alert.md",
+      "examplePath": null
+    },
+    "alert-dialog": {
+      "description": "https://shadcn-svelte.com/docs/components/alert-dialog",
+      "import": [
+        "import * as AlertDialog from \"$lib/components/ui/alert-dialog/index.js\";"
+      ],
+      "usage": [
+        "<AlertDialog.Root>",
+        "  <AlertDialog.Trigger>Open</AlertDialog.Trigger>",
+        "  <AlertDialog.Content>",
+        "    <AlertDialog.Header>",
+        "      <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>",
+        "      <AlertDialog.Description>",
+        "        This action cannot be undone. This will permanently delete your account",
+        "        and remove your data from our servers.",
+        "      </AlertDialog.Description>",
+        "    </AlertDialog.Header>",
+        "    <AlertDialog.Footer>",
+        "      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>",
+        "      <AlertDialog.Action>Continue</AlertDialog.Action>",
+        "    </AlertDialog.Footer>",
+        "  </AlertDialog.Content>",
+        "</AlertDialog.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/alert-dialog.md",
+      "examplePath": null
+    },
+    "aspect-ratio": {
+      "description": "https://shadcn-svelte.com/docs/components/aspect-ratio",
+      "import": [
+        "import { AspectRatio } from \"$lib/components/ui/aspect-ratio/index.js\";"
+      ],
+      "usage": [
+        "<div class=\"w-[450px]\">",
+        "  <AspectRatio ratio={16 / 9} class=\"bg-muted\">",
+        "    <img src=\"...\" alt=\"...\" class=\"rounded-md object-cover\" />",
+        "  </AspectRatio>",
+        "</div>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/aspect-ratio.md",
+      "examplePath": null
+    },
+    "avatar": {
+      "description": "https://shadcn-svelte.com/docs/components/avatar",
+      "import": [
+        "import * as Avatar from \"$lib/components/ui/avatar/index.js\";"
+      ],
+      "usage": [
+        "<Avatar.Root>",
+        "  <Avatar.Image src=\"https://github.com/shadcn.png\" alt=\"@shadcn\" />",
+        "  <Avatar.Fallback>CN</Avatar.Fallback>",
+        "</Avatar.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/avatar.md",
+      "examplePath": null
+    },
+    "badge": {
+      "description": "https://shadcn-svelte.com/docs/components/badge",
+      "import": [
+        "import { Badge } from \"$lib/components/ui/badge/index.js\";"
+      ],
+      "usage": [
+        "<Badge variant=\"outline\">Badge</Badge>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/badge.md",
+      "examplePath": null
+    },
+    "breadcrumb": {
+      "description": "https://shadcn-svelte.com/docs/components/breadcrumb",
+      "import": [
+        "import * as Breadcrumb from \"$lib/components/ui/breadcrumb/index.js\";"
+      ],
+      "usage": [
+        "<Breadcrumb.Root>",
+        "  <Breadcrumb.List>",
+        "    <Breadcrumb.Item>",
+        "      <Breadcrumb.Link href=\"/\">Home</Breadcrumb.Link>",
+        "    </Breadcrumb.Item>",
+        "    <Breadcrumb.Separator />",
+        "    <Breadcrumb.Item>",
+        "      <Breadcrumb.Link href=\"/components\">Components</Breadcrumb.Link>",
+        "    </Breadcrumb.Item>",
+        "    <Breadcrumb.Separator />",
+        "    <Breadcrumb.Item>",
+        "      <Breadcrumb.Page>Breadcrumb</Breadcrumb.Page>",
+        "    </Breadcrumb.Item>",
+        "  </Breadcrumb.List>",
+        "</Breadcrumb.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/breadcrumb.md",
+      "examplePath": null
+    },
+    "button": {
+      "description": "https://shadcn-svelte.com/docs/components/button",
+      "import": [
+        "import { Button } from \"$lib/components/ui/button/index.js\";"
+      ],
+      "usage": [
+        "<Button variant=\"outline\">Button</Button>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/button.md",
+      "examplePath": null
+    },
+    "button-group": {
+      "description": "https://shadcn-svelte.com/docs/components/button-group",
+      "import": [
+        "import * as ButtonGroup from \"$lib/components/ui/button-group/index.js\";"
+      ],
+      "usage": [
+        "<ButtonGroup.Root>",
+        "  <Button>Button 1</Button>",
+        "  <Button>Button 2</Button>",
+        "</ButtonGroup.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/button-group.md",
+      "examplePath": null
+    },
+    "calendar": {
+      "description": "https://shadcn-svelte.com/docs/components/calendar",
+      "import": [
+        "import { Calendar } from \"$lib/components/ui/calendar/index.js\";"
+      ],
+      "usage": [
+        "<Calendar type=\"single\" class=\"rounded-md border shadow-sm\" captionLayout=\"dropdown\" />"
+      ],
+      "source": "manual",
+      "docPath": "docs/content/components/calendar.md",
+      "examplePath": null
+    },
+    "card": {
+      "description": "https://shadcn-svelte.com/docs/components/card",
+      "import": [
+        "import * as Card from \"$lib/components/ui/card/index.js\";"
+      ],
+      "usage": [
+        "<Card.Root>",
+        "  <Card.Header>",
+        "    <Card.Title>Card Title</Card.Title>",
+        "    <Card.Description>Card Description</Card.Description>",
+        "  </Card.Header>",
+        "  <Card.Content>",
+        "    <p>Card Content</p>",
+        "  </Card.Content>",
+        "  <Card.Footer>",
+        "    <p>Card Footer</p>",
+        "  </Card.Footer>",
+        "</Card.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/card.md",
+      "examplePath": null
+    },
+    "carousel": {
+      "description": "https://shadcn-svelte.com/docs/components/carousel",
+      "import": [
+        "import * as Carousel from \"$lib/components/ui/carousel/index.js\";"
+      ],
+      "usage": [
+        "<Carousel.Root>",
+        "  <Carousel.Content>",
+        "    <Carousel.Item>...</Carousel.Item>",
+        "    <Carousel.Item>...</Carousel.Item>",
+        "    <Carousel.Item>...</Carousel.Item>",
+        "  </Carousel.Content>",
+        "  <Carousel.Previous />",
+        "  <Carousel.Next />",
+        "</Carousel.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/carousel.md",
+      "examplePath": null
+    },
+    "checkbox": {
+      "description": "https://shadcn-svelte.com/docs/components/checkbox",
+      "import": [
+        "import { Checkbox } from \"$lib/components/ui/checkbox/index.js\";"
+      ],
+      "usage": [
+        "<Checkbox />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/checkbox.md",
+      "examplePath": null
+    },
+    "collapsible": {
+      "description": "https://shadcn-svelte.com/docs/components/collapsible",
+      "import": [
+        "import * as Collapsible from \"$lib/components/ui/collapsible/index.js\";"
+      ],
+      "usage": [
+        "<Collapsible.Root>",
+        "  <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>",
+        "  <Collapsible.Content>",
+        "    Yes. Free to use for personal and commercial projects. No attribution",
+        "    required.",
+        "  </Collapsible.Content>",
+        "</Collapsible.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/collapsible.md",
+      "examplePath": null
+    },
+    "command": {
+      "description": "https://shadcn-svelte.com/docs/components/command",
+      "import": [
+        "import * as Command from \"$lib/components/ui/command/index.js\";"
+      ],
+      "usage": [
+        "<Command.Root>",
+        "  <Command.Input placeholder=\"Type a command or search...\" />",
+        "  <Command.List>",
+        "    <Command.Empty>No results found.</Command.Empty>",
+        "    <Command.Group heading=\"Suggestions\">",
+        "      <Command.Item>Calendar</Command.Item>",
+        "      <Command.Item>Search Emoji</Command.Item>",
+        "      <Command.Item>Calculator</Command.Item>",
+        "    </Command.Group>",
+        "    <Command.Separator />",
+        "    <Command.Group heading=\"Settings\">",
+        "      <Command.Item>Profile</Command.Item>",
+        "      <Command.Item>Billing</Command.Item>",
+        "      <Command.Item>Settings</Command.Item>",
+        "    </Command.Group>",
+        "  </Command.List>",
+        "</Command.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/command.md",
+      "examplePath": null
+    },
+    "context-menu": {
+      "description": "https://shadcn-svelte.com/docs/components/context-menu",
+      "import": [
+        "import * as ContextMenu from \"$lib/components/ui/context-menu/index.js\";"
+      ],
+      "usage": [
+        "<ContextMenu.Root>",
+        "  <ContextMenu.Trigger>Right click</ContextMenu.Trigger>",
+        "  <ContextMenu.Content>",
+        "    <ContextMenu.Item>Profile</ContextMenu.Item>",
+        "    <ContextMenu.Item>Billing</ContextMenu.Item>",
+        "    <ContextMenu.Item>Team</ContextMenu.Item>",
+        "    <ContextMenu.Item>Subscription</ContextMenu.Item>",
+        "  </ContextMenu.Content>",
+        "</ContextMenu.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/context-menu.md",
+      "examplePath": null
+    },
+    "dialog": {
+      "description": "https://shadcn-svelte.com/docs/components/dialog",
+      "import": [
+        "import * as Dialog from \"$lib/components/ui/dialog/index.js\";"
+      ],
+      "usage": [
+        "<Dialog.Root>",
+        "  <Dialog.Trigger>Open</Dialog.Trigger>",
+        "  <Dialog.Content>",
+        "    <Dialog.Header>",
+        "      <Dialog.Title>Are you sure absolutely sure?</Dialog.Title>",
+        "      <Dialog.Description>",
+        "        This action cannot be undone. This will permanently delete your account",
+        "        and remove your data from our servers.",
+        "      </Dialog.Description>",
+        "    </Dialog.Header>",
+        "  </Dialog.Content>",
+        "</Dialog.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/dialog.md",
+      "examplePath": null
+    },
+    "drawer": {
+      "description": "https://shadcn-svelte.com/docs/components/drawer",
+      "import": [
+        "import * as Drawer from \"$lib/components/ui/drawer/index.js\";"
+      ],
+      "usage": [
+        "<Drawer.Root>",
+        "  <Drawer.Trigger>Open</Drawer.Trigger>",
+        "  <Drawer.Content>",
+        "    <Drawer.Header>",
+        "      <Drawer.Title>Are you sure absolutely sure?</Drawer.Title>",
+        "      <Drawer.Description>This action cannot be undone.</Drawer.Description>",
+        "    </Drawer.Header>",
+        "    <Drawer.Footer>",
+        "      <Button>Submit</Button>",
+        "      <Drawer.Close>Cancel</Drawer.Close>",
+        "    </Drawer.Footer>",
+        "  </Drawer.Content>",
+        "</Drawer.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/drawer.md",
+      "examplePath": null
+    },
+    "dropdown-menu": {
+      "description": "https://shadcn-svelte.com/docs/components/dropdown-menu",
+      "import": [
+        "import * as DropdownMenu from \"$lib/components/ui/dropdown-menu/index.js\";"
+      ],
+      "usage": [
+        "<DropdownMenu.Root>",
+        "  <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>",
+        "  <DropdownMenu.Content>",
+        "    <DropdownMenu.Group>",
+        "      <DropdownMenu.Label>My Account</DropdownMenu.Label>",
+        "      <DropdownMenu.Separator />",
+        "      <DropdownMenu.Item>Profile</DropdownMenu.Item>",
+        "      <DropdownMenu.Item>Billing</DropdownMenu.Item>",
+        "      <DropdownMenu.Item>Team</DropdownMenu.Item>",
+        "      <DropdownMenu.Item>Subscription</DropdownMenu.Item>",
+        "    </DropdownMenu.Group>",
+        "  </DropdownMenu.Content>",
+        "</DropdownMenu.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/dropdown-menu.md",
+      "examplePath": null
+    },
+    "empty": {
+      "description": "https://shadcn-svelte.com/docs/components/empty",
+      "import": [
+        "import * as Empty from \"$lib/components/ui/empty/index.js\";",
+        "",
+        "import FolderCodeIcon from \"@tabler/icons-svelte/icons/folder-code\";"
+      ],
+      "usage": [
+        "<Empty.Root>",
+        "  <Empty.Header>",
+        "    <Empty.Media variant=\"icon\">",
+        "      <FolderCodeIcon />",
+        "    </Empty.Media>",
+        "    <Empty.Title>No data</Empty.Title>",
+        "    <Empty.Description>No data found</Empty.Description>",
+        "  </Empty.Header>",
+        "  <Empty.Content>",
+        "    <Button>Add data</Button>",
+        "  </Empty.Content>",
+        "</Empty.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/empty.md",
+      "examplePath": null
+    },
+    "field": {
+      "description": "https://shadcn-svelte.com/docs/components/field",
+      "import": [
+        "import * as Field from \"$lib/components/ui/field/index.js\";"
+      ],
+      "usage": [
+        "<Field.Set>",
+        "  <Field.Legend>Profile</Field.Legend>",
+        "  <Field.Description>This appears on invoices and emails.</Field.Description>",
+        "  <Field.Group>",
+        "    <Field.Field>",
+        "      <Field.Label for=\"name\">Full name</Field.Label>",
+        "      <Input id=\"name\" autocomplete=\"off\" placeholder=\"Evil Rabbit\" />",
+        "      <Field.Description",
+        "        >This appears on invoices and emails.</Field.Description",
+        "      >",
+        "    </Field.Field>",
+        "    <Field.Field>",
+        "      <Field.Label for=\"username\">Username</Field.Label>",
+        "      <Input id=\"username\" autoComplete=\"off\" aria-invalid />",
+        "      <Field.Error>Choose another username.</Field.Error>",
+        "    </Field.Field>",
+        "    <Field.Field orientation=\"horizontal\">",
+        "      <Switch id=\"newsletter\" />",
+        "      <Field.Label for=\"newsletter\">Subscribe to the newsletter</Field.Label>",
+        "    </Field.Field>",
+        "  </Field.Group>",
+        "</Field.Set>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/field.md",
+      "examplePath": null
+    },
+    "hover-card": {
+      "description": "https://shadcn-svelte.com/docs/components/hover-card",
+      "import": [
+        "import * as HoverCard from \"$lib/components/ui/hover-card/index.js\";"
+      ],
+      "usage": [
+        "<HoverCard.Root>",
+        "  <HoverCard.Trigger>Hover</HoverCard.Trigger>",
+        "  <HoverCard.Content>",
+        "    SvelteKit - Web development, streamlined",
+        "  </HoverCard.Content>",
+        "</HoverCard.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/hover-card.md",
+      "examplePath": null
+    },
+    "input": {
+      "description": "https://shadcn-svelte.com/docs/components/input",
+      "import": [
+        "import { Input } from \"$lib/components/ui/input/index.js\";"
+      ],
+      "usage": [
+        "<Input />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/input.md",
+      "examplePath": null
+    },
+    "input-group": {
+      "description": "https://shadcn-svelte.com/docs/components/input-group",
+      "import": [
+        "import * as InputGroup from \"$lib/components/ui/input-group/index.js\";",
+        "",
+        "import SearchIcon from \"@lucide/svelte/icons/search\";"
+      ],
+      "usage": [
+        "<InputGroup.Root>",
+        "  <InputGroup.Input placeholder=\"Search...\" />",
+        "  <InputGroup.Addon>",
+        "    <SearchIcon />",
+        "  </InputGroup.Addon>",
+        "  <InputGroup.Addon align=\"inline-end\">",
+        "    <InputGroup.Button>Search</InputGroup.Button>",
+        "  </InputGroup.Addon>",
+        "</InputGroup.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/input-group.md",
+      "examplePath": null
+    },
+    "input-otp": {
+      "description": "https://shadcn-svelte.com/docs/components/input-otp",
+      "import": [
+        "import * as InputOTP from \"$lib/components/ui/input-otp/index.js\";"
+      ],
+      "usage": [
+        "<InputOTP.Root maxlength={6}>",
+        "  {#snippet children({ cells })}",
+        "    <InputOTP.Group>",
+        "      {#each cells.slice(0, 3) as cell}",
+        "        <InputOTP.Slot {cell} />",
+        "      {/each}",
+        "    </InputOTP.Group>",
+        "    <InputOTP.Separator />",
+        "    <InputOTP.Group>",
+        "      {#each cells.slice(3, 6) as cell}",
+        "        <InputOTP.Slot {cell} />",
+        "      {/each}",
+        "    </InputOTP.Group>",
+        "  {/snippet}",
+        "</InputOTP.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/input-otp.md",
+      "examplePath": null
+    },
+    "item": {
+      "description": "https://shadcn-svelte.com/docs/components/item",
+      "import": [
+        "import * as Item from \"$lib/components/ui/item/index.js\";"
+      ],
+      "usage": [
+        "<Item.Root>",
+        "  <Item.Header>Item Header</Item.Header>",
+        "  <Item.Media />",
+        "  <Item.Content>",
+        "    <Item.Title>Item</Item.Title>",
+        "    <Item.Description>Item</Item.Description>",
+        "  </Item.Content>",
+        "  <Item.Actions />",
+        "  <Item.Footer>Item Footer</Item.Footer>",
+        "</Item.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/item.md",
+      "examplePath": null
+    },
+    "kbd": {
+      "description": "https://shadcn-svelte.com/docs/components/kbd",
+      "import": [
+        "import * as Kbd from \"$lib/components/ui/kbd/index.js\";"
+      ],
+      "usage": [
+        "<Kbd.Root>B</Kbd.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/kbd.md",
+      "examplePath": null
+    },
+    "label": {
+      "description": "https://shadcn-svelte.com/docs/components/label",
+      "import": [
+        "import { Label } from \"$lib/components/ui/label/index.js\";"
+      ],
+      "usage": [
+        "<Label for=\"email\">Your email address</Label>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/label.md",
+      "examplePath": null
+    },
+    "menubar": {
+      "description": "https://shadcn-svelte.com/docs/components/menubar",
+      "import": [
+        "import * as Menubar from \"$lib/components/ui/menubar/index.js\";"
+      ],
+      "usage": [
+        "<Menubar.Root>",
+        "  <Menubar.Menu>",
+        "    <Menubar.Trigger>File</Menubar.Trigger>",
+        "    <Menubar.Content>",
+        "      <Menubar.Item>",
+        "        New Tab",
+        "        <Menubar.Shortcut>⌘T</Menubar.Shortcut>",
+        "      </Menubar.Item>",
+        "      <Menubar.Item>New Window</Menubar.Item>",
+        "      <Menubar.Separator />",
+        "      <Menubar.Item>Share</Menubar.Item>",
+        "      <Menubar.Separator />",
+        "      <Menubar.Item>Print</Menubar.Item>",
+        "    </Menubar.Content>",
+        "  </Menubar.Menu>",
+        "</Menubar.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/menubar.md",
+      "examplePath": null
+    },
+    "native-select": {
+      "description": "https://shadcn-svelte.com/docs/components/native-select",
+      "import": [
+        "import * as NativeSelect from \"$lib/components/ui/native-select/index.js\";"
+      ],
+      "usage": [
+        "<NativeSelect.Root>",
+        "  <NativeSelect.Option value=\"\">Select a fruit</NativeSelect.Option>",
+        "  <NativeSelect.Option value=\"apple\">Apple</NativeSelect.Option>",
+        "  <NativeSelect.Option value=\"banana\">Banana</NativeSelect.Option>",
+        "  <NativeSelect.Option value=\"blueberry\">Blueberry</NativeSelect.Option>",
+        "  <NativeSelect.Option value=\"grapes\" disabled>Grapes</NativeSelect.Option>",
+        "  <NativeSelect.Option value=\"pineapple\">Pineapple</NativeSelect.Option>",
+        "</NativeSelect.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/native-select.md",
+      "examplePath": null
+    },
+    "navigation-menu": {
+      "description": "https://shadcn-svelte.com/docs/components/navigation-menu",
+      "import": [
+        "import * as NavigationMenu from \"$lib/components/ui/navigation-menu/index.js\";"
+      ],
+      "usage": [
+        "<NavigationMenu.Root>",
+        "  <NavigationMenu.List>",
+        "    <NavigationMenu.Item>",
+        "      <NavigationMenu.Trigger>Item One</NavigationMenu.Trigger>",
+        "      <NavigationMenu.Content>",
+        "        <NavigationMenu.Link>Link</NavigationMenu.Link>",
+        "      </NavigationMenu.Content>",
+        "    </NavigationMenu.Item>",
+        "  </NavigationMenu.List>",
+        "</NavigationMenu.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/navigation-menu.md",
+      "examplePath": null
+    },
+    "pagination": {
+      "description": "https://shadcn-svelte.com/docs/components/pagination",
+      "import": [
+        "import * as Pagination from \"$lib/components/ui/pagination/index.js\";"
+      ],
+      "usage": [
+        "<Pagination.Root count={100} perPage={10}>",
+        "  {#snippet children({ pages, currentPage })}",
+        "    <Pagination.Content>",
+        "      <Pagination.Item>",
+        "        <Pagination.Previous />",
+        "      </Pagination.Item>",
+        "      {#each pages as page (page.key)}",
+        "        {#if page.type === \"ellipsis\"}",
+        "          <Pagination.Item>",
+        "            <Pagination.Ellipsis />",
+        "          </Pagination.Item>",
+        "        {:else}",
+        "          <Pagination.Item>",
+        "            <Pagination.Link {page} isActive={currentPage === page.value}>",
+        "              {page.value}",
+        "            </Pagination.Link>",
+        "          </Pagination.Item>",
+        "        {/if}",
+        "      {/each}",
+        "      <Pagination.Item>",
+        "        <Pagination.Next />",
+        "      </Pagination.Item>",
+        "    </Pagination.Content>",
+        "  {/snippet}",
+        "</Pagination.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/pagination.md",
+      "examplePath": null
+    },
+    "popover": {
+      "description": "https://shadcn-svelte.com/docs/components/popover",
+      "import": [
+        "import * as Popover from \"$lib/components/ui/popover/index.js\";"
+      ],
+      "usage": [
+        "<Popover.Root>",
+        "  <Popover.Trigger>Open</Popover.Trigger>",
+        "  <Popover.Content>Place content for the popover here.</Popover.Content>",
+        "</Popover.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/popover.md",
+      "examplePath": null
+    },
+    "progress": {
+      "description": "https://shadcn-svelte.com/docs/components/progress",
+      "import": [
+        "import { Progress } from \"$lib/components/ui/progress/index.js\";"
+      ],
+      "usage": [
+        "<Progress value={33} />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/progress.md",
+      "examplePath": null
+    },
+    "radio-group": {
+      "description": "https://shadcn-svelte.com/docs/components/radio-group",
+      "import": [
+        "import { Label } from \"$lib/components/ui/label/index.js\";",
+        "",
+        "import * as RadioGroup from \"$lib/components/ui/radio-group/index.js\";"
+      ],
+      "usage": [
+        "<RadioGroup.Root value=\"option-one\">",
+        "  <div class=\"flex items-center space-x-2\">",
+        "    <RadioGroup.Item value=\"option-one\" id=\"option-one\" />",
+        "    <Label for=\"option-one\">Option One</Label>",
+        "  </div>",
+        "  <div class=\"flex items-center space-x-2\">",
+        "    <RadioGroup.Item value=\"option-two\" id=\"option-two\" />",
+        "    <Label for=\"option-two\">Option Two</Label>",
+        "  </div>",
+        "</RadioGroup.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/radio-group.md",
+      "examplePath": null
+    },
+    "range-calendar": {
+      "description": "https://shadcn-svelte.com/docs/components/range-calendar",
+      "import": [
+        "import { RangeCalendar } from \"$lib/components/ui/range-calendar/index.js\";"
+      ],
+      "usage": [
+        "<RangeCalendar class=\"rounded-md border\" />"
+      ],
+      "source": "manual",
+      "docPath": "docs/content/components/range-calendar.md",
+      "examplePath": null
+    },
+    "resizable": {
+      "description": "https://shadcn-svelte.com/docs/components/resizable",
+      "import": [
+        "import * as Resizable from \"$lib/components/ui/resizable/index.js\";"
+      ],
+      "usage": [
+        "<Resizable.PaneGroup direction=\"horizontal\">",
+        "  <Resizable.Pane>One</Resizable.Pane>",
+        "  <Resizable.Handle />",
+        "  <Resizable.Pane>Two</Resizable.Pane>",
+        "</Resizable.PaneGroup>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/resizable.md",
+      "examplePath": null
+    },
+    "scroll-area": {
+      "description": "https://shadcn-svelte.com/docs/components/scroll-area",
+      "import": [
+        "import { ScrollArea } from \"$lib/components/ui/scroll-area/index.js\";"
+      ],
+      "usage": [
+        "<ScrollArea class=\"h-[200px] w-[350px] rounded-md border p-4\">",
+        "  Jokester began sneaking into the castle in the middle of the night and",
+        "  leaving jokes all over the place: under the king's pillow, in his soup, even",
+        "  in the royal toilet. The king was furious, but he couldn't seem to stop",
+        "  Jokester. And then, one day, the people of the kingdom discovered that the",
+        "  jokes left by Jokester were so funny that they couldn't help but laugh. And",
+        "  once they started laughing, they couldn't stop.",
+        "</ScrollArea>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/scroll-area.md",
+      "examplePath": null
+    },
+    "select": {
+      "description": "https://shadcn-svelte.com/docs/components/select",
+      "import": [
+        "import * as Select from \"$lib/components/ui/select/index.js\";"
+      ],
+      "usage": [
+        "<Select.Root type=\"single\">",
+        "  <Select.Trigger class=\"w-[180px]\"></Select.Trigger>",
+        "  <Select.Content>",
+        "    <Select.Item value=\"light\">Light</Select.Item>",
+        "    <Select.Item value=\"dark\">Dark</Select.Item>",
+        "    <Select.Item value=\"system\">System</Select.Item>",
+        "  </Select.Content>",
+        "</Select.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/select.md",
+      "examplePath": null
+    },
+    "separator": {
+      "description": "https://shadcn-svelte.com/docs/components/separator",
+      "import": [
+        "import { Separator } from \"$lib/components/ui/separator/index.js\";"
+      ],
+      "usage": [
+        "<Separator />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/separator.md",
+      "examplePath": null
+    },
+    "sheet": {
+      "description": "https://shadcn-svelte.com/docs/components/sheet",
+      "import": [
+        "import * as Sheet from \"$lib/components/ui/sheet/index.js\";"
+      ],
+      "usage": [
+        "<Sheet.Root>",
+        "  <Sheet.Trigger>Open</Sheet.Trigger>",
+        "  <Sheet.Content>",
+        "    <Sheet.Header>",
+        "      <Sheet.Title>Are you sure absolutely sure?</Sheet.Title>",
+        "      <Sheet.Description>",
+        "        This action cannot be undone. This will permanently delete your account",
+        "        and remove your data from our servers.",
+        "      </Sheet.Description>",
+        "    </Sheet.Header>",
+        "  </Sheet.Content>",
+        "</Sheet.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/sheet.md",
+      "examplePath": null
+    },
+    "sidebar": {
+      "description": "https://shadcn-svelte.com/docs/components/sidebar",
+      "import": [
+        "import * as Sidebar from \"$lib/components/ui/sidebar/index.js\";",
+        "",
+        "import AppSidebar from \"$lib/components/app-sidebar.svelte\";"
+      ],
+      "usage": [
+        "<Sidebar.Provider>",
+        "  <AppSidebar />",
+        "  <main>",
+        "    <Sidebar.Trigger />",
+        "    {@render children?.()}",
+        "  </main>",
+        "</Sidebar.Provider>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/sidebar.md",
+      "examplePath": null
+    },
+    "skeleton": {
+      "description": "https://shadcn-svelte.com/docs/components/skeleton",
+      "import": [
+        "import { Skeleton } from \"$lib/components/ui/skeleton/index.js\";"
+      ],
+      "usage": [
+        "<Skeleton class=\"h-[20px] w-[100px] rounded-full\" />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/skeleton.md",
+      "examplePath": null
+    },
+    "slider": {
+      "description": "https://shadcn-svelte.com/docs/components/slider",
+      "import": [
+        "import { Slider } from \"$lib/components/ui/slider/index.js\";"
+      ],
+      "usage": [
+        "<Slider type=\"single\" bind:value max={100} step={1} />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/slider.md",
+      "examplePath": null
+    },
+    "spinner": {
+      "description": "https://shadcn-svelte.com/docs/components/spinner",
+      "import": [
+        "import { Spinner } from \"$lib/components/ui/spinner/index.js\";"
+      ],
+      "usage": [
+        "<Spinner />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/spinner.md",
+      "examplePath": null
+    },
+    "switch": {
+      "description": "https://shadcn-svelte.com/docs/components/switch",
+      "import": [
+        "import { Switch } from \"$lib/components/ui/switch/index.js\";"
+      ],
+      "usage": [
+        "<Switch />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/switch.md",
+      "examplePath": null
+    },
+    "table": {
+      "description": "https://shadcn-svelte.com/docs/components/table",
+      "import": [
+        "import * as Table from \"$lib/components/ui/table/index.js\";"
+      ],
+      "usage": [
+        "<Table.Root>",
+        "  <Table.Caption>A list of your recent invoices.</Table.Caption>",
+        "  <Table.Header>",
+        "    <Table.Row>",
+        "      <Table.Head class=\"w-[100px]\">Invoice</Table.Head>",
+        "      <Table.Head>Status</Table.Head>",
+        "      <Table.Head>Method</Table.Head>",
+        "      <Table.Head class=\"text-end\">Amount</Table.Head>",
+        "    </Table.Row>",
+        "  </Table.Header>",
+        "  <Table.Body>",
+        "    <Table.Row>",
+        "      <Table.Cell class=\"font-medium\">INV001</Table.Cell>",
+        "      <Table.Cell>Paid</Table.Cell>",
+        "      <Table.Cell>Credit Card</Table.Cell>",
+        "      <Table.Cell class=\"text-end\">$250.00</Table.Cell>",
+        "    </Table.Row>",
+        "  </Table.Body>",
+        "</Table.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/table.md",
+      "examplePath": null
+    },
+    "tabs": {
+      "description": "https://shadcn-svelte.com/docs/components/tabs",
+      "import": [
+        "import * as Tabs from \"$lib/components/ui/tabs/index.js\";"
+      ],
+      "usage": [
+        "<Tabs.Root value=\"account\" class=\"w-[400px]\">",
+        "  <Tabs.List>",
+        "    <Tabs.Trigger value=\"account\">Account</Tabs.Trigger>",
+        "    <Tabs.Trigger value=\"password\">Password</Tabs.Trigger>",
+        "  </Tabs.List>",
+        "  <Tabs.Content value=\"account\">",
+        "    Make changes to your account here.",
+        "  </Tabs.Content>",
+        "  <Tabs.Content value=\"password\">Change your password here.</Tabs.Content>",
+        "</Tabs.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/tabs.md",
+      "examplePath": null
+    },
+    "textarea": {
+      "description": "https://shadcn-svelte.com/docs/components/textarea",
+      "import": [
+        "import { Textarea } from \"$lib/components/ui/textarea/index.js\";"
+      ],
+      "usage": [
+        "<Textarea />"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/textarea.md",
+      "examplePath": null
+    },
+    "toggle": {
+      "description": "https://shadcn-svelte.com/docs/components/toggle",
+      "import": [
+        "import { Toggle } from \"$lib/components/ui/toggle/index.js\";"
+      ],
+      "usage": [
+        "<Toggle>Toggle</Toggle>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/toggle.md",
+      "examplePath": null
+    },
+    "toggle-group": {
+      "description": "https://shadcn-svelte.com/docs/components/toggle-group",
+      "import": [
+        "import * as ToggleGroup from \"$lib/components/ui/toggle-group/index.js\";"
+      ],
+      "usage": [
+        "<ToggleGroup.Root type=\"single\">",
+        "  <ToggleGroup.Item value=\"a\">A</ToggleGroup.Item>",
+        "  <ToggleGroup.Item value=\"b\">B</ToggleGroup.Item>",
+        "  <ToggleGroup.Item value=\"c\">C</ToggleGroup.Item>",
+        "</ToggleGroup.Root>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/toggle-group.md",
+      "examplePath": null
+    },
+    "tooltip": {
+      "description": "https://shadcn-svelte.com/docs/components/tooltip",
+      "import": [
+        "import * as Tooltip from \"$lib/components/ui/tooltip/index.js\";"
+      ],
+      "usage": [
+        "<Tooltip.Provider>",
+        "  {@render children()}",
+        "</Tooltip.Provider>"
+      ],
+      "source": "docs-usage",
+      "docPath": "docs/content/components/tooltip.md",
+      "examplePath": null
+    }
+  }
+}
