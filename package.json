@@ -138,7 +138,7 @@
     "check:upstream-snippets": "node scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
     "check-types": "tsc --noEmit",
     "build": "pnpm lint && node esbuild.js --production",
-    "build:ci": "pnpm check-types && eslint src --ext ts && node esbuild.js --production",
+    "build:ci": "pnpm generate:upstream-snippets && pnpm check-types && eslint src --ext ts && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
     "vscode": "pnpx vsce publish --no-dependencies",
     "ovsx": "pnpx ovsx publish --no-dependencies",
