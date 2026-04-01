@@ -49,6 +49,7 @@ jobs:
         id: publishToOpenVSX
         with:
           pat: ${{ env.OVSX_PAT }}
+          skipDependenciesCheck: true
 
       - name: Publish to VS Code Marketplace
         if: env.VSCE_PAT != ''
@@ -57,3 +58,4 @@ jobs:
           pat: ${{ env.VSCE_PAT }}
           registryUrl: https://marketplace.visualstudio.com
           extensionFile: ${{ steps.publishToOpenVSX.outputs.vsixPath }}
+          skipDependenciesCheck: true
