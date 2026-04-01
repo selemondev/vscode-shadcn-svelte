@@ -53,6 +53,10 @@ Easily import and use shadcn-svelte components with ease using snippets within V
 | `cni-x-[component]`| Adds imports for the shadcn/svelte@next component |
 | `cnx-[component]` | Adds the markup for the svelte component|
 
+Import and usage snippets are generated dynamically by the extension from the bundled snippet templates plus the latest component registry. If a newly released component does not have a hand-authored template yet, the extension falls back to a generic import and implementation snippet so completions stay available.
+
+Use `shadcn/svelte: Reload Component List` to refresh the cached registry and snippet completions without restarting VS Code.
+
 ### How to use?
 
 1. Components
@@ -84,6 +88,16 @@ Contributions are welcome and encouraged! If you have any ideas or suggestions f
 Developers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contributing Guide](./CONTRIBUTING.md).
 
 Use this link - [Snippet Generation](https://snippet-generator.app/?description=https%3A%2F%2Fwww.shadcn-svelte.com%2Fdocs%2Fcomponents&tabtrigger=shadcn-&snippet=&mode=vscode) to generate snippets and add/update them to the `snippets` folder that is located in the `src` accordingly.
+
+For Svelte 5 snippets sourced from the upstream `huntabyte/shadcn-svelte` docs and registry, run:
+
+```bash
+pnpm generate:upstream-snippets -- --upstream-dir /path/to/shadcn-svelte
+```
+
+This writes [`src/snippets/generated-upstream-next.json`](./src/snippets/generated-upstream-next.json), which the extension loads before falling back to the legacy hand-authored `@next` snippets. Use [`scripts/upstream-snippet-overrides.json`](./scripts/upstream-snippet-overrides.json) for components that should stay on the curated legacy snippet or need a custom extraction strategy.
+
+The repository also includes a scheduled GitHub Action at [`.github/workflows/sync-upstream-snippets.yml`](./.github/workflows/sync-upstream-snippets.yml) that clones the upstream `huntabyte/shadcn-svelte` repo, regenerates the manifest, verifies the extension still builds, and opens a PR when the generated manifest changes.
 
 
 ### Credits 
