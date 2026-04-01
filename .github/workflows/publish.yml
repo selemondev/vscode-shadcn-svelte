@@ -45,17 +45,9 @@ jobs:
         run: pnpm run build
 
       - name: Publish to Open VSX Registry
-        uses: HaaLeo/publish-vscode-extension@v1
-        id: publishToOpenVSX
-        with:
-          pat: ${{ env.OVSX_PAT }}
-          skipDependenciesCheck: true
+        if: env.OVSX_PAT != ''
+        run: pnpm ovsx
 
       - name: Publish to VS Code Marketplace
         if: env.VSCE_PAT != ''
-        uses: HaaLeo/publish-vscode-extension@v1
-        with:
-          pat: ${{ env.VSCE_PAT }}
-          registryUrl: https://marketplace.visualstudio.com
-          extensionFile: ${{ steps.publishToOpenVSX.outputs.vsixPath }}
-          skipDependenciesCheck: true
+        run: pnpm vscode
