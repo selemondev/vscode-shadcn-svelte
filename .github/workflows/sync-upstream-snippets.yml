@@ -1,0 +1,60 @@
+name: Sync Upstream Snippets
+
+on:
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+jobs:
+  sync-upstream-snippets:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js with pnpm
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.x
+          cache: "pnpm"
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Clone upstream shadcn-svelte
+        run: git clone --depth 1 https://github.com/huntabyte/shadcn-svelte.git /tmp/shadcn-svelte-upstream
+
+      - name: Regenerate upstream snippet manifest
+        run: pnpm generate:upstream-snippets -- --upstream-dir /tmp/shadcn-svelte-upstream
+
+      - name: Verify extension still builds without mutating files
+        run: pnpm build:ci
+
+      - name: Capture upstream commit
+        id: upstream
+        run: echo "sha=$(git -C /tmp/shadcn-svelte-upstream rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: sync upstream snippets"
+          branch: "ci/sync-upstream-snippets"
+          delete-branch: true
+          title: "chore: sync upstream snippets"
+          body: |
+            Syncs the generated Svelte 5 snippet manifest from `huntabyte/shadcn-svelte`.
+
+            Upstream commit: `${{ steps.upstream.outputs.sha }}`
+
+            This PR was created automatically by the `Sync Upstream Snippets` workflow.
+          add-paths: |
+            src/snippets/generated-upstream-next.json
