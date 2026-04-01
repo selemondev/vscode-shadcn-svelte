@@ -11,6 +11,8 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
+    env:
+      VSCE_PAT: ${{ secrets.VSCE_PAT }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -45,9 +47,9 @@ jobs:
           pat: ${{ secrets.OVSX_PAT }}
 
       - name: Publish to VS Code Marketplace
-        if: secrets.VSCE_PAT != ''
+        if: env.VSCE_PAT != ''
         uses: HaaLeo/publish-vscode-extension@v1
         with:
-          pat: ${{ secrets.VSCE_PAT }}
+          pat: ${{ env.VSCE_PAT }}
           registryUrl: https://marketplace.visualstudio.com
           extensionFile: ${{ steps.publishToOpenVSX.outputs.vsixPath }}
