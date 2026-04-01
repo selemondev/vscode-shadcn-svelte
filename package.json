@@ -32,7 +32,18 @@
     "svelte typescript snippets"
   ],
   "icon": "src/images/icon.png",
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:svelte",
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onCommand:shadcn-svelte.initCli",
+    "onCommand:shadcn-svelte.addNewComponent",
+    "onCommand:shadcn-svelte.addMultipleComponents",
+    "onCommand:shadcn-svelte.gotoComponentDoc",
+    "onCommand:shadcn-svelte.reloadComponentList",
+    "onCommand:shadcn-svelte.gotoDoc"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "languages": [
@@ -51,22 +62,6 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./src/snippets/imports-code-snippets.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/imports-code-snippets.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./src/snippets/imports-code-snippets-next.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/imports-code-snippets-next.json"
-      },
-      {
-        "language": "javascript",
         "path": "./src/snippets/help-code-snippets.json"
       },
       {
@@ -96,22 +91,6 @@
       {
         "language": "svelte",
         "path": "./src/snippets/help-code-snippets-next.json"
-      },
-      {
-        "language": "html",
-        "path": "./src/snippets/usage-code-snippets.json"
-      },
-      {
-        "language": "svelte",
-        "path": "./src/snippets/usage-code-snippets.json"
-      },
-      {
-        "language": "html",
-        "path": "./src/snippets/usage-code-snippets-next.json"
-      },
-      {
-        "language": "svelte",
-        "path": "./src/snippets/usage-code-snippets-next.json"
       }
     ],
     "commands": [
@@ -155,8 +134,11 @@
     "vscode:prepublish": "pnpm build",
     "generate-major:release": "npx changelogen@latest --major --release",
     "generate-minor:release": "npx changelogen@latest --minor --release",
+    "generate:upstream-snippets": "node scripts/generate-upstream-snippets.mjs",
+    "check:upstream-snippets": "node scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
     "check-types": "tsc --noEmit",
     "build": "pnpm lint && node esbuild.js --production",
+    "build:ci": "pnpm check-types && eslint src --ext ts && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
     "vscode": "pnpx vsce publish --no-dependencies",
     "ovsx": "pnpx ovsx publish --no-dependencies",

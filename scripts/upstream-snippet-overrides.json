@@ -1,0 +1,32 @@
+{
+  "calendar": {
+    "strategy": "manual",
+    "import": [
+      "import { Calendar } from \"$lib/components/ui/calendar/index.js\";"
+    ],
+    "usage": [
+      "<Calendar type=\"single\" class=\"rounded-md border shadow-sm\" captionLayout=\"dropdown\" />"
+    ]
+  },
+  "chart": {
+    "strategy": "legacy"
+  },
+  "data-table": {
+    "strategy": "legacy"
+  },
+  "form": {
+    "strategy": "legacy"
+  },
+  "range-calendar": {
+    "strategy": "manual",
+    "import": [
+      "import { RangeCalendar } from \"$lib/components/ui/range-calendar/index.js\";"
+    ],
+    "usage": [
+      "<RangeCalendar class=\"rounded-md border\" />"
+    ]
+  },
+  "sonner": {
+    "strategy": "legacy"
+  }
+}

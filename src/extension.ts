@@ -1,9 +1,9 @@
 import * as vscode from "vscode";
+import { ShadcnSnippetCompletionProvider } from "./completionProvider";
 import {
   getInitCmd,
   getInstallCmd,
   getComponentDocLink,
-  getRegistry,
 } from "./utils/registry";
 import { executeCommand, getOrChooseCwd } from "./utils/vscode";
 import { getSvelteVersion } from "./utils/getSvelteVersion";
@@ -19,29 +19,43 @@ const commands = {
 } as const;
 
 export async function activate(context: vscode.ExtensionContext) {
-  if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {
-    vscode.window.showErrorMessage("No workspace folder open.");
-    return;
-  }
+  const snippetCompletionProvider = new ShadcnSnippetCompletionProvider(context);
+  await snippetCompletionProvider.initialize();
 
-  let registryData: Components;
+  let registryData: Components = snippetCompletionProvider.getRegistryComponents();
+  const requireWorkspace = () => {
+    if (!vscode.workspace.workspaceFolders || vscode.workspace.workspaceFolders.length === 0) {
+      vscode.window.showErrorMessage("No workspace folder open.");
+      return false;
+    }
+
+    return true;
+  };
 
   const disposables: vscode.Disposable[] = [
+    snippetCompletionProvider.register(),
     vscode.commands.registerCommand(commands.initCli, async () => {
+      if (!requireWorkspace()) {
+        return;
+      }
+
       const cwd = await getOrChooseCwd();
       const intCmd = await getInitCmd(cwd);
       executeCommand(intCmd);
     }),
     vscode.commands.registerCommand(commands.addNewComponent, async () => {
-      registryData = [];
-      const newRegistryData = await getRegistry();
+      if (!requireWorkspace()) {
+        return;
+      }
 
-      if (!newRegistryData) {
+      const newRegistryData = await snippetCompletionProvider.refresh();
+
+      if (!newRegistryData.registryComponents.length) {
         vscode.window.showErrorMessage("Cannot get the component list");
         return;
       }
 
-      registryData = newRegistryData;
+      registryData = newRegistryData.registryComponents;
 
       const selectedComponent = await vscode.window.showQuickPick(registryData, {
         matchOnDescription: true,
@@ -56,15 +70,18 @@ export async function activate(context: vscode.ExtensionContext) {
     }),
 
     vscode.commands.registerCommand(commands.addMultipleComponents, async () => {
-      registryData = [];
-      const newRegistryData = await getRegistry();
+      if (!requireWorkspace()) {
+        return;
+      }
 
-      if (!newRegistryData) {
+      const newRegistryData = await snippetCompletionProvider.refresh();
+
+      if (!newRegistryData.registryComponents.length) {
         vscode.window.showErrorMessage("Cannot get the component list");
         return;
       }
 
-      registryData = newRegistryData;
+      registryData = newRegistryData.registryComponents;
 
       const selectedComponents = await vscode.window.showQuickPick(registryData, {
         matchOnDescription: true,
@@ -81,15 +98,14 @@ export async function activate(context: vscode.ExtensionContext) {
       executeCommand(installCmd);
     }),
     vscode.commands.registerCommand(commands.gotoComponentDoc, async () => {
-      registryData = [];
-      const newRegistryData = await getRegistry();
+      const newRegistryData = await snippetCompletionProvider.refresh();
 
-      if (!newRegistryData) {
+      if (!newRegistryData.registryComponents.length) {
         vscode.window.showErrorMessage("Cannot get the component list");
         return;
       }
 
-      registryData = newRegistryData;
+      registryData = newRegistryData.registryComponents;
 
       const selectedComponent = await vscode.window.showQuickPick(registryData, {
         matchOnDescription: true,
@@ -103,16 +119,15 @@ export async function activate(context: vscode.ExtensionContext) {
       vscode.env.openExternal(vscode.Uri.parse(componentDocLink));
     }),
     vscode.commands.registerCommand(commands.reloadComponentList, async () => {
-      registryData = [];
-      const newRegistryData = await getRegistry();
+      const newRegistryData = await snippetCompletionProvider.refresh(true);
 
-      if (!newRegistryData) {
+      if (!newRegistryData.registryComponents.length) {
         vscode.window.showErrorMessage("Cannot get the component list");
         return;
       }
 
-      registryData = newRegistryData;
-      vscode.window.showInformationMessage("shadcn/svelte: Reloaded components");
+      registryData = newRegistryData.registryComponents;
+      vscode.window.showInformationMessage(`shadcn/svelte: Reloaded ${registryData.length} components and snippets`);
     }),
     vscode.commands.registerCommand(commands.gotoDoc, async () => {
       const svelteVersion = await getSvelteVersion();
