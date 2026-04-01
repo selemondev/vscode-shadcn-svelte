@@ -4,6 +4,36 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.6.1
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.0...v0.6.1)
+
+### 🚀 Enhancements
+
+- Add support for automatic reload of latest components, usage and import snippets ([2abce4d](https://github.com/selemondev/vscode-shadcn-svelte/commit/2abce4d))
+- Add upstream sync workflow ([a0ce94b](https://github.com/selemondev/vscode-shadcn-svelte/commit/a0ce94b))
+
+### 📖 Documentation
+
+- Update documentation ([4c933ee](https://github.com/selemondev/vscode-shadcn-svelte/commit/4c933ee))
+
+### 🏡 Chore
+
+- **release:** V0.6.0 ([67de3b5](https://github.com/selemondev/vscode-shadcn-svelte/commit/67de3b5))
+- **vscode-types:** Downgrade @types/vscode version for compatibility with vscode engine ([34435bc](https://github.com/selemondev/vscode-shadcn-svelte/commit/34435bc))
+- **icon:** Fix extension icon path ([f563874](https://github.com/selemondev/vscode-shadcn-svelte/commit/f563874))
+- Update deloy scripts ([24e0f59](https://github.com/selemondev/vscode-shadcn-svelte/commit/24e0f59))
+- **scripts:** Fix deploy script keys ([070d582](https://github.com/selemondev/vscode-shadcn-svelte/commit/070d582))
+- Update deploy scripts ([b2906b1](https://github.com/selemondev/vscode-shadcn-svelte/commit/b2906b1))
+- Update build:ci script ([8dee420](https://github.com/selemondev/vscode-shadcn-svelte/commit/8dee420))
+- Refresh upstream manifest ([669abbe](https://github.com/selemondev/vscode-shadcn-svelte/commit/669abbe))
+- Refresh upstream manifest ([5a7513b](https://github.com/selemondev/vscode-shadcn-svelte/commit/5a7513b))
+- Add and update release scripts ([315d4ee](https://github.com/selemondev/vscode-shadcn-svelte/commit/315d4ee))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.6.0
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.5.6...v0.6.0)
