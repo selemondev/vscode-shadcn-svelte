@@ -12,6 +12,7 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     env:
+      OVSX_PAT: ${{ secrets.OVSX_PAT }}
       VSCE_PAT: ${{ secrets.VSCE_PAT }}
     steps:
       - name: Checkout code
@@ -47,7 +48,7 @@ jobs:
         uses: HaaLeo/publish-vscode-extension@v1
         id: publishToOpenVSX
         with:
-          pat: ${{ secrets.OVSX_PAT }}
+          pat: ${{ env.OVSX_PAT }}
 
       - name: Publish to VS Code Marketplace
         if: env.VSCE_PAT != ''
