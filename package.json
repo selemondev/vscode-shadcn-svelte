@@ -132,8 +132,9 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm build",
-    "generate-major:release": "npx changelogen@latest --major --release",
-    "generate-minor:release": "npx changelogen@latest --minor --release",
+    "generate:release": "pnpx changelogen@latest --release --hide-author-email && git push --follow-tags",
+    "generate-major:release": "pnpx changelogen@latest --major --release --hide-author-email && git push --follow-tags",
+    "generate-minor:release": "pnpx changelogen@latest --minor --release --hide-author-email && git push --follow-tags",
     "generate:upstream-snippets": "node scripts/generate-upstream-snippets.mjs",
     "check:upstream-snippets": "node scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
     "check-types": "tsc --noEmit",
