@@ -99,7 +99,6 @@ This writes [`src/snippets/generated-upstream-next.json`](./src/snippets/generat
 
 The repository also includes a scheduled GitHub Action at [`.github/workflows/sync-upstream-snippets.yml`](./.github/workflows/sync-upstream-snippets.yml) that clones the upstream `huntabyte/shadcn-svelte` repo, regenerates the manifest, verifies the extension still builds, and opens a PR when the generated manifest changes.
 
-
 ### Credits 
 
 All credits go to the creators of these amazing projects:
