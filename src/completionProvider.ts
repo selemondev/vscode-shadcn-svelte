@@ -27,7 +27,6 @@ type RuntimeSnippet = {
 type SnippetScope = "import" | "usage";
 
 type CompletionData = {
-  itemsByLanguage: CompletionItemsByLanguage;
   registryComponents: Components;
 };
 
@@ -43,6 +42,8 @@ type CompletionItemsByLanguage = {
 
 const REGISTRY_CACHE_KEY = "shadcn-svelte.registry-cache";
 const REGISTRY_CACHE_TTL_MS = 1000 * 60 * 60 * 12;
+const DEFAULT_LIB_ALIAS = "$lib";
+const DEFAULT_UI_ALIAS = `${DEFAULT_LIB_ALIAS}/components/ui`;
 
 const languageSelectors: vscode.DocumentSelector = [
   { language: "svelte" },
@@ -72,14 +73,55 @@ const toPascalCase = (value: string) => {
 const getDocBaseUrl = (version: SnippetVersion) =>
   version === 5 ? "https://next.shadcn-svelte.com/docs/components" : "https://shadcn-svelte.com/docs/components";
 
-const getImportPath = (component: string, version: SnippetVersion) =>
-  version === 5
-    ? `$$lib/components/ui/${component}/index.js`
-    : `$$lib/components/ui/${component}`;
+const escapeSnippetText = (value: string) => value.split("$").join("$$");
 
-const createImportPlaceholderBody = (component: string, version: SnippetVersion): SnippetBody => {
+const getImportPath = (component: string, version: SnippetVersion, uiAliasBase: string) =>
+  version === 5
+    ? `${escapeSnippetText(uiAliasBase)}/${component}/index.js`
+    : `${escapeSnippetText(uiAliasBase)}/${component}`;
+
+type ComponentsConfig = {
+  aliases?: {
+    lib?: string;
+    components?: string;
+    ui?: string;
+  };
+};
+
+const normalizeAlias = (value: string | undefined) => value?.trim().replace(/\/+$/, "");
+
+const resolveUiAliasBase = (config: ComponentsConfig | null) => {
+  const uiAlias = normalizeAlias(config?.aliases?.ui);
+  if (uiAlias) {
+    return uiAlias;
+  }
+
+  const componentsAlias = normalizeAlias(config?.aliases?.components);
+  if (componentsAlias) {
+    return `${componentsAlias}/ui`;
+  }
+
+  const libAlias = normalizeAlias(config?.aliases?.lib) ?? DEFAULT_LIB_ALIAS;
+  return `${libAlias}/components/ui`;
+};
+
+const rewriteUiImportLine = (line: string, uiAliasBase: string) => {
+  const match = line.match(/(["'])([^"']*\/components\/ui\/([^"']+))\1/);
+
+  if (!match) {
+    return line;
+  }
+
+  const [, quote, fullPath, suffix] = match;
+  return line.replace(
+    `${quote}${fullPath}${quote}`,
+    () => `${quote}${escapeSnippetText(uiAliasBase)}/${suffix}${quote}`,
+  );
+};
+
+const createImportPlaceholderBody = (component: string, version: SnippetVersion, uiAliasBase: string): SnippetBody => {
   const symbol = toPascalCase(component);
-  const importPath = getImportPath(component, version);
+  const importPath = getImportPath(component, version, uiAliasBase);
 
   return [
     `// Verify the exported API for "${component}" after installation.`,
@@ -104,11 +146,12 @@ const inferNamespaceUsage = (usageSnippet: StaticSnippet | undefined, symbol: st
 const createGenericImportBody = (
   component: string,
   version: SnippetVersion,
+  uiAliasBase: string,
   namedImportComponents: ReadonlySet<string>,
   usageSnippet?: StaticSnippet,
 ): SnippetBody => {
   const symbol = toPascalCase(component);
-  const importPath = getImportPath(component, version);
+  const importPath = getImportPath(component, version, uiAliasBase);
 
   if (inferNamespaceUsage(usageSnippet, symbol)) {
     return [`import * as ${symbol} from "${importPath}"`];
@@ -118,7 +161,7 @@ const createGenericImportBody = (
     return [`import { ${symbol} } from "${importPath}"`];
   }
 
-  return createImportPlaceholderBody(component, version);
+  return createImportPlaceholderBody(component, version, uiAliasBase);
 };
 
 const createGenericUsageBody = (
@@ -127,7 +170,9 @@ const createGenericUsageBody = (
   namedImportComponents: ReadonlySet<string>,
   staticImport?: StaticSnippet,
 ): SnippetBody => {
-  const importBody = staticImport?.body[0] ?? createGenericImportBody(component, version, namedImportComponents)[0];
+  const importBody =
+    staticImport?.body[0]
+    ?? createGenericImportBody(component, version, DEFAULT_UI_ALIAS, namedImportComponents)[0];
   const namedImportMatch = importBody.match(/import\s+\{\s*([A-Za-z0-9_]+)\s*\}\s+from/);
 
   if (namedImportMatch?.[1]) {
@@ -154,6 +199,7 @@ const createSnippet = (
   component: string,
   kind: "import" | "usage",
   version: SnippetVersion,
+  uiAliasBase: string,
   staticSnippets: StaticSnippetIndex,
   namedImportComponents: ReadonlySet<string>,
 ): RuntimeSnippet => {
@@ -166,12 +212,14 @@ const createSnippet = (
     kind,
     version,
     body:
-      staticSnippet?.body ??
-      (kind === "import"
-        ? createGenericImportBody(component, version, namedImportComponents, staticUsage)
-        : staticImport
-          ? createGenericUsageBody(component, version, namedImportComponents, staticImport)
-          : createUsagePlaceholderBody(component)),
+      kind === "import" && staticSnippet?.body
+        ? staticSnippet.body.map((line) => rewriteUiImportLine(line, uiAliasBase))
+        : staticSnippet?.body
+          ?? (kind === "import"
+            ? createGenericImportBody(component, version, uiAliasBase, namedImportComponents, staticUsage)
+            : staticImport
+              ? createGenericUsageBody(component, version, namedImportComponents, staticImport)
+              : createUsagePlaceholderBody(component)),
     description:
       staticSnippet?.description ??
       `${getDocBaseUrl(version)}/${component}.html`,
@@ -260,7 +308,8 @@ const isRegistryCache = (value: unknown): value is RegistryCache => {
 export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemProvider {
   private staticSnippetData?: Record<SnippetVersion, StaticSnippetIndex>;
   private namedImportComponents = new Set<string>();
-  private completionItemsByLanguage: CompletionItemsByLanguage = createEmptyItemsByLanguage();
+  private completionItemsCache = new Map<string, CompletionItemsByLanguage>();
+  private invalidComponentsConfigWarnings = new Set<string>();
   private registryComponents: Components = [];
   private preferredVersion: SnippetVersion = 5;
   private refreshPromise?: Promise<CompletionData>;
@@ -274,7 +323,6 @@ export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemPro
 
     const cachedRegistry = this.getCachedRegistry();
     this.registryComponents = cachedRegistry?.components ?? [];
-    this.completionItemsByLanguage = this.buildCompletionItems(this.registryComponents, this.preferredVersion);
 
     if (isStale(cachedRegistry)) {
       void this.refresh();
@@ -297,7 +345,7 @@ export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemPro
     this.refreshPromise = this.loadLatestCompletionData()
       .then((data) => {
         this.registryComponents = data.registryComponents;
-        this.completionItemsByLanguage = data.itemsByLanguage;
+        this.completionItemsCache.clear();
         return data;
       })
       .finally(() => {
@@ -319,23 +367,26 @@ export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemPro
     }
 
     if (document.languageId !== "svelte") {
+      const completionItemsByLanguage = await this.getCompletionItemsForDocument(document);
+
       if (document.languageId === "html") {
-        return new vscode.CompletionList(this.completionItemsByLanguage.html, false);
+        return new vscode.CompletionList(completionItemsByLanguage.html, false);
       }
 
       if (document.languageId === "javascript") {
-        return new vscode.CompletionList(this.completionItemsByLanguage.javascript, false);
+        return new vscode.CompletionList(completionItemsByLanguage.javascript, false);
       }
 
       if (document.languageId === "typescript") {
-        return new vscode.CompletionList(this.completionItemsByLanguage.typescript, false);
+        return new vscode.CompletionList(completionItemsByLanguage.typescript, false);
       }
 
       return new vscode.CompletionList([], false);
     }
 
     const preferredScope = this.getSvelteSnippetScope(document, position, currentWord);
-    return new vscode.CompletionList(this.completionItemsByLanguage.svelte[preferredScope], false);
+    const completionItemsByLanguage = await this.getCompletionItemsForDocument(document);
+    return new vscode.CompletionList(completionItemsByLanguage.svelte[preferredScope], false);
   }
 
   getRegistryComponents() {
@@ -367,13 +418,13 @@ export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemPro
 
     return {
       registryComponents,
-      itemsByLanguage: this.buildCompletionItems(registryComponents, preferredVersion),
     };
   }
 
   private buildCompletionItems(
     registryComponents: Components,
     preferredVersion: SnippetVersion,
+    uiAliasBase: string,
   ) {
     if (!this.staticSnippetData) {
       return createEmptyItemsByLanguage();
@@ -392,6 +443,7 @@ export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemPro
             component,
             kind,
             version,
+            uiAliasBase,
             staticSnippets,
             this.namedImportComponents,
           );
@@ -410,6 +462,58 @@ export class ShadcnSnippetCompletionProvider implements vscode.CompletionItemPro
     }
 
     return createItemsByLanguage(importItems, usageItems);
+  }
+
+  private async getCompletionItemsForDocument(document: vscode.TextDocument) {
+    const uiAliasBase = await this.getUiAliasBaseForDocument(document);
+    const cacheKey = `${this.preferredVersion}:${uiAliasBase}`;
+    const cached = this.completionItemsCache.get(cacheKey);
+
+    if (cached) {
+      return cached;
+    }
+
+    const items = this.buildCompletionItems(this.registryComponents, this.preferredVersion, uiAliasBase);
+    this.completionItemsCache.set(cacheKey, items);
+    return items;
+  }
+
+  private async getUiAliasBaseForDocument(document: vscode.TextDocument) {
+    const workspaceFolder = vscode.workspace.getWorkspaceFolder(document.uri)
+      ?? vscode.workspace.workspaceFolders?.find((folder) => folder.uri.scheme === "file");
+
+    if (!workspaceFolder) {
+      return DEFAULT_UI_ALIAS;
+    }
+
+    try {
+      const configPath = vscode.Uri.joinPath(workspaceFolder.uri, "components.json");
+      const configContent = await vscode.workspace.fs.readFile(configPath);
+      const rawConfig = Buffer.from(configContent).toString("utf8");
+      const config = JSON.parse(rawConfig) as ComponentsConfig;
+
+      this.invalidComponentsConfigWarnings.delete(workspaceFolder.uri.toString());
+      return resolveUiAliasBase(config);
+    } catch (error) {
+      if (error instanceof vscode.FileSystemError && error.code === "FileNotFound") {
+        return DEFAULT_UI_ALIAS;
+      }
+
+      this.warnInvalidComponentsConfig(workspaceFolder);
+      return DEFAULT_UI_ALIAS;
+    }
+  }
+
+  private warnInvalidComponentsConfig(workspaceFolder: vscode.WorkspaceFolder) {
+    const workspaceKey = workspaceFolder.uri.toString();
+    if (this.invalidComponentsConfigWarnings.has(workspaceKey)) {
+      return;
+    }
+
+    this.invalidComponentsConfigWarnings.add(workspaceKey);
+    void vscode.window.showWarningMessage(
+      `shadcn/svelte: Failed to parse components.json in ${workspaceFolder.name}. Falling back to ${DEFAULT_UI_ALIAS}.`,
+    );
   }
 
   private getSvelteSnippetScope(
