@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { ShadcnSnippetCompletionProvider } from "./completionProvider";
+import { ShadcnSnippetCompletionProvider } from "./completion-provider";
 import {
   getInitCmd,
   getInstallCmd,

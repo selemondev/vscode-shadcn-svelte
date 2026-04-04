@@ -126,6 +126,11 @@
           "type": "string",
           "default": "",
           "markdownDescription": "Absolute path to the working directory when running shadcn-svelte CLI. Default is the current workspace folder."
+        },
+        "shadcn-svelte.imports.includeIndexJs": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Whether shadcn/svelte import snippets include `/index.js` for Svelte 5 component imports."
         }
       }
     }
