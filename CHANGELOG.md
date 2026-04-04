@@ -4,6 +4,23 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.6.8
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.7...v0.6.8)
+
+### 💅 Refactors
+
+- Split completion provider and apply index.js import setting ([21a40b7](https://github.com/selemondev/vscode-shadcn-svelte/commit/21a40b7))
+
+### 🏡 Chore
+
+- Add node type to tsconfig.json ([a82d3a7](https://github.com/selemondev/vscode-shadcn-svelte/commit/a82d3a7))
+- Refresh manifest ([c40ae79](https://github.com/selemondev/vscode-shadcn-svelte/commit/c40ae79))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.6.7
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.6...v0.6.7)
