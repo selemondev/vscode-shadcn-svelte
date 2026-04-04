@@ -5,7 +5,7 @@
         "cni-x-accordion"
       ],
       "body": [
-        "import * as Accordion from \"$$lib/components/ui/accordion/index.js\""
+        "import * as Accordion from \"\\$lib/components/ui/accordion/index.js\""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/accordion.html"
     },
@@ -15,7 +15,7 @@
         "cni-x-alert"
       ],
       "body": [
-        "import * as Alert from \"$$lib/components/ui/alert/index.js\""
+        "import * as Alert from \"\\$lib/components/ui/alert/index.js\""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/alert.html"
     },
@@ -25,7 +25,7 @@
         "cni-x-alert-dialog"
       ],
       "body": [
-        "import * as AlertDialog from \"$$lib/components/ui/alert-dialog/index.js\""
+        "import * as AlertDialog from \"\\$lib/components/ui/alert-dialog/index.js\""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/alert-dialog.html"
     },
@@ -35,7 +35,7 @@
         "cni-x-aspect-ratio"
       ],
       "body": [
-        "import { AspectRatio } from \"$$lib/components/ui/aspect-ratio/index.js\"",
+        "import { AspectRatio } from \"\\$lib/components/ui/aspect-ratio/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/aspect-ratio.html"
@@ -46,7 +46,7 @@
         "cni-x-avatar"
       ],
       "body": [
-        "  import * as Avatar from \"$$lib/components/ui/avatar/index.js\"",
+        "  import * as Avatar from \"\\$lib/components/ui/avatar/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/avatar.html"
@@ -57,7 +57,7 @@
         "cni-x-badge"
       ],
       "body": [
-        "import { Badge } from \"$$lib/components/ui/badge/index.js\"",
+        "import { Badge } from \"\\$lib/components/ui/badge/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/badge.html"
@@ -68,7 +68,7 @@
         "cni-x-button"
       ],
       "body": [
-        "import { Button } from \"$$lib/components/ui/button/index.js\"",
+        "import { Button } from \"\\$lib/components/ui/button/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/button.html"
@@ -79,7 +79,7 @@
         "cni-x-calendar"
       ],
       "body": [
-        "import { Calendar } from \"$$lib/components/ui/calendar/index.js\"",
+        "import { Calendar } from \"\\$lib/components/ui/calendar/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/calendar.html"
@@ -90,7 +90,7 @@
         "cni-x-card"
       ],
       "body": [
-        "import * as Card from \"$$lib/components/ui/card/index.js\"",
+        "import * as Card from \"\\$lib/components/ui/card/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/card.html"
@@ -101,8 +101,8 @@
         "cni-x-carousel"
       ],
       "body": [
-        "import * as Card from \"$$lib/components/ui/card/index.js\"",
-        "import * as Carousel from \"$$lib/components/ui/carousel/index.js\""
+        "import * as Card from \"\\$lib/components/ui/card/index.js\"",
+        "import * as Carousel from \"\\$lib/components/ui/carousel/index.js\""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/carousel.html"
     },
@@ -112,7 +112,7 @@
         "cni-x-checkbox"
       ],
       "body": [
-        "import { Checkbox } from \"$$lib/components/ui/checkbox/index.js\"",
+        "import { Checkbox } from \"\\$lib/components/ui/checkbox/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/checkbox.html"
@@ -123,7 +123,7 @@
         "cni-x-collapsible"
       ],
       "body": [
-        "import * as Collapsible from \"$$lib/components/ui/collapsible/index.js\"",
+        "import * as Collapsible from \"\\$lib/components/ui/collapsible/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/collapsible.html"
@@ -134,7 +134,7 @@
         "cni-x-command"
       ],
       "body": [
-        "import * as Command from \"$$lib/components/ui/command/index.js\"",
+        "import * as Command from \"\\$lib/components/ui/command/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/command.html"
@@ -145,7 +145,7 @@
         "cni-x-context-menu"
       ],
       "body": [
-        "import * as ContextMenu from \"$$lib/components/ui/context-menu/index.js\"",
+        "import * as ContextMenu from \"\\$lib/components/ui/context-menu/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/context-menu.html"
@@ -156,7 +156,7 @@
         "cni-x-dialog"
       ],
       "body": [
-        "import * as Dialog from \"$$lib/components/ui/dialog/index.js\"",
+        "import * as Dialog from \"\\$lib/components/ui/dialog/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/dialog.html"
@@ -167,7 +167,7 @@
         "cni-x-dropdown-menu"
       ],
       "body": [
-        "import * as DropdownMenu from \"$$lib/components/ui/dropdown-menu/index.js\"",
+        "import * as DropdownMenu from \"\\$lib/components/ui/dropdown-menu/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/dropdown-menu.html"
@@ -178,7 +178,7 @@
         "cni-x-drawer"
       ],
       "body": [
-        "  import * as Drawer from \"$$lib/components/ui/drawer/index.js\"",
+        "  import * as Drawer from \"\\$lib/components/ui/drawer/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/drawer.html"
@@ -189,7 +189,7 @@
         "cni-x-hover-card"
       ],
       "body": [
-        "import * as HoverCard from \"$$lib/components/ui/hover-card/index.js\"",
+        "import * as HoverCard from \"\\$lib/components/ui/hover-card/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/hover-card.html"
@@ -200,7 +200,7 @@
         "cni-x-input"
       ],
       "body": [
-        "import { Input } from \"$$lib/components/ui/input/index.js\"",
+        "import { Input } from \"\\$lib/components/ui/input/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/input.html"
@@ -211,7 +211,7 @@
         "cni-x-input-otp"
       ],
       "body": [
-        "import * as InputOTP from \"$$lib/components/ui/input-otp/index.js\"",
+        "import * as InputOTP from \"\\$lib/components/ui/input-otp/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
@@ -222,7 +222,7 @@
         "cni-x-label"
       ],
       "body": [
-        "import { Label } from \"$$lib/components/ui/label/index.js\"",
+        "import { Label } from \"\\$lib/components/ui/label/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/label.html"
@@ -233,7 +233,7 @@
         "cni-x-menubar"
       ],
       "body": [
-        "import * as Menubar from \"$$lib/components/ui/menubar/index.js\"",
+        "import * as Menubar from \"\\$lib/components/ui/menubar/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/menu-bar.html"
@@ -244,7 +244,7 @@
         "cni-x-popover"
       ],
       "body": [
-        "import * as Popover from \"$$lib/components/ui/popover/index.js\"",
+        "import * as Popover from \"\\$lib/components/ui/popover/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/popover.html"
@@ -255,7 +255,7 @@
         "cni-x-progress"
       ],
       "body": [
-        "import { Progress } from \"$$lib/components/ui/progress/index.js\"",
+        "import { Progress } from \"\\$lib/components/ui/progress/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/progress.html"
@@ -266,8 +266,8 @@
         "cni-x-radio-group"
       ],
       "body": [
-        "import { Label } from \"$$lib/components/ui/label/index.js\"",
-        "import * as RadioGroup from \"$$lib/components/ui/radio-group/index.js\"",
+        "import { Label } from \"\\$lib/components/ui/label/index.js\"",
+        "import * as RadioGroup from \"\\$lib/components/ui/radio-group/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/radio-group.html"
@@ -278,7 +278,7 @@
         "cni-x-range-calendar"
       ],
       "body": [
-        "import { RangeCalendar } from \"$$lib/components/ui/range-calendar/index.js\"",
+        "import { RangeCalendar } from \"\\$lib/components/ui/range-calendar/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/range-calendar.html"
@@ -289,7 +289,7 @@
         "cni-x-scroll-area"
       ],
       "body": [
-        "import { ScrollArea } from \"$$lib/components/ui/scroll-area/index.js\"",
+        "import { ScrollArea } from \"\\$lib/components/ui/scroll-area/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/scroll-area.html"
@@ -299,7 +299,7 @@
         "cni-x-select"
       ],
       "body": [
-        "import * as Select from \"$$lib/components/ui/select/index.js\"",
+        "import * as Select from \"\\$lib/components/ui/select/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/select.html"
@@ -310,7 +310,7 @@
         "cni-x-separator"
       ],
       "body": [
-        "import { Separator } from \"$$lib/components/ui/separator/index.js\"",
+        "import { Separator } from \"\\$lib/components/ui/separator/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/separator.html"
@@ -321,7 +321,7 @@
         "cni-x-sheet"
       ],
       "body": [
-        "import * as Sheet from \"$$lib/components/ui/sheet/index.js\"",
+        "import * as Sheet from \"\\$lib/components/ui/sheet/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/sheet.html"
@@ -332,7 +332,7 @@
         "cni-x-sidebar"
       ],
       "body": [
-        "import * as Sidebar from \"$$lib/components/ui/sidebar/index.js\"",
+        "import * as Sidebar from \"\\$lib/components/ui/sidebar/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
@@ -343,7 +343,7 @@
         "cni-x-skeleton"
       ],
       "body": [
-        "import { Skeleton } from \"$$lib/components/ui/skeleton/index.js\"",
+        "import { Skeleton } from \"\\$lib/components/ui/skeleton/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/skeleton.html"
@@ -354,7 +354,7 @@
         "cni-x-slider"
       ],
       "body": [
-        "import { Slider } from \"$$lib/components/ui/slider/index.js\"",
+        "import { Slider } from \"\\$lib/components/ui/slider/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/slider.html"
@@ -365,7 +365,7 @@
         "cni-x-sonner"
       ],
       "body": [
-        "import { Toaster } from \"$lib/components/ui/sonner/index.js\";"
+        "import { Toaster } from \"\\$lib/components/ui/sonner/index.js\";"
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/sonner.html"
     },
@@ -375,7 +375,7 @@
         "cni-x-switch"
       ],
       "body": [
-        "import { Switch } from \"$$lib/components/ui/switch/index.js\"",
+        "import { Switch } from \"\\$lib/components/ui/switch/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/switch.html"
@@ -386,7 +386,7 @@
         "cni-x-table"
       ],
       "body": [
-        "import * as Table from \"$$lib/components/ui/table/index.js\"",
+        "import * as Table from \"\\$lib/components/ui/table/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/table.html"
@@ -397,7 +397,7 @@
         "cni-x-tabs"
       ],
       "body": [
-        "import * as Tabs from \"$$lib/components/ui/tabs/index.js\"",
+        "import * as Tabs from \"\\$lib/components/ui/tabs/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/tabs.html"
@@ -408,7 +408,7 @@
         "cni-x-textarea"
       ],
       "body": [
-        "import { Textarea } from \"$$lib/components/ui/textarea/index.js\"",
+        "import { Textarea } from \"\\$lib/components/ui/textarea/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/textarea.html"
@@ -419,7 +419,7 @@
         "cni-x-toggle"
       ],
       "body": [
-        "import { Toggle } from \"$$lib/components/ui/toggle/index.js\"",
+        "import { Toggle } from \"\\$lib/components/ui/toggle/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/toggle.html"
@@ -430,7 +430,7 @@
         "cni-x-toggle"
       ],
       "body": [
-        "import * as ToggleGroup from \"$$lib/components/ui/toggle-group/index.js\"",
+        "import * as ToggleGroup from \"\\$lib/components/ui/toggle-group/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/toggle-group.html"
@@ -441,7 +441,7 @@
         "cni-x-tooltip"
       ],
       "body": [
-        "import * as Tooltip from \"$$lib/components/ui/tooltip/index.js\"",
+        "import * as Tooltip from \"\\$lib/components/ui/tooltip/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/tooltip.html"
@@ -452,7 +452,7 @@
         "cni-x-form"
       ],
       "body": [
-        "import * as Form from \"$$lib/components/ui/form/index.js\"",
+        "import * as Form from \"\\$lib/components/ui/form/index.js\"",
         ""
       ],
       "description": "https://next.shadcn-svelte.com/docs/components/form.html"

@@ -5,7 +5,7 @@
       "cni-accordion"
     ],
     "body": [
-      "import * as Accordion from \"$$lib/components/ui/accordion\""
+      "import * as Accordion from \"\\$lib/components/ui/accordion\""
     ],
     "description": "https://shadcn-svelte.com/docs/components/accordion.html"
   },
@@ -15,7 +15,7 @@
       "cni-alert"
     ],
     "body": [
-      "import * as Alert from \"$$lib/components/ui/alert\""
+      "import * as Alert from \"\\$lib/components/ui/alert\""
     ],
     "description": "https://shadcn-svelte.com/docs/components/alert.html"
   },
@@ -25,7 +25,7 @@
       "cni-alert-dialog"
     ],
     "body": [
-      "import * as AlertDialog from \"$$lib/components/ui/alert-dialog\""
+      "import * as AlertDialog from \"\\$lib/components/ui/alert-dialog\""
     ],
     "description": "https://shadcn-svelte.com/docs/components/alert-dialog.html"
   },
@@ -35,7 +35,7 @@
       "cni-aspect-ratio"
     ],
     "body": [
-      "import { AspectRatio } from \"$$lib/components/ui/aspect-ratio\"",
+      "import { AspectRatio } from \"\\$lib/components/ui/aspect-ratio\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/aspect-ratio.html"
@@ -46,7 +46,7 @@
       "cni-avatar"
     ],
     "body": [
-      "  import * as Avatar from \"$$lib/components/ui/avatar\"",
+      "  import * as Avatar from \"\\$lib/components/ui/avatar\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/avatar.html"
@@ -57,7 +57,7 @@
       "cni-badge"
     ],
     "body": [
-      "import { Badge } from \"$$lib/components/ui/badge\"",
+      "import { Badge } from \"\\$lib/components/ui/badge\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/badge.html"
@@ -68,7 +68,7 @@
       "cni-button"
     ],
     "body": [
-      "import { Button } from \"$$lib/components/ui/button\"",
+      "import { Button } from \"\\$lib/components/ui/button\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/button.html"
@@ -79,7 +79,7 @@
       "cni-calendar"
     ],
     "body": [
-      "import { Calendar } from \"$$lib/components/ui/calendar\"",
+      "import { Calendar } from \"\\$lib/components/ui/calendar\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/calendar.html"
@@ -90,7 +90,7 @@
       "cni-card"
     ],
     "body": [
-      "import * as Card from \"$$lib/components/ui/card\"",
+      "import * as Card from \"\\$lib/components/ui/card\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/card.html"
@@ -101,8 +101,8 @@
       "cni-carousel"
     ],
     "body": [
-      "import * as Card from \"$$lib/components/ui/card\"",
-      "import * as Carousel from \"$$lib/components/ui/carousel\""
+      "import * as Card from \"\\$lib/components/ui/card\"",
+      "import * as Carousel from \"\\$lib/components/ui/carousel\""
     ],
     "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
   },
@@ -112,7 +112,7 @@
       "cni-checkbox"
     ],
     "body": [
-      "import { Checkbox } from \"$$lib/components/ui/checkbox\"",
+      "import { Checkbox } from \"\\$lib/components/ui/checkbox\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/checkbox.html"
@@ -123,7 +123,7 @@
       "cni-collapsible"
     ],
     "body": [
-      "import * as Collapsible from \"$$lib/components/ui/collapsible\"",
+      "import * as Collapsible from \"\\$lib/components/ui/collapsible\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/collapsible.html"
@@ -134,7 +134,7 @@
       "cni-command"
     ],
     "body": [
-      "import * as Command from \"$$lib/components/ui/command\"",
+      "import * as Command from \"\\$lib/components/ui/command\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/command.html"
@@ -145,7 +145,7 @@
       "cni-context-menu"
     ],
     "body": [
-      "import * as ContextMenu from \"$$lib/components/ui/context-menu\"",
+      "import * as ContextMenu from \"\\$lib/components/ui/context-menu\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/context-menu.html"
@@ -156,7 +156,7 @@
       "cni-dialog"
     ],
     "body": [
-      "import * as Dialog from \"$$lib/components/ui/dialog\"",
+      "import * as Dialog from \"\\$lib/components/ui/dialog\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/dialog.html"
@@ -167,7 +167,7 @@
       "cni-dropdown-menu"
     ],
     "body": [
-      "import * as DropdownMenu from \"$$lib/components/ui/dropdown-menu\"",
+      "import * as DropdownMenu from \"\\$lib/components/ui/dropdown-menu\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/dropdown-menu.html"
@@ -178,7 +178,7 @@
       "cni-drawer"
     ],
     "body": [
-      "  import * as Drawer from \"$$lib/components/ui/drawer\"",
+      "  import * as Drawer from \"\\$lib/components/ui/drawer\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/drawer.html"
@@ -189,7 +189,7 @@
       "cni-hover-card"
     ],
     "body": [
-      "import * as HoverCard from \"$$lib/components/ui/hover-card\"",
+      "import * as HoverCard from \"\\$lib/components/ui/hover-card\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/hover-card.html"
@@ -200,7 +200,7 @@
       "cni-input"
     ],
     "body": [
-      "import { Input } from \"$$lib/components/ui/input\"",
+      "import { Input } from \"\\$lib/components/ui/input\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/input.html"
@@ -211,7 +211,7 @@
       "cni-input-otp"
     ],
     "body": [
-      "import * as InputOTP from \"$$lib/components/ui/input-otp/index.js\"",
+      "import * as InputOTP from \"\\$lib/components/ui/input-otp/index.js\"",
       ""
     ],
     "description": "https://next.shadcn-svelte.com/docs/components/input-otp"
@@ -222,7 +222,7 @@
       "cni-label"
     ],
     "body": [
-      "import { Label } from \"$$lib/components/ui/label\"",
+      "import { Label } from \"\\$lib/components/ui/label\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/label.html"
@@ -233,7 +233,7 @@
       "cni-menubar"
     ],
     "body": [
-      "import * as Menubar from \"$$lib/components/ui/menubar\"",
+      "import * as Menubar from \"\\$lib/components/ui/menubar\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/menu-bar.html"
@@ -244,7 +244,7 @@
       "cni-popover"
     ],
     "body": [
-      "import * as Popover from \"$$lib/components/ui/popover\"",
+      "import * as Popover from \"\\$lib/components/ui/popover\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/popover.html"
@@ -255,7 +255,7 @@
       "cni-progress"
     ],
     "body": [
-      "import { Progress } from \"$$lib/components/ui/progress\"",
+      "import { Progress } from \"\\$lib/components/ui/progress\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/progress.html"
@@ -266,8 +266,8 @@
       "cni-radio-group"
     ],
     "body": [
-      "import { Label } from \"$$lib/components/ui/label\"",
-      "import * as RadioGroup from \"$$lib/components/ui/radio-group\"",
+      "import { Label } from \"\\$lib/components/ui/label\"",
+      "import * as RadioGroup from \"\\$lib/components/ui/radio-group\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/radio-group.html"
@@ -278,7 +278,7 @@
       "cni-range-calendar"
     ],
     "body": [
-      "import { RangeCalendar } from \"$$lib/components/ui/range-calendar\"",
+      "import { RangeCalendar } from \"\\$lib/components/ui/range-calendar\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/range-calendar.html"
@@ -289,7 +289,7 @@
       "cni-scroll-area"
     ],
     "body": [
-      "import { ScrollArea } from \"$$lib/components/ui/scroll-area\"",
+      "import { ScrollArea } from \"\\$lib/components/ui/scroll-area\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/scroll-area.html"
@@ -299,7 +299,7 @@
       "cni-select"
     ],
     "body": [
-      "import * as Select from \"$$lib/components/ui/select\"",
+      "import * as Select from \"\\$lib/components/ui/select\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/select.html"
@@ -310,7 +310,7 @@
       "cni-separator"
     ],
     "body": [
-      "  import { Separator } from \"$$lib/components/ui/separator\"",
+      "  import { Separator } from \"\\$lib/components/ui/separator\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/separator.html"
@@ -321,7 +321,7 @@
       "cni-sheet"
     ],
     "body": [
-      "import * as Sheet from \"$$lib/components/ui/sheet\"",
+      "import * as Sheet from \"\\$lib/components/ui/sheet\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/sheet.html"
@@ -332,7 +332,7 @@
       "cni-sidebar"
     ],
     "body": [
-      "import * as Sidebar from \"$$lib/components/ui/sidebar/index.js\"",
+      "import * as Sidebar from \"\\$lib/components/ui/sidebar/index.js\"",
       ""
     ],
     "description": "https://next.shadcn-svelte.com/docs/components/sidebar"
@@ -343,7 +343,7 @@
       "cni-skeleton"
     ],
     "body": [
-      "import { Skeleton } from \"$$lib/components/ui/skeleton\"",
+      "import { Skeleton } from \"\\$lib/components/ui/skeleton\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/skeleton.html"
@@ -354,7 +354,7 @@
       "cni-slider"
     ],
     "body": [
-      "import { Slider } from \"$$lib/components/ui/slider\"",
+      "import { Slider } from \"\\$lib/components/ui/slider\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/slider.html"
@@ -375,7 +375,7 @@
       "cni-switch"
     ],
     "body": [
-      "import { Switch } from \"$$lib/components/ui/switch\"",
+      "import { Switch } from \"\\$lib/components/ui/switch\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/switch.html"
@@ -386,7 +386,7 @@
       "cni-table"
     ],
     "body": [
-      "import * as Table from \"$$lib/components/ui/table\"",
+      "import * as Table from \"\\$lib/components/ui/table\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/table.html"
@@ -397,7 +397,7 @@
       "cni-tabs"
     ],
     "body": [
-      "import * as Tabs from \"$$lib/components/ui/tabs\"",
+      "import * as Tabs from \"\\$lib/components/ui/tabs\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/tabs.html"
@@ -408,7 +408,7 @@
       "cni-textarea"
     ],
     "body": [
-      "import { Textarea } from \"$$lib/components/ui/textarea\"",
+      "import { Textarea } from \"\\$lib/components/ui/textarea\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/textarea.html"
@@ -419,7 +419,7 @@
       "cni-toggle"
     ],
     "body": [
-      "import { Toggle } from \"$$lib/components/ui/toggle\"",
+      "import { Toggle } from \"\\$lib/components/ui/toggle\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/toggle.html"
@@ -430,7 +430,7 @@
       "cni-toggle"
     ],
     "body": [
-      "import * as ToggleGroup from \"$$lib/components/ui/toggle-group\"",
+      "import * as ToggleGroup from \"\\$lib/components/ui/toggle-group\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/toggle-group.html"
@@ -441,7 +441,7 @@
       "cni-tooltip"
     ],
     "body": [
-      "import * as Tooltip from \"$$lib/components/ui/tooltip\"",
+      "import * as Tooltip from \"\\$lib/components/ui/tooltip\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/tooltip.html"
@@ -452,7 +452,7 @@
       "cni-form"
     ],
     "body": [
-      "import * as Form from \"$$lib/components/ui/form\"",
+      "import * as Form from \"\\$lib/components/ui/form\"",
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/form.html"
