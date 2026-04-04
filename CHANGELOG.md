@@ -4,6 +4,23 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.6.7
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.6...v0.6.7)
+
+### 🩹 Fixes
+
+- Resolve UI snippet imports from components.json aliases ([311b3e3](https://github.com/selemondev/vscode-shadcn-svelte/commit/311b3e3))
+- Alias regex ([c6f79c9](https://github.com/selemondev/vscode-shadcn-svelte/commit/c6f79c9))
+
+### 🏡 Chore
+
+- Refresh manifest ([bb4cefc](https://github.com/selemondev/vscode-shadcn-svelte/commit/bb4cefc))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v0.6.6
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.5...v0.6.6)
