@@ -3,7 +3,7 @@
       "prefix": ["cn-x-help"],
       "body": [
         "// cni-x-[component] e.g. cni-x-button",
-        "import { Button } from \"$$lib/components/ui/button/index.js\";",
+        "import { Button } from \"\\$lib/components/ui/button/index.js\";",
         "",
         "// cnx-[component] e.g. cnx-button",
         "<Button> Submit </Button>",
@@ -15,7 +15,7 @@
       "prefix": ["shadcn-x-help"],
       "body": [
         "// shadcn-ix-[component] e.g. shadcn-ix-button",
-        "import { Button } from \"$$lib/components/ui/button/index.js\";",
+        "import { Button } from \"\\$lib/components/ui/button/index.js\";",
         "",
         "// shadcn-x-[component] e.g. shadcn-x-button",
         "<Button> Submit </Button>",

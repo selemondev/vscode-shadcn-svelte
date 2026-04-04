@@ -73,7 +73,7 @@ const toPascalCase = (value: string) => {
 const getDocBaseUrl = (version: SnippetVersion) =>
   version === 5 ? "https://next.shadcn-svelte.com/docs/components" : "https://shadcn-svelte.com/docs/components";
 
-const escapeSnippetText = (value: string) => value.split("$").join("$$");
+const escapeSnippetText = (value: string) => value.replaceAll("$", "\\$");
 
 const getImportPath = (component: string, version: SnippetVersion, uiAliasBase: string) =>
   version === 5
