@@ -57,6 +57,31 @@ Import and usage snippets are generated dynamically by the extension from the bu
 
 Use `shadcn/svelte: Reload Component List` to refresh the cached registry and snippet completions without restarting VS Code.
 
+### Import path setting
+
+For Svelte 5 import snippets, the extension includes `/index.js` by default:
+
+```ts
+import { Button } from "$lib/components/ui/button/index.js";
+```
+
+You can change this with the `shadcn-svelte.imports.includeIndexJs` setting:
+
+- `true` (default): import snippets use `/index.js`
+- `false`: import snippets use the component directory path without `/index.js`
+
+Set it in your VS Code `settings.json`:
+
+```json
+{
+  "shadcn-svelte.imports.includeIndexJs": false
+}
+```
+
+You can also search for `shadcn/svelte` in the VS Code Settings UI and toggle `Imports: Include Index Js`.
+
+This setting applies to generated import completions for JavaScript, TypeScript, and Svelte files.
+
 ### How to use?
 
 1. Components
