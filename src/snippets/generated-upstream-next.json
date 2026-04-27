@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-04T15:27:07.712Z",
-  "upstreamCommit": "dad1614ffd90bc44c123a6f3806a3a55437609ee",
+  "generatedAt": "2026-04-27T12:44:12.668Z",
+  "upstreamCommit": "f4130ec05c2a90ad7c1d111406f802e173f48667",
   "upstreamRepository": "https://github.com/huntabyte/shadcn-svelte",
   "components": {
     "accordion": {
