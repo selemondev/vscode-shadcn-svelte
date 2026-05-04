@@ -267,7 +267,6 @@
     ],
     "description": "https://www.shadcn-svelte.com/docs/components/carousel.html"
   },
-
   "Carousel-Vertical": {
     "prefix": [
       "shadcn-x-carousel-vertical",
@@ -391,7 +390,6 @@
     ],
     "description": "https://shadcn-svelte.com/docs/components/dialog.html"
   },
-
   "Drawer": {
     "prefix": [
       "shadcn-x-drawer",
@@ -556,7 +554,7 @@
       ""
     ],
     "description": "https://shadcn-svelte.com/docs/components/pagination.html"
-},
+  },
   "Popover": {
     "prefix": [
       "shadcn-x-popover",
@@ -848,7 +846,7 @@
       "  <Form.Field {form} name=\"field\">",
       "    <Form.Control let:attrs>",
       "      <Form.Label>Label</Form.Label>",
-      "      <input {...attrs} bind:value=\"{$formData.field}\" />",
+      "      <input {...attrs} bind:value={\\$formData.field} />",
       "    </Form.Control>",
       "    <Form.Description>Description</Form.Description>",
       "    <Form.FieldErrors />",
