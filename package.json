@@ -14,7 +14,7 @@
     "email": "selemondev19@gmail.com"
   },
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.103.0"
   },
   "categories": [
     "Other",
@@ -62,6 +62,22 @@
     "snippets": [
       {
         "language": "javascript",
+        "path": "./src/snippets/imports-code-snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/imports-code-snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./src/snippets/imports-code-snippets-next.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./src/snippets/imports-code-snippets-next.json"
+      },
+      {
+        "language": "javascript",
         "path": "./src/snippets/help-code-snippets.json"
       },
       {
@@ -91,6 +107,22 @@
       {
         "language": "svelte",
         "path": "./src/snippets/help-code-snippets-next.json"
+      },
+      {
+        "language": "html",
+        "path": "./src/snippets/usage-code-snippets.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./src/snippets/usage-code-snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./src/snippets/usage-code-snippets-next.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./src/snippets/usage-code-snippets-next.json"
       }
     ],
     "commands": [
@@ -152,7 +184,7 @@
   },
   "devDependencies": {
     "@types/node": "24.x",
-    "@types/vscode": "^1.85.0",
+    "@types/vscode": "^1.103.0",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
     "@typescript-eslint/parser": "^8.45.0",
     "esbuild": "^0.27.0",
