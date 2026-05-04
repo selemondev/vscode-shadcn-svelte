@@ -4,6 +4,28 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.6.9
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.8...v0.6.9)
+
+### 💅 Refactors
+
+- Email address' contact for bug reports ([86f1d38](https://github.com/selemondev/vscode-shadcn-svelte/commit/86f1d38))
+- Update vscode engine version and add usage code snippets for cmd intellisense ([42c1062](https://github.com/selemondev/vscode-shadcn-svelte/commit/42c1062))
+- Update Form snippets syntax ([07c73ff](https://github.com/selemondev/vscode-shadcn-svelte/commit/07c73ff))
+
+### 📖 Documentation
+
+- Document import path suffix inclusion and exclusion feature ([ce6d7ff](https://github.com/selemondev/vscode-shadcn-svelte/commit/ce6d7ff))
+
+### 🏡 Chore
+
+- Sync upstream snippets ([d4b4937](https://github.com/selemondev/vscode-shadcn-svelte/commit/d4b4937))
+
+### ❤️ Contributors
+
+- Selemondev ([@selemondev](https://github.com/selemondev))
+
 ## v0.6.8
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.7...v0.6.8)
