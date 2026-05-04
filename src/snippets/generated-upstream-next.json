@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-04-04T15:27:07.712Z",
-  "upstreamCommit": "dad1614ffd90bc44c123a6f3806a3a55437609ee",
+  "generatedAt": "2026-05-04T15:01:51.430Z",
+  "upstreamCommit": "ea6cfc368b14ddeb323f13deb0083fa5be1bab00",
   "upstreamRepository": "https://github.com/huntabyte/shadcn-svelte",
   "components": {
     "accordion": {
@@ -410,7 +410,7 @@
         "    </Field.Field>",
         "    <Field.Field>",
         "      <Field.Label for=\"username\">Username</Field.Label>",
-        "      <Input id=\"username\" autoComplete=\"off\" aria-invalid />",
+        "      <Input id=\"username\" autocomplete=\"off\" aria-invalid />",
         "      <Field.Error>Choose another username.</Field.Error>",
         "    </Field.Field>",
         "    <Field.Field orientation=\"horizontal\">",
