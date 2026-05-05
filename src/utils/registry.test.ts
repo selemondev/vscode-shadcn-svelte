@@ -86,7 +86,7 @@ describe("registry helpers", () => {
     vi.mocked(detectPackageManager)
       .mockResolvedValueOnce("bun")
       .mockResolvedValueOnce("pnpm")
-      .mockResolvedValueOnce("yarn");
+      .mockResolvedValueOnce("npm");
 
     await expect(getInitCmd("/workspace")).resolves.toBe("bunx shadcn-svelte@latest init -c /workspace");
     await expect(getInitCmd("/workspace")).resolves.toBe("pnpm dlx shadcn-svelte@latest init -c /workspace");
