@@ -178,6 +178,8 @@
     "build": "pnpm lint && node esbuild.js --production",
     "build:ci": "pnpm generate:upstream-snippets && pnpm check-types && eslint src --ext ts && node esbuild.js --production",
     "dev": "pnpm build -- --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "vscode": "pnpx vsce publish --no-dependencies",
     "ovsx": "pnpx ovsx publish --no-dependencies",
     "lint": "eslint src --ext ts --fix"
@@ -187,9 +189,11 @@
     "@types/vscode": "^1.103.0",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
     "@typescript-eslint/parser": "^8.45.0",
+    "@vitest/coverage-v8": "4.1.5",
     "esbuild": "^0.28.0",
     "eslint": "^9.37.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "4.1.5"
   },
   "dependencies": {
     "ofetch": "^1.4.1",
