@@ -33,8 +33,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check types
+        run: pnpm check-types
+
+      - name: Lint code
+        run: pnpm exec eslint src --ext ts
+
+      - name: Build extension
+        run: node esbuild.js --production
+
       - name: Run tests
         run: pnpm test
-
-      - name: Run CI build checks
-        run: pnpm build:ci
