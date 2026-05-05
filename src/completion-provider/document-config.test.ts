@@ -97,11 +97,11 @@ describe("document config helpers", () => {
   });
 
   it("detects import and usage snippet scopes", () => {
-    const document = createDocument(`<script>\n  const value = true;\n</script>\n\n<Button />`);
+    const document = createDocument(`<script>\n  cni-button\n  shadcn-x-button\n</script>\n\n<Button />`);
 
-    expect(getSvelteSnippetScope(document as never, new Position(0, 3), "cni-button")).toBe("import");
-    expect(getSvelteSnippetScope(document as never, new Position(0, 8), "shadcn-x-button")).toBe("usage");
-    expect(getSvelteSnippetScope(document as never, new Position(1, 5), "Button")).toBe("import");
+    expect(getSvelteSnippetScope(document as never, new Position(1, 5), "cni-button")).toBe("import");
+    expect(getSvelteSnippetScope(document as never, new Position(2, 5), "shadcn-x-button")).toBe("usage");
+    expect(getSvelteSnippetScope(document as never, new Position(1, 2), "Button")).toBe("import");
     expect(getSvelteSnippetScope(document as never, new Position(4, 5), "Button")).toBe("usage");
   });
 });

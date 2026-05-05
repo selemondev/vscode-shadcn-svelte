@@ -39,7 +39,7 @@ describe("registry helpers", () => {
         type: "registry:block",
         name: "card",
         files: [],
-      } as never,
+      },
       {
         type: "registry:ui",
         name: "badge",

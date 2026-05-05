@@ -4,6 +4,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   resolve: {
     alias: {
+      // Redirect extension-only vscode imports to a local test stub.
       vscode: resolve("src/test/vscode.ts"),
     },
   },
