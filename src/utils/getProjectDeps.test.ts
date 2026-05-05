@@ -1,13 +1,14 @@
 import { existsSync } from "fs";
-import { readPackageJSON } from "pkg-types";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+
+const readPackageJSON = vi.fn();
 
 vi.mock("fs", () => ({
   existsSync: vi.fn(),
 }));
 
 vi.mock("pkg-types", () => ({
-  readPackageJSON: vi.fn(),
+  readPackageJSON,
 }));
 
 vi.mock("./getProjectDir", () => ({
