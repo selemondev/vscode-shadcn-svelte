@@ -9,7 +9,8 @@ vi.mock("./vscode", () => ({
   detectPackageManager: vi.fn(),
 }));
 
-import { getComponentDocLink, getInitCmd, getInstallCmd, getRegistry } from "./registry";
+import { FileSystemError, FileType, workspace } from "vscode";
+import { getComponentDocLink, getInitCmd, getInstallCmd, getInstalledComponents, getRegistry, getRegistryIndex, getUpdateCmd } from "./registry";
 import { detectPackageManager } from "./vscode";
 
 describe("registry helpers", () => {
@@ -93,6 +94,75 @@ describe("registry helpers", () => {
     await expect(getInitCmd("/workspace")).resolves.toBe("npx shadcn-svelte@latest init -c /workspace");
     await expect(getComponentDocLink("alert-dialog")).resolves.toBe(
       "https://shadcn-svelte.com/docs/components/alert-dialog",
+    );
+  });
+});
+
+describe("getRegistryIndex", () => {
+  it("returns the raw registry array", async () => {
+    const raw = [
+      { name: "button", type: "registry:ui", registryDependencies: [], relativeUrl: "button.json" },
+      { name: "badge", type: "registry:ui", registryDependencies: ["label"], relativeUrl: "badge.json" },
+    ];
+    vi.mocked(ofetch).mockResolvedValue(raw);
+
+    await expect(getRegistryIndex()).resolves.toEqual(raw);
+  });
+
+  it("returns null on fetch failure", async () => {
+    vi.mocked(ofetch).mockRejectedValue(new Error("network"));
+    await expect(getRegistryIndex()).resolves.toBeNull();
+  });
+});
+
+describe("getInstalledComponents", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("returns only subdirectory names", async () => {
+    vi.mocked(workspace.fs.readDirectory).mockResolvedValue([
+      ["button", FileType.Directory],
+      ["badge", FileType.Directory],
+      ["index.ts", FileType.File],
+    ]);
+
+    await expect(getInstalledComponents("/workspace/src/lib/components/ui")).resolves.toEqual([
+      "button",
+      "badge",
+    ]);
+  });
+
+  it("returns empty array on missing path", async () => {
+    vi.mocked(workspace.fs.readDirectory).mockRejectedValue(
+      FileSystemError.FileNotFound(),
+    );
+
+    await expect(getInstalledComponents("/nonexistent")).resolves.toEqual([]);
+  });
+
+  it("returns empty array for empty directory", async () => {
+    vi.mocked(workspace.fs.readDirectory).mockResolvedValue([]);
+
+    await expect(getInstalledComponents("/workspace/empty")).resolves.toEqual([]);
+  });
+});
+
+describe("getUpdateCmd", () => {
+  it("builds update commands for the supported package managers", async () => {
+    vi.mocked(detectPackageManager)
+      .mockResolvedValueOnce("bun")
+      .mockResolvedValueOnce("pnpm")
+      .mockResolvedValueOnce("npm");
+
+    await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
+      "bunx shadcn-svelte@latest add button -c /workspace",
+    );
+    await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
+      "pnpm dlx shadcn-svelte@latest add button -c /workspace",
+    );
+    await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
+      "npx shadcn-svelte@latest add button -c /workspace",
     );
   });
 });
