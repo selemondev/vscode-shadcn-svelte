@@ -71,6 +71,13 @@ export class Uri {
   }
 }
 
+export const FileType = {
+  Unknown: 0,
+  File: 1,
+  Directory: 2,
+  SymbolicLink: 64,
+} as const;
+
 export class FileSystemError extends Error {
   constructor(message: string, public readonly code: string) {
     super(message);
@@ -89,6 +96,7 @@ export const workspace = {
   getWorkspaceFolder: vi.fn(),
   fs: {
     readFile: vi.fn(),
+    readDirectory: vi.fn(),
     stat: vi.fn(),
   },
 };
