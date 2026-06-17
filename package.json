@@ -42,7 +42,8 @@
     "onCommand:shadcn-svelte.addMultipleComponents",
     "onCommand:shadcn-svelte.gotoComponentDoc",
     "onCommand:shadcn-svelte.reloadComponentList",
-    "onCommand:shadcn-svelte.gotoDoc"
+    "onCommand:shadcn-svelte.gotoDoc",
+    "onCommand:shadcn-svelte.updateInstalledComponents"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -149,6 +150,10 @@
       {
         "command": "shadcn-svelte.gotoDoc",
         "title": "shadcn/svelte: Open Documentation"
+      },
+      {
+        "command": "shadcn-svelte.updateInstalledComponents",
+        "title": "shadcn/svelte: Update installed components"
       }
     ],
     "configuration": {
