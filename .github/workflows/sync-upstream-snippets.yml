@@ -47,7 +47,7 @@ jobs:
         run: echo "sha=$(git -C /tmp/shadcn-svelte-upstream rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "chore: sync upstream snippets"
           branch: "ci/sync-upstream-snippets"
