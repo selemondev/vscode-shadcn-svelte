@@ -4,6 +4,38 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v0.6.10
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.9...v0.6.10)
+
+### 🚀 Enhancements
+
+- Add Update Components command to update installed components ([f243bd4](https://github.com/selemondev/vscode-shadcn-svelte/commit/f243bd4))
+
+### 🏡 Chore
+
+- Ignore generated coverage output ([cf0fab7](https://github.com/selemondev/vscode-shadcn-svelte/commit/cf0fab7))
+- Sync upstream snippets ([9e7d65b](https://github.com/selemondev/vscode-shadcn-svelte/commit/9e7d65b))
+- Sync upstream snippets ([5531ad2](https://github.com/selemondev/vscode-shadcn-svelte/commit/5531ad2))
+- Update dependencies ([6f67c5e](https://github.com/selemondev/vscode-shadcn-svelte/commit/6f67c5e))
+- Fix pnpm version mismatch ([d96e79a](https://github.com/selemondev/vscode-shadcn-svelte/commit/d96e79a))
+
+### ✅ Tests
+
+- Add vitest setup and initial coverage cases ([27fa95c](https://github.com/selemondev/vscode-shadcn-svelte/commit/27fa95c))
+- Finalize coverage improvements ([586dde8](https://github.com/selemondev/vscode-shadcn-svelte/commit/586dde8))
+- Address validation feedback ([bbe7c9c](https://github.com/selemondev/vscode-shadcn-svelte/commit/bbe7c9c))
+- Resolve final review comments ([1001c80](https://github.com/selemondev/vscode-shadcn-svelte/commit/1001c80))
+
+### 🤖 CI
+
+- Add pull request workflow ([a088e3d](https://github.com/selemondev/vscode-shadcn-svelte/commit/a088e3d))
+- Use non-mutating validation steps ([7e6cfba](https://github.com/selemondev/vscode-shadcn-svelte/commit/7e6cfba))
+
+### ❤️ Contributors
+
+- Selemondev ([@selemondev](https://github.com/selemondev))
+
 ## v0.6.9
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.8...v0.6.9)
