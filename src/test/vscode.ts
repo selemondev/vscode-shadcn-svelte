@@ -66,10 +66,21 @@ export class Uri {
     return new Uri([base.fsPath, ...paths].join("/").replace(/\/+/g, "/"));
   }
 
+  static from(components: { scheme: string; path?: string; query?: string }) {
+    return new Uri(components.path ?? "");
+  }
+
   toString() {
     return this.fsPath;
   }
 }
+
+export const FileType = {
+  Unknown: 0,
+  File: 1,
+  Directory: 2,
+  SymbolicLink: 64,
+} as const;
 
 export class FileSystemError extends Error {
   constructor(message: string, public readonly code: string) {
@@ -90,6 +101,7 @@ export const workspace = {
   fs: {
     readFile: vi.fn(),
     stat: vi.fn(),
+    readDirectory: vi.fn(),
   },
 };
 

@@ -75,6 +75,23 @@ export const getInstallCmd = async (components: string[], cwd: string) => {
   return `npx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
 };
 
+export const getUpdateCmd = async (components: string[], cwd: string) => {
+  const packageManager = await detectPackageManager();
+  const componentStr = components.join(" ");
+
+  // `-y` skips the CLI's "Ready to install?" confirmation; without it the spawned
+  // (non-TTY) process would hang waiting for input. `--overwrite` replaces the files.
+  if (packageManager === "bun") {
+    return `bunx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${cwd}`;
+  }
+
+  if (packageManager === "pnpm") {
+    return `pnpm dlx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${cwd}`;
+  }
+
+  return `npx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${cwd}`;
+};
+
 export const getInitCmd = async (cwd: string) => {
   const packageManager = await detectPackageManager();
 
