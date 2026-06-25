@@ -14,7 +14,7 @@
     "email": "selemondev19@gmail.com"
   },
   "engines": {
-    "vscode": "^1.103.0"
+    "vscode": "^1.125.0"
   },
   "categories": [
     "Other",
@@ -191,18 +191,18 @@
   },
   "devDependencies": {
     "@types/node": "24.x",
-    "@types/vscode": "^1.103.0",
-    "@typescript-eslint/eslint-plugin": "^8.43.0",
-    "@typescript-eslint/parser": "^8.45.0",
+    "@types/vscode": "^1.125.0",
+    "@typescript-eslint/eslint-plugin": "^8.62.0",
+    "@typescript-eslint/parser": "^8.62.0",
     "@vitest/coverage-v8": "4.1.5",
-    "esbuild": "^0.28.0",
-    "eslint": "^9.37.0",
-    "typescript": "^6.0.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^9.39.4",
+    "typescript": "^6.0.3",
     "vitest": "4.1.5"
   },
   "dependencies": {
-    "ofetch": "^1.4.1",
-    "pkg-types": "^2.3.0"
+    "ofetch": "^1.5.1",
+    "pkg-types": "^2.3.1"
   },
-  "packageManager": "pnpm@10.34.1"
+  "packageManager": "pnpm@10.34.4"
 }
