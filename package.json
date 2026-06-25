@@ -1,208 +1,208 @@
 {
-  "name": "vscode-shadcn-svelte",
-  "version": "0.6.10",
-  "license": "MIT",
-  "displayName": "shadcn/svelte",
-  "description": "Integrate components and snippets from Shadcn/Svelte directly into your IDE ✨.",
-  "publisher": "Selemondev",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/selemondev/vscode-shadcn-svelte"
-  },
-  "bugs": {
-    "url": "https://github.com/selemondev/vscode-shadcn-svelte/issues",
-    "email": "selemondev19@gmail.com"
-  },
-  "engines": {
-    "vscode": "^1.125.0"
-  },
-  "categories": [
-    "Other",
-    "Snippets"
-  ],
-  "keywords": [
-    "svelte",
-    "shadcn-svelte",
-    "shadcn-svelte-snippet",
-    "shadcn-svelte-snippets",
-    "snippet",
-    "snippets",
-    "svelte snippets",
-    "shadcn-svelte snippets",
-    "svelte typescript snippets"
-  ],
-  "icon": "src/images/icon.png",
-  "activationEvents": [
-    "onLanguage:svelte",
-    "onLanguage:html",
-    "onLanguage:javascript",
-    "onLanguage:typescript",
-    "onCommand:shadcn-svelte.initCli",
-    "onCommand:shadcn-svelte.addNewComponent",
-    "onCommand:shadcn-svelte.addMultipleComponents",
-    "onCommand:shadcn-svelte.updateComponents",
-    "onCommand:shadcn-svelte.gotoComponentDoc",
-    "onCommand:shadcn-svelte.reloadComponentList",
-    "onCommand:shadcn-svelte.gotoDoc"
-  ],
-  "main": "./dist/extension.js",
-  "contributes": {
-    "languages": [
-      {
-        "id": "svelte",
-        "aliases": [
-          "Svelte",
-          "Svelte 3",
-          "svelte"
-        ],
-        "filenamePatterns": [
-          "*.svelte"
-        ]
-      }
-    ],
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./src/snippets/imports-code-snippets.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/imports-code-snippets.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./src/snippets/imports-code-snippets-next.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/imports-code-snippets-next.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./src/snippets/help-code-snippets.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/help-code-snippets.json"
-      },
-      {
-        "language": "javascript",
-        "path": "./src/snippets/help-code-snippets-next.json"
-      },
-      {
-        "language": "typescript",
-        "path": "./src/snippets/help-code-snippets-next.json"
-      },
-      {
-        "language": "html",
-        "path": "./src/snippets/help-code-snippets.json"
-      },
-      {
-        "language": "svelte",
-        "path": "./src/snippets/help-code-snippets.json"
-      },
-      {
-        "language": "html",
-        "path": "./src/snippets/help-code-snippets-next.json"
-      },
-      {
-        "language": "svelte",
-        "path": "./src/snippets/help-code-snippets-next.json"
-      },
-      {
-        "language": "html",
-        "path": "./src/snippets/usage-code-snippets.json"
-      },
-      {
-        "language": "svelte",
-        "path": "./src/snippets/usage-code-snippets.json"
-      },
-      {
-        "language": "html",
-        "path": "./src/snippets/usage-code-snippets-next.json"
-      },
-      {
-        "language": "svelte",
-        "path": "./src/snippets/usage-code-snippets-next.json"
-      }
-    ],
-    "commands": [
-      {
-        "command": "shadcn-svelte.initCli",
-        "title": "shadcn/svelte: Install CLI"
-      },
-      {
-        "command": "shadcn-svelte.addNewComponent",
-        "title": "shadcn/svelte: Add New Component"
-      },
-      {
-        "command": "shadcn-svelte.addMultipleComponents",
-        "title": "shadcn/svelte: Add Multiple Components"
-      },
-      {
-        "command": "shadcn-svelte.updateComponents",
-        "title": "shadcn/svelte: Update Components"
-      },
-      {
-        "command": "shadcn-svelte.gotoComponentDoc",
-        "title": "shadcn/svelte: Open Component Documentation"
-      },
-      {
-        "command": "shadcn-svelte.reloadComponentList",
-        "title": "shadcn/svelte: Reload Component List"
-      },
-      {
-        "command": "shadcn-svelte.gotoDoc",
-        "title": "shadcn/svelte: Open Documentation"
-      }
-    ],
-    "configuration": {
-      "title": "shadcn/svelte",
-      "properties": {
-        "shadcn-svelte.cwd": {
-          "type": "string",
-          "default": "",
-          "markdownDescription": "Absolute path to the working directory when running shadcn-svelte CLI. Default is the current workspace folder."
-        },
-        "shadcn-svelte.imports.includeIndexJs": {
-          "type": "boolean",
-          "default": true,
-          "markdownDescription": "Whether shadcn/svelte import snippets include `/index.js` for Svelte 5 component imports."
-        }
-      }
-    }
-  },
-  "scripts": {
-    "vscode:prepublish": "pnpm build",
-    "generate:release": "pnpx changelogen@latest --release --hide-author-email && git push --follow-tags",
-    "generate-major:release": "pnpx changelogen@latest --major --release --hide-author-email && git push --follow-tags",
-    "generate-minor:release": "pnpx changelogen@latest --minor --release --hide-author-email && git push --follow-tags",
-    "generate:upstream-snippets": "node scripts/generate-upstream-snippets.mjs",
-    "check:upstream-snippets": "node scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
-    "check-types": "tsc --noEmit",
-    "build": "pnpm lint && node esbuild.js --production",
-    "build:ci": "pnpm generate:upstream-snippets && pnpm check-types && eslint src --ext ts && node esbuild.js --production",
-    "dev": "pnpm build -- --watch",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "vscode": "pnpx vsce publish --no-dependencies",
-    "ovsx": "pnpx ovsx publish --no-dependencies",
-    "lint": "eslint src --ext ts --fix"
-  },
-  "devDependencies": {
-    "@types/node": "24.x",
-    "@types/vscode": "^1.125.0",
-    "@typescript-eslint/eslint-plugin": "^8.62.0",
-    "@typescript-eslint/parser": "^8.62.0",
-    "@vitest/coverage-v8": "4.1.5",
-    "esbuild": "^0.28.1",
-    "eslint": "^9.39.4",
-    "typescript": "^6.0.3",
-    "vitest": "4.1.5"
-  },
-  "dependencies": {
-    "ofetch": "^1.5.1",
-    "pkg-types": "^2.3.1"
-  },
-  "packageManager": "pnpm@10.34.4"
+	"name": "vscode-shadcn-svelte",
+	"version": "0.6.9",
+	"license": "MIT",
+	"displayName": "shadcn/svelte",
+	"description": "Integrate components and snippets from Shadcn/Svelte directly into your IDE ✨.",
+	"publisher": "Selemondev",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/selemondev/vscode-shadcn-svelte"
+	},
+	"bugs": {
+		"url": "https://github.com/selemondev/vscode-shadcn-svelte/issues",
+		"email": "selemondev19@gmail.com"
+	},
+	"engines": {
+		"vscode": "^1.125.0"
+	},
+	"categories": [
+		"Other",
+		"Snippets"
+	],
+	"keywords": [
+		"svelte",
+		"shadcn-svelte",
+		"shadcn-svelte-snippet",
+		"shadcn-svelte-snippets",
+		"snippet",
+		"snippets",
+		"svelte snippets",
+		"shadcn-svelte snippets",
+		"svelte typescript snippets"
+	],
+	"icon": "src/images/icon.png",
+	"activationEvents": [
+		"onLanguage:svelte",
+		"onLanguage:html",
+		"onLanguage:javascript",
+		"onLanguage:typescript",
+		"onCommand:shadcn-svelte.initCli",
+		"onCommand:shadcn-svelte.addNewComponent",
+		"onCommand:shadcn-svelte.addMultipleComponents",
+		"onCommand:shadcn-svelte.updateComponents",
+		"onCommand:shadcn-svelte.gotoComponentDoc",
+		"onCommand:shadcn-svelte.reloadComponentList",
+		"onCommand:shadcn-svelte.gotoDoc"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "svelte",
+				"aliases": [
+					"Svelte",
+					"Svelte 3",
+					"svelte"
+				],
+				"filenamePatterns": [
+					"*.svelte"
+				]
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./src/snippets/imports-code-snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/imports-code-snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/snippets/imports-code-snippets-next.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/imports-code-snippets-next.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/snippets/help-code-snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/help-code-snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/snippets/help-code-snippets-next.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./src/snippets/help-code-snippets-next.json"
+			},
+			{
+				"language": "html",
+				"path": "./src/snippets/help-code-snippets.json"
+			},
+			{
+				"language": "svelte",
+				"path": "./src/snippets/help-code-snippets.json"
+			},
+			{
+				"language": "html",
+				"path": "./src/snippets/help-code-snippets-next.json"
+			},
+			{
+				"language": "svelte",
+				"path": "./src/snippets/help-code-snippets-next.json"
+			},
+			{
+				"language": "html",
+				"path": "./src/snippets/usage-code-snippets.json"
+			},
+			{
+				"language": "svelte",
+				"path": "./src/snippets/usage-code-snippets.json"
+			},
+			{
+				"language": "html",
+				"path": "./src/snippets/usage-code-snippets-next.json"
+			},
+			{
+				"language": "svelte",
+				"path": "./src/snippets/usage-code-snippets-next.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "shadcn-svelte.initCli",
+				"title": "shadcn/svelte: Install CLI"
+			},
+			{
+				"command": "shadcn-svelte.addNewComponent",
+				"title": "shadcn/svelte: Add New Component"
+			},
+			{
+				"command": "shadcn-svelte.addMultipleComponents",
+				"title": "shadcn/svelte: Add Multiple Components"
+			},
+			{
+				"command": "shadcn-svelte.updateComponents",
+				"title": "shadcn/svelte: Update Components"
+			},
+			{
+				"command": "shadcn-svelte.gotoComponentDoc",
+				"title": "shadcn/svelte: Open Component Documentation"
+			},
+			{
+				"command": "shadcn-svelte.reloadComponentList",
+				"title": "shadcn/svelte: Reload Component List"
+			},
+			{
+				"command": "shadcn-svelte.gotoDoc",
+				"title": "shadcn/svelte: Open Documentation"
+			}
+		],
+		"configuration": {
+			"title": "shadcn/svelte",
+			"properties": {
+				"shadcn-svelte.cwd": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Absolute path to the working directory when running shadcn-svelte CLI. Default is the current workspace folder."
+				},
+				"shadcn-svelte.imports.includeIndexJs": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Whether shadcn/svelte import snippets include `/index.js` for Svelte 5 component imports."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "pnpm build",
+		"generate:release": "pnpx changelogen@latest --release --hide-author-email && git push --follow-tags",
+		"generate-major:release": "pnpx changelogen@latest --major --release --hide-author-email && git push --follow-tags",
+		"generate-minor:release": "pnpx changelogen@latest --minor --release --hide-author-email && git push --follow-tags",
+		"generate:upstream-snippets": "node scripts/generate-upstream-snippets.mjs",
+		"check:upstream-snippets": "node scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
+		"check-types": "tsc --noEmit",
+		"build": "pnpm lint && node esbuild.js --production",
+		"build:ci": "pnpm generate:upstream-snippets && pnpm check-types && eslint src --ext ts && node esbuild.js --production",
+		"dev": "pnpm build -- --watch",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"vscode": "pnpx vsce publish --no-dependencies",
+		"ovsx": "pnpx ovsx publish --no-dependencies",
+		"lint": "eslint src --ext ts --fix"
+	},
+	"devDependencies": {
+		"@types/node": "24.x",
+		"@types/vscode": "^1.125.0",
+		"@typescript-eslint/eslint-plugin": "^8.62.0",
+		"@typescript-eslint/parser": "^8.62.0",
+		"@vitest/coverage-v8": "4.1.5",
+		"esbuild": "^0.28.1",
+		"eslint": "^9.39.4",
+		"typescript": "^6.0.3",
+		"vitest": "4.1.5"
+	},
+	"dependencies": {
+		"ofetch": "^1.5.1",
+		"pkg-types": "^2.3.1"
+	},
+	"packageManager": "pnpm@10.34.4"
 }
