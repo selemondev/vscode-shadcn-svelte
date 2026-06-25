@@ -40,6 +40,7 @@
     "onCommand:shadcn-svelte.initCli",
     "onCommand:shadcn-svelte.addNewComponent",
     "onCommand:shadcn-svelte.addMultipleComponents",
+    "onCommand:shadcn-svelte.updateComponents",
     "onCommand:shadcn-svelte.gotoComponentDoc",
     "onCommand:shadcn-svelte.reloadComponentList",
     "onCommand:shadcn-svelte.gotoDoc"
@@ -137,6 +138,10 @@
       {
         "command": "shadcn-svelte.addMultipleComponents",
         "title": "shadcn/svelte: Add Multiple Components"
+      },
+      {
+        "command": "shadcn-svelte.updateComponents",
+        "title": "shadcn/svelte: Update Components"
       },
       {
         "command": "shadcn-svelte.gotoComponentDoc",

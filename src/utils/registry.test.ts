@@ -9,7 +9,7 @@ vi.mock("./vscode", () => ({
   detectPackageManager: vi.fn(),
 }));
 
-import { getComponentDocLink, getInitCmd, getInstallCmd, getRegistry } from "./registry";
+import { getComponentDocLink, getInitCmd, getInstallCmd, getRegistry, getUpdateCmd } from "./registry";
 import { detectPackageManager } from "./vscode";
 
 describe("registry helpers", () => {
@@ -79,6 +79,23 @@ describe("registry helpers", () => {
     );
     await expect(getInstallCmd(["button"], "/workspace")).resolves.toBe(
       "npx shadcn-svelte@latest add button -c /workspace",
+    );
+  });
+
+  it("builds update commands with the overwrite flag for the supported package managers", async () => {
+    vi.mocked(detectPackageManager)
+      .mockResolvedValueOnce("bun")
+      .mockResolvedValueOnce("pnpm")
+      .mockResolvedValueOnce("npm");
+
+    await expect(getUpdateCmd(["button", "badge"], "/workspace")).resolves.toBe(
+      "bunx shadcn-svelte@latest add button badge --overwrite -y -c /workspace",
+    );
+    await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
+      "pnpm dlx shadcn-svelte@latest add button --overwrite -y -c /workspace",
+    );
+    await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
+      "npx shadcn-svelte@latest add button --overwrite -y -c /workspace",
     );
   });
 
