@@ -4,6 +4,8 @@ out/**
 node_modules/**
 .gitignore
 .npmrc
+bun.lock
+bunfig.toml
 vsc-extension-quickstart.md
 **/tsconfig.json
 **/.eslintrc.json

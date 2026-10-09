@@ -173,20 +173,19 @@
 		}
 	},
 	"scripts": {
-		"vscode:prepublish": "pnpm build",
-		"generate:release": "pnpx changelogen@latest --release --hide-author-email && git push --follow-tags",
-		"generate-major:release": "pnpx changelogen@latest --major --release --hide-author-email && git push --follow-tags",
-		"generate-minor:release": "pnpx changelogen@latest --minor --release --hide-author-email && git push --follow-tags",
-		"generate:upstream-snippets": "node scripts/generate-upstream-snippets.mjs",
-		"check:upstream-snippets": "node scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
+		"generate:release": "bunx changelogen@latest --release --hide-author-email && git push --follow-tags",
+		"generate-major:release": "bunx changelogen@latest --major --release --hide-author-email && git push --follow-tags",
+		"generate-minor:release": "bunx changelogen@latest --minor --release --hide-author-email && git push --follow-tags",
+		"generate:upstream-snippets": "bun scripts/generate-upstream-snippets.mjs",
+		"check:upstream-snippets": "bun scripts/generate-upstream-snippets.mjs --upstream-dir /tmp/shadcn-svelte-upstream && git diff --exit-code -- src/snippets/generated-upstream-next.json",
 		"check-types": "tsc --noEmit",
-		"build": "pnpm lint && node esbuild.js --production",
-		"build:ci": "pnpm generate:upstream-snippets && pnpm check-types && eslint src --ext ts && node esbuild.js --production",
-		"dev": "pnpm build -- --watch",
+		"build": "bun run lint && bun esbuild.js --production",
+		"build:ci": "bun run generate:upstream-snippets && bun run check-types && eslint src --ext ts && bun esbuild.js --production",
+		"dev": "bun run build --watch",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
-		"vscode": "pnpx vsce publish --no-dependencies",
-		"ovsx": "pnpx ovsx publish --no-dependencies",
+		"vscode": "bun run build && bunx @vscode/vsce publish --no-dependencies",
+		"ovsx": "bun run build && bunx ovsx publish --no-dependencies",
 		"lint": "eslint src --ext ts --fix"
 	},
 	"devDependencies": {
@@ -204,5 +203,5 @@
 		"ofetch": "^1.5.1",
 		"pkg-types": "^2.3.1"
 	},
-	"packageManager": "pnpm@10.34.4"
+	"packageManager": "bun@1.4.2"
 }

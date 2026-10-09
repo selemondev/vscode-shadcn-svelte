@@ -16,29 +16,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Verify pnpm
-        run: pnpm --version
-
-      - name: Set up Node.js with pnpm
-        uses: actions/setup-node@v6
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22.x
-          cache: "pnpm"
+          bun-version-file: package.json
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Clone upstream shadcn-svelte
         run: git clone --depth 1 https://github.com/huntabyte/shadcn-svelte.git /tmp/shadcn-svelte-upstream
 
       - name: Regenerate upstream snippet manifest
-        run: pnpm generate:upstream-snippets -- --upstream-dir /tmp/shadcn-svelte-upstream
+        run: bun run generate:upstream-snippets --upstream-dir /tmp/shadcn-svelte-upstream
 
       - name: Verify extension still builds without mutating files
-        run: pnpm build:ci
+        run: bun run build:ci
 
       - name: Capture upstream commit
         id: upstream
