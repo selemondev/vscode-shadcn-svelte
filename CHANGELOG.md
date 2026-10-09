@@ -4,6 +4,20 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v1.0.0
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.10...v1.0.0)
+
+### 🏡 Chore
+
+- Lint package.json file ([54f1580](https://github.com/selemondev/vscode-shadcn-svelte/commit/54f1580))
+- Migrate package manager from pnpm to bun ([da3ea51](https://github.com/selemondev/vscode-shadcn-svelte/commit/da3ea51))
+- Add automd badges ([50d40ed](https://github.com/selemondev/vscode-shadcn-svelte/commit/50d40ed))
+
+### ❤️ Contributors
+
+- Selemondev ([@selemondev](https://github.com/selemondev))
+
 ## v0.6.10
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.9...v0.6.10)
