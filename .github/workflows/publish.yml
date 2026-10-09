@@ -16,7 +16,7 @@ jobs:
       VSCE_PAT: ${{ secrets.VSCE_PAT }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
