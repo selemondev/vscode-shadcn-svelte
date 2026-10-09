@@ -5,6 +5,19 @@
  </h1>
 </p>
 
+<!-- automd:vscode-badges -->
+
+[![CI](https://github.com/selemondev/vscode-shadcn-svelte/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/selemondev/vscode-shadcn-svelte/actions/workflows/ci.yml)
+[![VS Marketplace version](https://vsmarketplacebadges.dev/version-short/Selemondev.vscode-shadcn-svelte.svg)](https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-shadcn-svelte)
+[![VS Code installs](https://vsmarketplacebadges.dev/installs-short/Selemondev.vscode-shadcn-svelte.svg?label=VS%20Code%20installs)](https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-shadcn-svelte)
+[![VS Code downloads](https://vsmarketplacebadges.dev/downloads-short/Selemondev.vscode-shadcn-svelte.svg?label=VS%20Code%20downloads)](https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-shadcn-svelte)
+[![VS Code rating](https://vsmarketplacebadges.dev/rating-short/Selemondev.vscode-shadcn-svelte.svg?label=VS%20Code%20rating)](https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-shadcn-svelte&ssr=false#review-details)
+[![Open VSX version](https://img.shields.io/open-vsx/v/Selemondev/vscode-shadcn-svelte)](https://open-vsx.org/extension/Selemondev/vscode-shadcn-svelte)
+[![Open VSX downloads](https://img.shields.io/open-vsx/dt/Selemondev/vscode-shadcn-svelte?label=Open%20VSX%20downloads)](https://open-vsx.org/extension/Selemondev/vscode-shadcn-svelte)
+[![License](https://img.shields.io/github/license/selemondev/vscode-shadcn-svelte)](https://github.com/selemondev/vscode-shadcn-svelte/blob/master/LICENSE)
+
+<!-- /automd -->
+
 > [!NOTE]  
 > The Shadcn Svelte VSCode Extension now supports both Svelte 4 and Svelte 5. The following are the abbreviations for help, imports, and usage specific to their respective Svelte versions: Svelte 4: `cn-help`, `cni-accordion` and `cnx-accordion`. Svelte 5: `cn-x-help`, `cni-x-accordion` and `cnx-accordion-next`. 
 
