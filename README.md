@@ -117,7 +117,7 @@ Use this link - [Snippet Generation](https://snippet-generator.app/?description=
 For Svelte 5 snippets sourced from the upstream `huntabyte/shadcn-svelte` docs and registry, run:
 
 ```bash
-pnpm generate:upstream-snippets -- --upstream-dir /path/to/shadcn-svelte
+bun run generate:upstream-snippets --upstream-dir /path/to/shadcn-svelte
 ```
 
 This writes [`src/snippets/generated-upstream-next.json`](./src/snippets/generated-upstream-next.json), which the extension loads before falling back to the legacy hand-authored `@next` snippets. Use [`scripts/upstream-snippet-overrides.json`](./scripts/upstream-snippet-overrides.json) for components that should stay on the curated legacy snippet or need a custom extraction strategy.

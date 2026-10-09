@@ -16,29 +16,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Verify pnpm
-        run: pnpm --version
-
-      - name: Set up Node.js with pnpm
-        uses: actions/setup-node@v6
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22.x
-          cache: "pnpm"
+          bun-version-file: package.json
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Check types
-        run: pnpm check-types
+        run: bun run check-types
 
       - name: Lint code
-        run: pnpm exec eslint src --ext ts
+        run: bunx eslint src --ext ts
 
       - name: Build extension
-        run: node esbuild.js --production
+        run: bun esbuild.js --production
 
       - name: Run tests
-        run: pnpm test
+        run: bun run test
