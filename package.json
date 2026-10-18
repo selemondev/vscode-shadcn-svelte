@@ -194,7 +194,7 @@
 		"@types/vscode": "^1.140.0",
 		"@typescript-eslint/eslint-plugin": "^8.71.1",
 		"@typescript-eslint/parser": "^8.71.1",
-		"@vitest/coverage-v8": "5.0.3",
+		"@vitest/coverage-v8": "5.0.5",
 		"automd": "^0.4.3",
 		"esbuild": "^0.28.2",
 		"eslint": "^10.12.0",
