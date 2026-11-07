@@ -36,14 +36,15 @@ export const detectPackageManager = async (): Promise<PackageManager> => {
   const lockFiles = ["bun.lock", "bun.lockb"];
   const results = await Promise.all(
     lockFiles.map((file) =>
-      getFileStat(file).catch(err => err.code === 'ENOENT' ? false : Promise.reject(err))
-    )
+      getFileStat(file).catch((err) =>
+        err.code === "ENOENT" ? false : Promise.reject(err),
+      ),
+    ),
   );
 
   if (results.some(Boolean)) {
-    return 'bun';
+    return "bun";
   }
-
 
   const pnpmLockExists = await getFileStat("pnpm-lock.yaml");
   if (pnpmLockExists) {
@@ -63,22 +64,23 @@ export const getOrChooseCwd = async (): Promise<string> => {
   const prefix = "${workspaceFolder}/";
 
   const workspaceFolders = (vscode.workspace.workspaceFolders ?? []).filter(
-    (f) => f.uri.scheme === "file"
+    (f) => f.uri.scheme === "file",
   );
 
-  if (!workspaceFolders.length) { return "./"; }
+  if (!workspaceFolders.length) {
+    return "./";
+  }
 
   const workspacePath = workspaceFolders[0]?.uri.fsPath ?? "";
   const cwdFromConfig = vscode.workspace
     .getConfiguration()
-    .get<string>("terminal.integrated.cwd")
+    .get<string>("shadcn-svelte.cwd")
     ?.trim();
 
   if (cwdFromConfig) {
     if (cwdFromConfig.startsWith(prefix)) {
       cwd = cwdFromConfig.slice(prefix.length);
-    }
-    else if (cwdFromConfig.startsWith(workspacePath)) {
+    } else if (cwdFromConfig.startsWith(workspacePath)) {
       cwd = cwdFromConfig.replace(new RegExp(`^${workspacePath}/?`), "");
     } else {
       cwd = cwdFromConfig;
@@ -88,10 +90,12 @@ export const getOrChooseCwd = async (): Promise<string> => {
   }
 
   const choice = await vscode.window.showQuickPick(
-    workspaceFolders.map((f) => f.name)
+    workspaceFolders.map((f) => f.name),
   );
 
-  if (!choice) { return "./"; }
+  if (!choice) {
+    return "./";
+  }
 
   return workspaceFolders.find((f) => f.name === choice)?.uri.fsPath ?? "./";
 };
