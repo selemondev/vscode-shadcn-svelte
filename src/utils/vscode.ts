@@ -1,3 +1,4 @@
+import { posix, win32 } from "node:path";
 import * as vscode from "vscode";
 
 export type PackageManager = "npm" | "pnpm" | "yarn" | "bun";
@@ -59,18 +60,56 @@ export const detectPackageManager = async (): Promise<PackageManager> => {
   return "npm";
 };
 
-export const getOrChooseCwd = async (): Promise<string> => {
-  let cwd = "";
-  const prefix = "${workspaceFolder}/";
+const WORKSPACE_FOLDER_VAR = "${workspaceFolder}";
 
+// win32.isAbsolute treats both drive paths and leading-slash paths as absolute,
+// so POSIX and Windows values are recognized on either host.
+const isAbsolutePath = (value: string): boolean => win32.isAbsolute(value);
+
+const joinWorkspacePath = (workspacePath: string, relativePath: string): string => {
+  const pathApi = workspacePath.includes("\\") || /^[A-Za-z]:/.test(workspacePath) ? win32 : posix;
+  return pathApi.join(workspacePath, relativePath);
+};
+
+const workspaceFolderSuffix = (configured: string): string | undefined => {
+  if (configured === WORKSPACE_FOLDER_VAR) {
+    return "";
+  }
+
+  if (!configured.startsWith(WORKSPACE_FOLDER_VAR)) {
+    return undefined;
+  }
+
+  const rest = configured.slice(WORKSPACE_FOLDER_VAR.length);
+  if (rest.startsWith("/") || rest.startsWith("\\")) {
+    return rest.replace(/^[\\/]+/, "");
+  }
+
+  return undefined;
+};
+
+const resolveConfiguredCwd = (configured: string, workspacePath: string): string | undefined => {
+  if (isAbsolutePath(configured)) {
+    return configured;
+  }
+
+  const suffix = workspaceFolderSuffix(configured);
+  const relativePath = suffix ?? configured;
+  if (!workspacePath) {
+    return undefined;
+  }
+
+  if (!relativePath) {
+    return workspacePath;
+  }
+
+  return joinWorkspacePath(workspacePath, relativePath);
+};
+
+export const getOrChooseCwd = async (): Promise<string> => {
   const workspaceFolders = (vscode.workspace.workspaceFolders ?? []).filter(
     (f) => f.uri.scheme === "file",
   );
-
-  if (!workspaceFolders.length) {
-    return "./";
-  }
-
   const workspacePath = workspaceFolders[0]?.uri.fsPath ?? "";
   const cwdFromConfig = vscode.workspace
     .getConfiguration()
@@ -78,15 +117,14 @@ export const getOrChooseCwd = async (): Promise<string> => {
     ?.trim();
 
   if (cwdFromConfig) {
-    if (cwdFromConfig.startsWith(prefix)) {
-      cwd = cwdFromConfig.slice(prefix.length);
-    } else if (cwdFromConfig.startsWith(workspacePath)) {
-      cwd = cwdFromConfig.replace(new RegExp(`^${workspacePath}/?`), "");
-    } else {
-      cwd = cwdFromConfig;
+    const resolved = resolveConfiguredCwd(cwdFromConfig, workspacePath);
+    if (resolved) {
+      return resolved;
     }
+  }
 
-    return `${workspacePath}/${cwd}`;
+  if (!workspaceFolders.length) {
+    return "./";
   }
 
   const choice = await vscode.window.showQuickPick(
