@@ -4,6 +4,30 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## v2.0.0
+
+[compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v1.0.0...v2.0.0)
+
+### 🩹 Fixes
+
+- Updated cwdFromConfig to use extension config ([9df8517](https://github.com/selemondev/vscode-shadcn-svelte/commit/9df8517))
+- Resolve shadcn-svelte.cwd without prefixing absolute paths ([ba4a196](https://github.com/selemondev/vscode-shadcn-svelte/commit/ba4a196))
+
+### 📖 Documentation
+
+- Exclude update downloads from VS Code downloads badge ([5d446b7](https://github.com/selemondev/vscode-shadcn-svelte/commit/5d446b7))
+- Refresh badge figures ([9ad80d9](https://github.com/selemondev/vscode-shadcn-svelte/commit/9ad80d9))
+
+### 🏡 Chore
+
+- Update dependencies ([8f62919](https://github.com/selemondev/vscode-shadcn-svelte/commit/8f62919))
+
+### ❤️ Contributors
+
+- Selemondev ([@selemondev](https://github.com/selemondev))
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+- Cheekysim <minecraftcheekysim@gmail.com>
+
 ## Unreleased
 
 ### 🩹 Fixes
