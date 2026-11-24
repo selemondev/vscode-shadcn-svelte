@@ -4,6 +4,12 @@ All notable changes to the "vscode-shadcn-svelte" extension will be documented i
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## Unreleased
+
+### 🩹 Fixes
+
+- Resolve `shadcn-svelte.cwd` from an absolute path, a workspace-relative path, or `${workspaceFolder}/...`. `terminal.integrated.cwd` is no longer read.
+
 ## v1.0.0
 
 [compare changes](https://github.com/selemondev/vscode-shadcn-svelte/compare/v0.6.10...v1.0.0)

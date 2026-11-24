@@ -72,13 +72,13 @@ describe("registry helpers", () => {
       .mockResolvedValueOnce("npm");
 
     await expect(getInstallCmd(["button", "badge"], "/workspace")).resolves.toBe(
-      "bunx shadcn-svelte@latest add button badge -c /workspace",
+      'bunx shadcn-svelte@latest add button badge -c "/workspace"',
     );
     await expect(getInstallCmd(["button"], "/workspace")).resolves.toBe(
-      "pnpm dlx shadcn-svelte@latest add button -c /workspace",
+      'pnpm dlx shadcn-svelte@latest add button -c "/workspace"',
     );
     await expect(getInstallCmd(["button"], "/workspace")).resolves.toBe(
-      "npx shadcn-svelte@latest add button -c /workspace",
+      'npx shadcn-svelte@latest add button -c "/workspace"',
     );
   });
 
@@ -89,13 +89,21 @@ describe("registry helpers", () => {
       .mockResolvedValueOnce("npm");
 
     await expect(getUpdateCmd(["button", "badge"], "/workspace")).resolves.toBe(
-      "bunx shadcn-svelte@latest add button badge --overwrite -y -c /workspace",
+      'bunx shadcn-svelte@latest add button badge --overwrite -y -c "/workspace"',
     );
     await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
-      "pnpm dlx shadcn-svelte@latest add button --overwrite -y -c /workspace",
+      'pnpm dlx shadcn-svelte@latest add button --overwrite -y -c "/workspace"',
     );
     await expect(getUpdateCmd(["button"], "/workspace")).resolves.toBe(
-      "npx shadcn-svelte@latest add button --overwrite -y -c /workspace",
+      'npx shadcn-svelte@latest add button --overwrite -y -c "/workspace"',
+    );
+  });
+
+  it("quotes the working directory so paths with spaces survive the shell", async () => {
+    vi.mocked(detectPackageManager).mockResolvedValue("npm");
+
+    await expect(getInstallCmd(["button"], "/Users/foo/my app")).resolves.toBe(
+      'npx shadcn-svelte@latest add button -c "/Users/foo/my app"',
     );
   });
 
@@ -105,9 +113,9 @@ describe("registry helpers", () => {
       .mockResolvedValueOnce("pnpm")
       .mockResolvedValueOnce("npm");
 
-    await expect(getInitCmd("/workspace")).resolves.toBe("bunx shadcn-svelte@latest init -c /workspace");
-    await expect(getInitCmd("/workspace")).resolves.toBe("pnpm dlx shadcn-svelte@latest init -c /workspace");
-    await expect(getInitCmd("/workspace")).resolves.toBe("npx shadcn-svelte@latest init -c /workspace");
+    await expect(getInitCmd("/workspace")).resolves.toBe('bunx shadcn-svelte@latest init -c "/workspace"');
+    await expect(getInitCmd("/workspace")).resolves.toBe('pnpm dlx shadcn-svelte@latest init -c "/workspace"');
+    await expect(getInitCmd("/workspace")).resolves.toBe('npx shadcn-svelte@latest init -c "/workspace"');
     await expect(getComponentDocLink("alert-dialog")).resolves.toBe(
       "https://shadcn-svelte.com/docs/components/alert-dialog",
     );

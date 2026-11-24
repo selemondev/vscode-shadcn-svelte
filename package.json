@@ -162,7 +162,7 @@
 				"shadcn-svelte.cwd": {
 					"type": "string",
 					"default": "",
-					"markdownDescription": "Absolute path to the working directory when running shadcn-svelte CLI. Default is the current workspace folder."
+					"markdownDescription": "Working directory for the shadcn-svelte CLI. An absolute path, a path relative to the workspace folder, or `${workspaceFolder}/...` is accepted. When unset, the current workspace folder is used."
 				},
 				"shadcn-svelte.imports.includeIndexJs": {
 					"type": "boolean",

@@ -60,19 +60,21 @@ export const getRegistry = async (): Promise<Components | null> => {
   return components;
 };
 
+const quoteCwd = (cwd: string): string => `"${cwd}"`;
+
 export const getInstallCmd = async (components: string[], cwd: string) => {
   const packageManager = await detectPackageManager();
   const componentStr = components.join(" ");
 
   if (packageManager === "bun") {
-    return `bunx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
+    return `bunx shadcn-svelte@latest add ${componentStr} -c ${quoteCwd(cwd)}`;
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
+    return `pnpm dlx shadcn-svelte@latest add ${componentStr} -c ${quoteCwd(cwd)}`;
   }
 
-  return `npx shadcn-svelte@latest add ${componentStr} -c ${cwd}`;
+  return `npx shadcn-svelte@latest add ${componentStr} -c ${quoteCwd(cwd)}`;
 };
 
 export const getUpdateCmd = async (components: string[], cwd: string) => {
@@ -82,28 +84,28 @@ export const getUpdateCmd = async (components: string[], cwd: string) => {
   // `-y` skips the CLI's "Ready to install?" confirmation; without it the spawned
   // (non-TTY) process would hang waiting for input. `--overwrite` replaces the files.
   if (packageManager === "bun") {
-    return `bunx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${cwd}`;
+    return `bunx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${quoteCwd(cwd)}`;
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${cwd}`;
+    return `pnpm dlx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${quoteCwd(cwd)}`;
   }
 
-  return `npx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${cwd}`;
+  return `npx shadcn-svelte@latest add ${componentStr} --overwrite -y -c ${quoteCwd(cwd)}`;
 };
 
 export const getInitCmd = async (cwd: string) => {
   const packageManager = await detectPackageManager();
 
   if (packageManager === "bun") {
-    return `bunx shadcn-svelte@latest init -c ${cwd}`;
+    return `bunx shadcn-svelte@latest init -c ${quoteCwd(cwd)}`;
   }
 
   if (packageManager === "pnpm") {
-    return `pnpm dlx shadcn-svelte@latest init -c ${cwd}`;
+    return `pnpm dlx shadcn-svelte@latest init -c ${quoteCwd(cwd)}`;
   }
 
-  return `npx shadcn-svelte@latest init -c ${cwd}`;
+  return `npx shadcn-svelte@latest init -c ${quoteCwd(cwd)}`;
 };
 
 export const getComponentDocLink = async (component: string) => {
